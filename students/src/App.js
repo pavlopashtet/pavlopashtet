@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import IhorComponent from "./components/Ihor/Ihor";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React today
         </a>
+        <IhorComponent />
       </header>
     </div>
   );
