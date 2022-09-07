@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Sasha from "./components/Sasha/Sasha";
+
 
 function App() {
   return (
