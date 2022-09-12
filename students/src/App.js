@@ -1,18 +1,28 @@
 import './App.css';
-import Miki from "./components/solomiya/hanets.jsx"
+import Miki from "./pages/solomiya/hanets.jsx"
 // import Sasha from "./components/Sasha/Sasha";
 // import IhorComponent from "./components/Ihor/Ihor";
-import Iryna from './Iryna/Iryna';
-import SashaComp from "./components/SashaLsnk/lysenko.jsx"
+import Iryna from './pages/Iryna/Iryna';
+import SashaComp from "./pages/SashaLsnk/lysenko.jsx"
+import Header from "./components/header/Header";
+import { Routes, Route } from "react-router-dom";
+import NotFoundPAge from "./pages/404/NotFoundPAge";
+import MainPage from "./pages/Main/MainPage";
+import { AppRoutes } from "./common/Routes";
 
 const App = () => {
-  return (
-<div>
-  <Miki />
-  <Iryna/>
-  <SashaComp/>
-</div>
-  );
+    return (
+        <>
+            <Header />
+            <Routes>
+                <Route path="/404" element={<NotFoundPAge/>}/>
+                <Route path="*" element={<NotFoundPAge/>}/>
+            </Routes>
+            {/*<Miki/>*/}
+            {/*<Iryna/>*/}
+            {/*<SashaComp/>*/}
+        </>
+    );
 }
 
 export default App;
