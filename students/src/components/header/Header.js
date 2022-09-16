@@ -5,7 +5,9 @@ import { AppRoutes } from "../../common/Routes";
 
 const Header = () => (
     <div className={styles.container}>
-
+<Link to={AppRoutes.Ihor}>
+    <span style={{fontSize: '20px'}}>Ihor</span>
+</Link>
     </div>
 );
 

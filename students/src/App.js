@@ -9,12 +9,14 @@ import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import MainPage from "./pages/Main/MainPage";
 import { AppRoutes } from "./common/Routes";
+import IhorComponent from "./pages/Ihor/Ihor.jsx";
 
 const App = () => {
     return (
         <>
             <Header />
             <Routes>
+                <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
                 <Route path="/404" element={<NotFoundPAge/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
             </Routes>
