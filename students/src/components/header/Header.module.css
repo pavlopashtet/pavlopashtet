@@ -1,0 +1,8 @@
+.container{
+    height: 40px;
+    background-color: yellow;
+    color: blue;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
