@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import MainPage from "./pages/Main/MainPage";
 import { AppRoutes } from "./common/Routes";
+import IhorComponent from "./pages/Ihor/Ihor.jsx";
 import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 import HOC from "./components/HOC/HOC";
 import { useEffect } from "react";
@@ -30,8 +31,8 @@ const App = () => {
                 <Route path={AppRoutes.MENTOR} element={
                     <MentorRoute authUser={authUser} Component={MentorContainerPage}/>
                 }/>
-
                 <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
+                <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
             </Routes>
             {/*<Miki/>*/}
