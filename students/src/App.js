@@ -9,20 +9,31 @@ import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import MainPage from "./pages/Main/MainPage";
 import { AppRoutes } from "./common/Routes";
-
+import Con from "./pages/Iryna/CV/CV"
 const App = () => {
     return (
-        <>
-            <Header />
+//         <>
+//             <Header />
+//             <Routes>
+//                 <Route path="/404" element={<NotFoundPAge/>}/>
+//                 <Route path="*" element={<NotFoundPAge/>}/>
+//             </Routes>
+//             {/*<Miki/>*/}
+//             {/*<Iryna/>*/}
+//             {/*<SashaComp/>*/}
+//         </>
+<>            
+<Header/>
             <Routes>
-                <Route path="/404" element={<NotFoundPAge/>}/>
-                <Route path="*" element={<NotFoundPAge/>}/>
-            </Routes>
-            {/*<Miki/>*/}
-            {/*<Iryna/>*/}
-            {/*<SashaComp/>*/}
-        </>
+               <Route path ={AppRoutes.Iryna} element = {<Iryna/>}/>               
+               <Route path={AppRoutes.NOTFOUND} element={<NotFoundPAge/>}/>
+               {/* <Route path="*" element={<NotFoundPAge/>}/> */}
+           </Routes>
+            
+ </>
+        
     );
+
 }
 
 export default App;
