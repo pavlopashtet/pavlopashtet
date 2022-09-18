@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react"
 
 
-const Miki = ()=> {
+const Solomiya = ()=> {
     const [count, setCount] = useState(0)
 
     useEffect( ()=> {
@@ -16,4 +16,4 @@ const Miki = ()=> {
         </div>
 }
 
-export default Miki
+export default Solomiya

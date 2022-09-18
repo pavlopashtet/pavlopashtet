@@ -1,10 +1,11 @@
 import './App.css';
-import Miki from "./components/solomiya/hanets.jsx"
+import Solomiya from "./components/Solomiya/Solomiya"
 
 const App = () => {
   return (
 <div>
-  <Miki />
+  <Solomiya />
+  <SolomiyaComponentPage/>
 </div>
   );
 }
