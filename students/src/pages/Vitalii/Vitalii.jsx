@@ -1,6 +1,4 @@
 import React, { useState} from 'react';
-//import { Routes, Route, useParams, useLocation } from "react-router-dom";
-//import NotFoundPAge from "../404/NotFoundPAge";
 const Vitalii = ()=> {
     const [action, setAction] = useState("true");
     return (
