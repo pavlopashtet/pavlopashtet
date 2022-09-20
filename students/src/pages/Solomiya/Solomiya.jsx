@@ -1,7 +1,7 @@
 import React from "react";
 import {Link, Route, Routes} from "react-router-dom";
 import {SolRoutes} from "./SolomiyaRoutes";
-import {AppRoutes, RedirectRoutes} from "../../common/Routes";
+import {RedirectRoutes} from "../../common/Routes";
 import styles from "./CVpages/SolomiyaPage.module.scss"
 import SolomiyaComponentPage from "./CVpages/CVPageSolomiya";
 
@@ -23,7 +23,7 @@ const Main = () => {
 export const Solomiya = ()=> {
     return (
         <Routes>
-            <Route path={AppRoutes.MAIN} element={<Main/>}/>
+            <Route path={SolRoutes.MAIN} element={<Main/>}/>
             <Route path={SolRoutes.CV} element={<SolomiyaComponentPage/>}/>
 
         </Routes>
