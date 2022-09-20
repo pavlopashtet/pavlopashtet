@@ -5,8 +5,10 @@ import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import IhorComponent from "./pages/Ihor/Ihor";
 import { AppRoutes } from "./common/Routes";
-import { MentorRoute } from "./components/HOC/MentorRoute";
+
 import { useEffect } from "react";
+import Vitalii from "./pages/Vitalii/Vitalii";
+
 
 
 const App = () => {
@@ -45,3 +47,5 @@ export default App;
 // {/*<Miki/>*/}
 // {/*<Iryna/>*/}
 // {/*<SashaComp/>*/}
+<Vitalii/>
+
