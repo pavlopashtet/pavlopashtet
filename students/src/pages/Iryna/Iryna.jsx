@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { AppRoutes, RedirectRoutes } from "../../common/Routes";
 import Con from "./CV/CV";
 import { Link } from "react-router-dom";
+import MainComponent from "./liftState/liftState";
 // import NotFoundPAge from "../404/NotFoundPAge";
+
 
 const Iryna = () => {
   const [action, setAction] = useState("true");
@@ -25,6 +27,10 @@ const Iryna = () => {
         <Route path={AppRoutes.CV} element={<Con/>} />
       </Routes>
      
+
+     <MainComponent/>
+   
+
     </>
     
   );
