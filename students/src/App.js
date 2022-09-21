@@ -6,7 +6,7 @@ import NotFoundPAge from "./pages/404/NotFoundPAge";
 import { AppRoutes } from "./common/Routes";
 import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 import IhorComponent from "./pages/Ihor/Ihor";
-import Solomiya from "./pages/solomiya/Solomiya";
+import Solomiya from "./pages/Solomiya/Solomiya";
 
 const App = () => {
     return (
