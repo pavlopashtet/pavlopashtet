@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-import { AppRoutes, RedirectRoutes, RedirectRoutes } from "../../common/Routes";
+import { AppRoutes, RedirectRoutes} from "../../common/Routes";
 
 const Header = () => (
     <div className={styles.container}>

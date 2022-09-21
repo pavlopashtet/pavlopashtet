@@ -1,52 +1,39 @@
 import './App.css';
+import Miki from "./pages/solomiya/hanets.jsx"
+// import Sasha from "./components/Sasha/Sasha";
+// import IhorComponent from "./components/Ihor/Ihor";
+import Iryna from './pages/Iryna/Iryna';
+import SashaComp from "./pages/SashaLsnk/lysenko.jsx"
 import Header from "./components/header/Header";
-import { Route, Routes } from "react-router-dom";
-import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
+import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
-import IhorComponent from "./pages/Ihor/Ihor";
+import MainPage from "./pages/Main/MainPage";
 import { AppRoutes } from "./common/Routes";
-
-import { useEffect } from "react";
-import Vitalii from "./pages/Vitalii/Vitalii";
-
-
-
+import Con from "./pages/Iryna/CV/CV"
 const App = () => {
-    const authUser = JSON.parse(localStorage.getItem("authUser"));
-    useEffect(()=>{
-        localStorage.setItem("authUser", JSON.stringify({user: "Ihor", role: "mentor"}))
-    },[])
-
-    console.log(authUser);
     return (
-        <>
-            <Header/>
+//         <>
+//             <Header />
+//             <Routes>
+//                 <Route path="/404" element={<NotFoundPAge/>}/>
+//                 <Route path="*" element={<NotFoundPAge/>}/>
+//             </Routes>
+//             {/*<Miki/>*/}
+//             {/*<Iryna/>*/}
+//             {/*<SashaComp/>*/}
+//         </>
+<>            
+<Header/>
             <Routes>
-                <Route path={AppRoutes.MENTOR} element={<MentorContainerPage />}/>
-
-
-
-                <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
-                {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
-                {/*<Route path={AppRoutes.MENTOR} element={*/}
-                {/*    <MentorRoute authUser={authUser} Component={MentorContainerPage}/>*/}
-                {/*}/>*/}
-                <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
-                <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
-                <Route path="*" element={<NotFoundPAge/>}/>
-            </Routes>
-        </>
+               <Route path ={AppRoutes.Iryna} element = {<Iryna/>}/>               
+               <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
+               {/* <Route path="*" element={<NotFoundPAge/>}/> */}
+           </Routes>
+            
+ </>
+        
     );
 
 }
 
 export default App;
-
-
-// <Header />
-
-// {/*<Miki/>*/}
-// {/*<Iryna/>*/}
-// {/*<SashaComp/>*/}
-<Vitalii/>
-
