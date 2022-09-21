@@ -4,9 +4,9 @@ export const AppRoutes = {
     NOT_FOUND: "/404",
     MENTOR: "/mentor/*",
     HOC: "/hoc",
-    CV: "/cv",
-    Solomiya: '/solomiya/*',
-    Iryna:"/Iryna/*"  
+    NATALIA: "/natalia/*",
+    CV: "/cv/*",
+    Iryna:"/Iryna/*"
 
 }
 
@@ -17,9 +17,8 @@ export const RedirectRoutes = {
     MENTOR: "/mentor",
     HOC: "/hoc",
     Solomiya: '/solomiya',
-
-
     Iryna:"/Iryna",
-    CV:"/cv"
+    CV:"/cv",
+    NATALIA: "/natalia",
 }
 

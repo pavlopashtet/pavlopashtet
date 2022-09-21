@@ -1,0 +1,9 @@
+.box{
+    height: 200px;
+    background-color: lightgrey;
+    color: blue;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+

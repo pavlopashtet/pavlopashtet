@@ -8,7 +8,7 @@ import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 import HOC from "./components/HOC/HOC";
 import { useEffect } from "react";
 import { MentorRoute } from "./components/HOC/MentorRoute";
-import NataliaComponent from "./Components/Natalia/Natalia";
+import NataliaComponent from "./pages/Natalia/Natalia";
 
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/solomiya/Solomiya";
@@ -45,7 +45,7 @@ const App = () => {
             {/*<Miki/>*/}
             {/*<Iryna/>*/}
             {/*<SashaComp/>*/}
-          {/*<NataliaComponent/>*/}
+          <NataliaComponent/>
         </>
     );
 }
