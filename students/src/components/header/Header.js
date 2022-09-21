@@ -14,6 +14,9 @@ const Header = () => (
         <Link to={RedirectRoutes.MENTOR}>
             <span style={{fontSize: '20px'}}>MENTOR</span>
         </Link>
+        <Link to={RedirectRoutes.Solomiya}>
+            <span style={{fontSize: '20px'}}>Solomiya</span>
+        </Link>
     </div>
 );
 
