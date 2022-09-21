@@ -1,0 +1,14 @@
+@mixin colorRed (){
+    color: red;
+}
+
+.box{
+    width: 40%;
+    background-color: blue;
+    @include colorRed;
+    height: 300px;
+}
+
+.box1{
+    @include colorRed;
+}
