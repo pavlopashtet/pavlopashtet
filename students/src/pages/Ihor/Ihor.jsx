@@ -2,7 +2,7 @@ import React from "react";
 import {Route, Routes} from "react-router-dom";
 import {AppRoutes} from "../../common/Routes";
 import NotFoundPAge from "../404/NotFoundPAge";
-import {IhorRout} from "../../common/IhorRouts";
+import {IhorRout} from "./IhorRouts";
 
 const IhorComponent = ()=>{
     return(

@@ -1,26 +1,43 @@
-import { Route, Routes } from "react-router-dom";
-import { AppRoutes } from "../../common/Routes";
-import NotFoundPAge from "../404/NotFoundPAge";
-import { MentorRoutes } from "../../common/MentorRoutes";
+import styles from "./MentorContainerPage.module.scss"
+import UserCard from "../../components/userCard/UserCard";
+import { Link, Route, Routes } from "react-router-dom";
+import { AppRoutes, RedirectRoutes } from "../../common/Routes";
+import React from "react";
+const titleArr = [
+    "Text 1", "Text 2", "Text 3", "Text 4", "Text 5", "Text 6"
+]
 
 const MentorContainerPage = () => {
-    console.log("mentor");
-    return (
-        <div>
-            <h1 style={{textAlign: "center", backgroundColor: "blue"}}>Header of mentor PAGE</h1>
 
-            <Routes>
-                <Route path={MentorRoutes.FIRSTNAME} element={
-                    <div>
-                        <h3>Firstname</h3>
-                        <Routes>
-                            <Route path="/fLetter" element={<h3>I</h3>}/>
-                            <Route path="/sLetter" element={<h3>H</h3>}/>
-                        </Routes>
-                    </div>
-                }/>
-                <Route path={MentorRoutes.LASTNAME} element={<h3>Kurylov</h3>}/>
-            </Routes>
+    const showClickInfo = (info) => console.log(`Clicked on ${info}`)
+    const showInfo = () => console.log(`Clicked`)
+    return (
+        <div className={styles.container}>
+            {/*{titleArr.map((item) => <UserCard*/}
+            {/*    title={item}*/}
+            {/*    handleClick={showClickInfo}*/}
+            {/*    showInfo={showInfo}*/}
+            {/*/>)}*/}
+
+            <h1>Hello this is my page</h1>
+            <Link to={`${RedirectRoutes.MENTOR}${AppRoutes.CV}`}>
+                <span style={{fontSize: '20px'}}>CV</span>
+            </Link>
+            <Link to="/mentor/users">
+                <span style={{fontSize: '20px'}}>User card</span>
+            </Link>
+
+
+
+      <Routes>
+          <Route path={AppRoutes.CV} element={<h1>CV</h1>}/>
+          <Route path="/users" element={<UserCard
+              title={"CARD"}
+              handleClick={showClickInfo}
+              showInfo={showInfo}
+          />}/>
+
+      </Routes>
         </div>
     )
 };
