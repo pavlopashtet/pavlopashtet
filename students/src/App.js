@@ -9,7 +9,15 @@ import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import MainPage from "./pages/Main/MainPage";
 import { AppRoutes } from "./common/Routes";
+Solomiya-Hanets
+import { useEffect } from "react";
+import Solomiya from "./pages/Solomiya/Solomiya.jsx";
+import Vitalii from "./pages/Vitalii/Vitalii";
+
+
+
 import Con from "./pages/Iryna/CV/CV"
+
 const App = () => {
     return (
 //         <>
@@ -25,15 +33,40 @@ const App = () => {
 <>            
 <Header/>
             <Routes>
+
+                <Route path={AppRoutes.MENTOR} element={<MentorContainerPage />}/>
+                <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
+
+                <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
+                {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
+                {/*<Route path={AppRoutes.MENTOR} element={*/}
+                {/*    <MentorRoute authUser={authUser} Component={MentorContainerPage}/>*/}
+                {/*}/>*/}
+                <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
+                <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
+                <Route path="*" element={<NotFoundPAge/>}/>
+            </Routes>
+        </>
                <Route path ={AppRoutes.Iryna} element = {<Iryna/>}/>               
                <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
                {/* <Route path="*" element={<NotFoundPAge/>}/> */}
            </Routes>
             
  </>
-        
+
     );
 
 }
 
 export default App;
+
+
+
+// <Header />
+
+// {/*<Solomiya/>*/}
+// {/*<Iryna/>*/}
+// {/*<SashaComp/>*/}
+<Vitalii/>
+
+development
