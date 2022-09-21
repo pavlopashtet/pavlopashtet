@@ -7,8 +7,15 @@ import { AppRoutes } from "./common/Routes";
 import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
+import Vitalii from "./pages/Vitalii/Vitalii";
 
 const App = () => {
+    // const authUser = JSON.parse(localStorage.getItem("authUser"));
+    // useEffect(()=>{
+    //     localStorage.setItem("authUser", JSON.stringify({user: "Ihor", role: "mentor"}))
+    // },[])
+    //
+    // console.log(authUser);
     return (
         // <>
         //     <Header />
