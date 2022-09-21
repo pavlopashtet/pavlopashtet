@@ -1,5 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import { AppRoutes, RedirectRoutes } from "../../common/Routes";
+import SashaLysenkoCV from "./SashaCV";
+
 
 const SashaComp = () => {
     const[isActive, setIsActive] = useState("true"); 
@@ -24,6 +28,14 @@ const SashaComp = () => {
 
         </button>
         </div>
+
+        <Link to={`${RedirectRoutes.Sasha}${AppRoutes.CV}`}>
+        <span style={{ fontSize: "50px" }}>CV</span>
+      </Link>    
+      <Routes>
+        <Route path={AppRoutes.CV} element={<SashaLysenkoCV/>} />
+      </Routes>
+
         </div>
     )
 }
