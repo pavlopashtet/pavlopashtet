@@ -1,26 +1,39 @@
 import './App.css';
+import Miki from "./pages/solomiya/hanets.jsx"
+// import Sasha from "./components/Sasha/Sasha";
+// import IhorComponent from "./components/Ihor/Ihor";
+import Iryna from './pages/Iryna/Iryna';
+import SashaComp from "./pages/SashaLsnk/lysenko.jsx"
 import Header from "./components/header/Header";
-import { Route, Routes } from "react-router-dom";
-import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
+import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
-import IhorComponent from "./pages/Ihor/Ihor";
+import MainPage from "./pages/Main/MainPage";
 import { AppRoutes } from "./common/Routes";
+Solomiya-Hanets
 import { useEffect } from "react";
 import Solomiya from "./pages/Solomiya/Solomiya.jsx";
 import Vitalii from "./pages/Vitalii/Vitalii";
 
 
-const App = () => {
-    const authUser = JSON.parse(localStorage.getItem("authUser"));
-    useEffect(()=>{
-        localStorage.setItem("authUser", JSON.stringify({user: "Ihor", role: "mentor"}))
-    },[])
 
-    console.log(authUser);
+import Con from "./pages/Iryna/CV/CV"
+
+const App = () => {
     return (
-        <>
-            <Header/>
+//         <>
+//             <Header />
+//             <Routes>
+//                 <Route path="/404" element={<NotFoundPAge/>}/>
+//                 <Route path="*" element={<NotFoundPAge/>}/>
+//             </Routes>
+//             {/*<Miki/>*/}
+//             {/*<Iryna/>*/}
+//             {/*<SashaComp/>*/}
+//         </>
+<>            
+<Header/>
             <Routes>
+
                 <Route path={AppRoutes.MENTOR} element={<MentorContainerPage />}/>
                 <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
 
@@ -34,10 +47,19 @@ const App = () => {
                 <Route path="*" element={<NotFoundPAge/>}/>
             </Routes>
         </>
+               <Route path ={AppRoutes.Iryna} element = {<Iryna/>}/>               
+               <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
+               {/* <Route path="*" element={<NotFoundPAge/>}/> */}
+           </Routes>
+            
+ </>
+
     );
+
 }
 
 export default App;
+
 
 
 // <Header />
@@ -47,3 +69,4 @@ export default App;
 // {/*<SashaComp/>*/}
 <Vitalii/>
 
+development
