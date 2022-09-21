@@ -6,7 +6,8 @@ export const AppRoutes = {
     HOC: "/hoc",
     NATALIA: "/natalia/*",
     CV: "/cv/*",
-    Iryna:"/Iryna/*"
+    Iryna:"/Iryna/*",
+    Solomiya: '/solomiya/*',
 
 }
 

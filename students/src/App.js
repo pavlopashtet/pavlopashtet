@@ -11,7 +11,7 @@ import { MentorRoute } from "./components/HOC/MentorRoute";
 import NataliaComponent from "./pages/Natalia/Natalia";
 
 import IhorComponent from "./pages/Ihor/Ihor";
-import Solomiya from "./pages/solomiya/Solomiya";
+import Solomiya from "./pages/Solomiya/Solomiya";
 
 const App = () => {
     return (
