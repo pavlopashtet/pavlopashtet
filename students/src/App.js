@@ -1,31 +1,40 @@
 import './App.css';
+import Iryna from './pages/Iryna/Iryna';
 import Header from "./components/header/Header";
-import { Route, Routes } from "react-router-dom";
-import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
+import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
-import IhorComponent from "./pages/Ihor/Ihor";
 import { AppRoutes } from "./common/Routes";
-
-import { useEffect } from "react";
+import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
+import IhorComponent from "./pages/Ihor/Ihor";
+import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
 
-
-
 const App = () => {
-    const authUser = JSON.parse(localStorage.getItem("authUser"));
-    useEffect(()=>{
-        localStorage.setItem("authUser", JSON.stringify({user: "Ihor", role: "mentor"}))
-    },[])
-
-    console.log(authUser);
+    // const authUser = JSON.parse(localStorage.getItem("authUser"));
+    // useEffect(()=>{
+    //     localStorage.setItem("authUser", JSON.stringify({user: "Ihor", role: "mentor"}))
+    // },[])
+    //
+    // console.log(authUser);
     return (
+        // <>
+        //     <Header />
+        //     <Routes>
+        //         <Route path="/404" element={<NotFoundPAge/>}/>
+        //         <Route path="*" element={<NotFoundPAge/>}/>
+        //     </Routes>
+        //     {/*<Miki/>*/}
+        //     {/*<Iryna/>*/}
+        //     {/*<SashaComp/>*/}
+        // {/*<Vitalii/>*/}
+        // </>
         <>
             <Header/>
             <Routes>
-                <Route path={AppRoutes.MENTOR} element={<MentorContainerPage />}/>
 
-
-
+                <Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>
+                <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
+                <Route path={AppRoutes.Iryna} element={<Iryna/>}/>
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
                 {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
                 {/*<Route path={AppRoutes.MENTOR} element={*/}
@@ -40,12 +49,3 @@ const App = () => {
 }
 
 export default App;
-
-
-// <Header />
-
-// {/*<Miki/>*/}
-// {/*<Iryna/>*/}
-// {/*<SashaComp/>*/}
-<Vitalii/>
-
