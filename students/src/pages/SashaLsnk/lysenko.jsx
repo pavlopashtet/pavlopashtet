@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { AppRoutes, RedirectRoutes } from "../../common/Routes";
-import SashaLysenkoCV from "./SashaCV/SashaLysenkoCV";
+import SashaLysenkoCV from "./SashaCV";
 
 
 const SashaComp = () => {
