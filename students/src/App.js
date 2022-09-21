@@ -1,5 +1,4 @@
 import './App.css';
-import Miki from "./pages/solomiya/hanets.jsx"
 // import Sasha from "./components/Sasha/Sasha";
 // import IhorComponent from "./components/Ihor/Ihor";
 import Iryna from './pages/Iryna/Iryna';
@@ -9,14 +8,13 @@ import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import MainPage from "./pages/Main/MainPage";
 import { AppRoutes } from "./common/Routes";
-Solomiya-Hanets
 import { useEffect } from "react";
 import Solomiya from "./pages/Solomiya/Solomiya.jsx";
 import Vitalii from "./pages/Vitalii/Vitalii";
-
-
-
 import Con from "./pages/Iryna/CV/CV"
+import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
+import IhorComponent from "./pages/Ihor/Ihor";
+
 
 const App = () => {
     return (
@@ -45,16 +43,10 @@ const App = () => {
                 <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
+                <Route path ={AppRoutes.Iryna} element = {<Iryna/>}/>  
             </Routes>
-        </>
-               <Route path ={AppRoutes.Iryna} element = {<Iryna/>}/>               
-               <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
-               {/* <Route path="*" element={<NotFoundPAge/>}/> */}
-           </Routes>
-            
- </>
-
-    );
+</>     
+);
 
 }
 
@@ -67,6 +59,6 @@ export default App;
 // {/*<Solomiya/>*/}
 // {/*<Iryna/>*/}
 // {/*<SashaComp/>*/}
-<Vitalii/>
+{/* <Vitalii/> */}
 
-development
+
