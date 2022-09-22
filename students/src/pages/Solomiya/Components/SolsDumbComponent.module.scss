@@ -2,19 +2,19 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 50px;
+  align-items: center;
+  padding: 10px;
   background-color: #a4e4fa;
 }
 .squareContainer {
-  height: 30vh;
+  height: 60vh;
   width: 30vh;
-  background-color: #f1c375;
+  padding: 30px;
 }
 
 .button {
-  height: 3vh;
-  width: 10vh;
+  height: 5vh;
+  width: 15vh;
   border-radius: 10px;
   border: 1px solid #f5bc62;
   background-color: #c8e4ef;
