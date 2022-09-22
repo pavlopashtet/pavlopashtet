@@ -6,7 +6,8 @@ export const AppRoutes = {
     HOC: "/hoc",
     CV: "/cv",
     Solomiya: '/solomiya/*',
-    Iryna:"/Iryna/*"  
+    Iryna:"/Iryna/*",
+    Vitalii:"/Vitalii/*"
 
 }
 
@@ -17,9 +18,8 @@ export const RedirectRoutes = {
     MENTOR: "/mentor",
     HOC: "/hoc",
     Solomiya: '/solomiya',
-
-
     Iryna:"/Iryna",
+    Vitalii: '/vitalii',
     CV:"/cv"
 }
 

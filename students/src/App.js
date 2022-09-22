@@ -8,6 +8,9 @@ import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
+import SashaComp from "./pages/SashaLsnk/lysenko";
+import "rsuite/dist/rsuite.min.css";
+
 
 const App = () => {
     // const authUser = JSON.parse(localStorage.getItem("authUser"));
@@ -35,6 +38,8 @@ const App = () => {
                 <Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>
                 <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
                 <Route path={AppRoutes.Iryna} element={<Iryna/>}/>
+                <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
+                <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
                 {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
                 {/*<Route path={AppRoutes.MENTOR} element={*/}
