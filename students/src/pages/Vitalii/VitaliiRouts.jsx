@@ -1,3 +1,4 @@
-export const VitaliiRout = {
-    CVROUTE: 'CV',
+export const SolutionRoutes = {
+    CV: "/cv",
+    MAIN: '/',
 }
