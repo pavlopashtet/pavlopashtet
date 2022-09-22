@@ -7,8 +7,7 @@ export const AppRoutes = {
     CV: "/cv",
     Solomiya: '/solomiya/*',
     Iryna:"/Iryna/*",
-    Sasha: "/sasha/*"  
-
+    Sasha: "/sasha/*"
 }
 
 export const RedirectRoutes = {
