@@ -4,7 +4,7 @@ import {SolRoutes} from "./SolomiyaRoutes";
 import {RedirectRoutes} from "../../common/Routes";
 import styles from "./CVpages/SolomiyaPage.module.scss"
 import SolomiyaComponentPage from "./CVpages/CVPageSolomiya";
-import SolsDumbComponent from "./Components/SolsDumbComponent";
+import SolsComponent from "./Components/SolsDumbComponent";
 
 
 const Main = () => {
@@ -29,7 +29,7 @@ export const Solomiya = ()=> {
         <Routes>
             <Route path={SolRoutes.MAIN} element={<Main/>}/>
             <Route path={SolRoutes.CV} element={<SolomiyaComponentPage/>}/>
-            <Route path={SolRoutes.STATE} element={<SolsDumbComponent/>}/>
+            <Route path={SolRoutes.STATE} element={<SolsComponent/>}/>
 
         </Routes>
     )
