@@ -29,4 +29,4 @@ export const Vitalii = ()=> {
     )
 }
 
-    export default Vitalii
+export default Vitalii
