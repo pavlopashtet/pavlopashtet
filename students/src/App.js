@@ -8,6 +8,9 @@ import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
+import SashaComp from "./pages/SashaLsnk/lysenko";
+import "rsuite/dist/rsuite.min.css";
+
 
 const App = () => {
     // const authUser = JSON.parse(localStorage.getItem("authUser"));

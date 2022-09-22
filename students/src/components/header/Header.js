@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import { AppRoutes, RedirectRoutes} from "../../common/Routes";
 
@@ -16,6 +16,9 @@ const Header = () => (
         </Link>
         <Link to={RedirectRoutes.Solomiya}>
             <span style={{fontSize: '20px'}}>Solomiya</span>
+        </Link>
+        <Link to={RedirectRoutes.Sasha}>
+            <span style={{fontSize: '20px'}}>Sasha</span>
         </Link>
     </div>
 );
