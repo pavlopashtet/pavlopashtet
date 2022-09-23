@@ -6,11 +6,10 @@ export const AppRoutes = {
     HOC: "/hoc",
     NATALIA: "/natalia/*",
     CV: "/cv/*",
-    Iryna:"/Iryna/*"
+    Iryna:"/Iryna/*",
     Solomiya: '/solomiya/*',
     Vitalii:"/Vitalii/*",
-    Sasha: "/sasha/*"
-
+    Sasha: "/sasha/*",
 }
 
 export const RedirectRoutes = {

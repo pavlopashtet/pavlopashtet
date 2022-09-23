@@ -9,7 +9,6 @@ import HOC from "./components/HOC/HOC";
 import { useEffect } from "react";
 import { MentorRoute } from "./components/HOC/MentorRoute";
 import NataliaComponent from "./pages/Natalia/Natalia";
-
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
@@ -18,12 +17,6 @@ import "rsuite/dist/rsuite.min.css";
 
 
 const App = () => {
-    // const authUser = JSON.parse(localStorage.getItem("authUser"));
-    // useEffect(()=>{
-    //     localStorage.setItem("authUser", JSON.stringify({user: "Ihor", role: "mentor"}))
-    // },[])
-    //
-    // console.log(authUser);
     return (
         // <>
         //     <Header />
