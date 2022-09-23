@@ -8,7 +8,8 @@ export const AppRoutes = {
     Solomiya: '/solomiya/*',
     Iryna:"/Iryna/*",
     Vitalii:"/Vitalii/*",
-    Sasha: "/sasha/*"
+    Sasha: "/sasha/*",
+    FORM: "/form",
 
 }
 
