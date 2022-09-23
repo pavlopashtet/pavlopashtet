@@ -1,0 +1,21 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #a4e4fa;
+}
+.squareContainer {
+  height: 60vh;
+  width: 30vh;
+  padding: 30px;
+}
+
+.button {
+  height: 5vh;
+  width: 15vh;
+  border-radius: 10px;
+  border: 1px solid #f5bc62;
+  background-color: #c8e4ef;
+}
