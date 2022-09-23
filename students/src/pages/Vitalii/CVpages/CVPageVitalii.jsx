@@ -9,7 +9,7 @@ const VitaliiComponentPage = () => {
                 <h2>Hello! </h2>
                 <h1>Ukraine</h1>
                 <div>
-                    <p>
+                    <p className={styles.newtext}>
                         Ukraine, country located in eastern Europe, the second largest on the continent after Russia. The capital is Kyiv, located on the Dnieper River in north-central Ukraine.
                         A fully independent Ukraine emerged only late in the 20th century, after long periods of successive domination by Poland-Lithuania, Russia, and the Union of Soviet Socialist Republics (U.S.S.R.).
                         Ukraine had experienced a brief period of independence in 1918–20,

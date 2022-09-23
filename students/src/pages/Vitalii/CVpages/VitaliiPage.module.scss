@@ -22,7 +22,15 @@ h2, span {
 }
 
 .header {
-  dis0play: flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.newtext{
+  color:black;
+  font-family: 'Raleway', sans-serif;
+  font-max-size: medium;
+  font-min-size: small;
+
 }
