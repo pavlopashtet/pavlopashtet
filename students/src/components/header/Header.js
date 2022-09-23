@@ -20,6 +20,9 @@ const Header = () => (
         <Link to={RedirectRoutes.Sasha}>
             <span style={{fontSize: '20px'}}>Sasha</span>
         </Link>
+        <Link to={RedirectRoutes.Vitalii}>
+            <span style={{fontSize: '20px'}}>Vitalii</span>
+        </Link>
     </div>
 );
 
