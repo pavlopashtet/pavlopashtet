@@ -6,7 +6,7 @@ const VitaliiComponentPage = () => {
     return (
         <>
             <div className={styles.container}>
-                <h2>Hi! </h2>
+                <h2>Hello! </h2>
                 <span>my CV's gona be here soon...</span>
             </div>
         </>
