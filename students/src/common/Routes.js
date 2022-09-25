@@ -10,6 +10,8 @@ export const AppRoutes = {
     Solomiya: '/solomiya/*',
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
+    FORM: "/form",
+
 }
 
 export const RedirectRoutes = {
