@@ -1,6 +1,6 @@
 import React from "react";
-
 import styles from "./CV.module.css";
+
 
 class NataliaCV extends React.Component {
     constructor() {
@@ -9,8 +9,6 @@ class NataliaCV extends React.Component {
             name: "Natalia",
             phone:' +380686293764',
             email: 'natalia.gmail'
-
-            // show: false
         }
     }
     render() {

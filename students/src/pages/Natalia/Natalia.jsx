@@ -1,4 +1,13 @@
 import React from "react";
+import {Link, Route, Routes} from "react-router-dom";
+import {AppRoutes, RedirectRoutes} from "../../common/Routes";
+import NataliaCV from "./Natalia.cv";
+
+
+
+
+
+
 
 class Natalia extends React.Component{
     constructor(props) {
@@ -15,16 +24,28 @@ class Natalia extends React.Component{
         return(
             <div>
                 <h1> I want change!!!</h1>
-                {this.state.show &&<h1>Then start learning something</h1>}
+                {this.state.show &&<h1>Then start learning something!!!</h1>}
                 <button
                     onClick={this.handleClick.bind(this)}>
                     Click me
                 </button>
 
-            </div>
+
+        <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.CV}`}>
+            <span style={{ fontSize: "50px" }}>CV</span>
+        </Link>
+        <Routes>
+            <Route path={AppRoutes.CV} element={<NataliaCV/>} />
+        </Routes>
+
+
+    </div>
+
+
         )
 
     }
 }
 
 export default Natalia
+

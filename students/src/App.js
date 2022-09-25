@@ -39,6 +39,7 @@ const App = () => {
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
                 <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
                 <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
+                <Route path={AppRoutes.NATALIA} element={<NataliaComponent/>}/>
                 {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
                 {/*<Route path={AppRoutes.MENTOR} element={*/}
                 {/*    <MentorRoute authUser={authUser} Component={MentorContainerPage}/>*/}
@@ -50,7 +51,7 @@ const App = () => {
             {/*<Miki/>*/}
             {/*<Iryna/>*/}
             {/*<SashaComp/>*/}
-          <NataliaComponent/>
+         {/* <NataliaComponent/>*/}
         </>
     );
 }
