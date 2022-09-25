@@ -64,4 +64,3 @@ class Natalia extends React.Component{
 }
 
 export default Natalia
-
