@@ -8,7 +8,8 @@ export const AppRoutes = {
     Solomiya: '/solomiya/*',
     Iryna:"/Iryna/*",
     Vitalii:"/Vitalii/*",
-    Sasha: "/sasha/*"
+    Sasha: "/sasha/*",
+    MainComponent:"/liftState"
 
 }
 
@@ -22,6 +23,7 @@ export const RedirectRoutes = {
     Vitalii: '/vitalii',
     Sasha: "/sasha",
     Iryna:"/Iryna",
-    CV:"/cv"
+    CV:"/cv",
+    MainComponent:"/liftState"
 }
 

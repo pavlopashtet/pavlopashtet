@@ -1,8 +1,15 @@
+import styles from "../liftState.module.css";
 
-import styles from "../liftState.module.css"
-const Component = ()=>{
-    return (
-    <button className= {styles.bt}>First</button>
-    );
-}
+const Component = ({ setBg, Color}) => {
+  return (
+    <button
+      className={styles.bt}
+      onClick={() => {
+        setBg(Color);
+      }}
+    >
+      First
+    </button>
+  );
+};
 export default Component;
