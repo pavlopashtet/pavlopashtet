@@ -4,6 +4,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { AppRoutes, RedirectRoutes } from "../../common/Routes";
 import React, { useEffect, useState } from "react";
 import { Button, Input } from "rsuite";
+import Forms from "./forms/Forms";
 
 const titleArr = [
     "Text 1", "Text 2", "Text 3", "Text 4", "Text 5", "Text 6"
@@ -19,19 +20,22 @@ const MentorContainerPage = () => {
     const showInfo = () => console.log(`Clicked`)
     //
     useEffect(() => {
-            console.log(inputState)
+            // console.log(inputState)
         },
         [ inputState ])
 
     return (
         <div className={styles.container}>
             <h1>Hello this is my page</h1>
-            {/*<Link to={`${RedirectRoutes.MENTOR}${AppRoutes.CV}`}>*/}
-            {/*    <span style={{fontSize: '20px'}}>CV</span>*/}
-            {/*</Link>*/}
-            {/*<Link to="/mentor/users">*/}
-            {/*    <span style={{fontSize: '20px'}}>User card</span>*/}
-            {/*</Link>*/}
+            <Link to={`${RedirectRoutes.MENTOR}${AppRoutes.CV}`}>
+                <span style={{fontSize: '20px'}}>CV</span>
+            </Link>
+            <Link to="/mentor/users">
+                <span style={{fontSize: '20px'}}>User card</span>
+            </Link>
+            <Link to="/mentor/form">
+                <span style={{fontSize: '20px'}}>Form</span>
+            </Link>
 
             {
                 editMode
@@ -74,7 +78,7 @@ const MentorContainerPage = () => {
                     handleClick={showClickInfo}
                     showInfo={showInfo}
                 />}/>
-
+                <Route path={AppRoutes.FORM} element={<Forms />}/>
             </Routes>
         </div>
     )

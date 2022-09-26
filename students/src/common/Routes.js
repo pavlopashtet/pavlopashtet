@@ -9,6 +9,7 @@ export const AppRoutes = {
     Iryna:"/Iryna/*",
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
+    FORM: "/form",,
     MainComponent:"/liftState"
 
 }
