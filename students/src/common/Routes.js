@@ -10,7 +10,8 @@ export const AppRoutes = {
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
     FORM: "/form",
-    MainComponent:"/liftState"
+    MainComponent:"/liftState",
+    CONSULT: "/consult"
 
 }
 
