@@ -47,6 +47,7 @@ const App = () => {
                 <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
+
             </Routes>
             {/*<Miki/>*/}
             {/*<Iryna/>*/}

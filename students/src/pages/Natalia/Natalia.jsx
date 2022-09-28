@@ -5,10 +5,6 @@ import NataliaCV from "./Natalia.cv";
 
 
 
-
-
-
-
 class Natalia extends React.Component{
     constructor(props) {
         super(props);
@@ -33,13 +29,17 @@ class Natalia extends React.Component{
 
         <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.CV}`}>
             <span style={{ fontSize: "50px" }}>CV</span>
+            {/*<span style={{ fontSize: "50px" }}>BTN</span>*/}
         </Link>
         <Routes>
             <Route path={AppRoutes.CV} element={<NataliaCV/>} />
+            {/*<Route path={AppRoutes.BTN} element={<NataComp/>}/>*/}
         </Routes>
 
 
     </div>
+
+
 
 
         )
