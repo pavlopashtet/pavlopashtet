@@ -56,11 +56,10 @@ class Natalia extends React.Component{
     </div>
 
 
-
-
         )
 
     }
 }
 
 export default Natalia
+

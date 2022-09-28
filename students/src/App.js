@@ -57,6 +57,7 @@ const App = () => {
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
                 <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
+
             </Routes>
         </>
     );
