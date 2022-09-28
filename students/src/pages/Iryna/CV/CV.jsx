@@ -22,7 +22,7 @@ const Con = () => {
               creating website, gain experience and to develop as a specialist.
             </p>
             <br />
-            <p>
+            <p> 
               <span style={{ color: "white" }}>My strengths are:</span> the
               ability to convey and defend one's ideas, sociability, maximum
               efficiency in work, responsible and conscientious performance of

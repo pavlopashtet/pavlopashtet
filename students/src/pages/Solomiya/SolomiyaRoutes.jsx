@@ -1,5 +1,6 @@
 export const SolRoutes = {
     CV: "/cv",
     MAIN: '/',
-    STATE: "/liftState"
+    STATE: "/liftState",
+    INPUT: "/inputs"
 }
