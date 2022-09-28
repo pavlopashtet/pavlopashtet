@@ -4,9 +4,8 @@ import {SolutionRoutes} from "./VitaliiRouts";
 import {RedirectRoutes} from "../../common/Routes";
 import styles from "./CVpages/VitaliiPage.module.scss"
 import VitaliiComponentPage from "./CVpages/CVPageVitalii";
-import {SolutionRoutes} from "../Vitalii/VitaliiRouts";
 import VitComponent from "../Vitalii/Components/VitDumb";
-import {SolutionRoutes} from "../Vitalii/VitaliiRouts";
+
 
 const Main = () => {
     return (
@@ -18,7 +17,7 @@ const Main = () => {
                 <span style={{fontSize: '20px'}}>CV</span>
             </Link>
 
-            <Link className={styles.box} to={`${RedirectRoutes.Vitalii}${SolRoutes.STATE}`}>
+            <Link className={styles.box} to={`${RedirectRoutes.Vitalii}${SolutionRoutes.STATE}`}>
                 <span style={{fontSize: '20px'}}>States</span>
             </Link>
 
