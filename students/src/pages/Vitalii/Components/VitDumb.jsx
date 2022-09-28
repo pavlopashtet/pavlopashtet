@@ -11,7 +11,7 @@ const VitComponent = () => {
     return (
         <>
             <div className={styles.wrapper}>
-                <div className={styles.squareContainer} style={{backgroundColor: btnColor}}>
+                <div className={styles.squareContent} style={{backgroundColor: btnColor}}>
                 </div>
 
 

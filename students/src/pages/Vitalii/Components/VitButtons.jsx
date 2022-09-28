@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./VitDumb.scss"
 
-const randColor = () =>  {
+const randomColor = () =>  {
     return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
 }
 
@@ -12,7 +12,7 @@ export const ButtonOne = ({setBtnColor}) => {
             <button
                 className={styles.button}
                 onClick={() => {
-                    setBtnColor(randColor());
+                    setBtnColor(randomColor());
                 }}>
                 Random
             </button>
