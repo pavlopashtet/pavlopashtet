@@ -1,0 +1,20 @@
+.box{
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+.btn{
+  width: 200px;
+  height: 30px;
+  background: #61dafb;
+  display: block;
+  margin: 10px;
+
+
+}

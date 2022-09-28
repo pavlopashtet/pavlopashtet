@@ -2,7 +2,7 @@ import React from "react";
 import {Link, Route, Routes} from "react-router-dom";
 import {AppRoutes, RedirectRoutes} from "../../common/Routes";
 import NataliaCV from "./Natalia.cv";
-
+import NataComp from "./DumbCompNata/CompNata";
 
 
 class Natalia extends React.Component{
@@ -29,12 +29,15 @@ class Natalia extends React.Component{
 
         <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.CV}`}>
             <span style={{ fontSize: "50px" }}>CV</span>
-            {/*<span style={{ fontSize: "50px" }}>BTN</span>*/}
         </Link>
+                <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.BTN}`}>
+                    <span style={{ fontSize: "50px" }}>BTN</span>
+                </Link>
         <Routes>
             <Route path={AppRoutes.CV} element={<NataliaCV/>} />
-            {/*<Route path={AppRoutes.BTN} element={<NataComp/>}/>*/}
+            <Route path={AppRoutes.BTN} element={<NataComp/>}/>
         </Routes>
+
 
 
     </div>

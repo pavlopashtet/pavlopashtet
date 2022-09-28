@@ -5,11 +5,13 @@ export const AppRoutes = {
     MENTOR: "/mentor/*",
     HOC: "/hoc",
     CV: "/cv",
+    NATALIA: "/natalia/*",
     Solomiya: '/solomiya/*',
     Iryna:"/Iryna/*",
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
     FORM: "/form",
+    BTN: "/NataComp"
 
 }
 
