@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./VitDumb.scss"
-import ButtonOne from "./VitButtons";
-import ButtonTwo from "./VitButtons";
+import {ButtonOne} from "./VitButtons";
+import {ButtonTwo} from "./VitButtons";
 
 const VitDumbComponent = () => {
 
