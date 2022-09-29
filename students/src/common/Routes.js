@@ -27,6 +27,7 @@ export const RedirectRoutes = {
     Iryna:"/Iryna",
     CV:"/cv",
     NATALIA: "/natalia",
-    MainComponent:"/liftState"
+    MainComponent:"/liftState",
+
 }
 

@@ -33,11 +33,11 @@ class Natalia extends React.Component{
                 <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.BTN}`}>
                     <span style={{ fontSize: "50px" }}>BTN</span>
                 </Link>
+
         <Routes>
-            <Route path={AppRoutes.CV} element={<NataliaCV/>} />
+            <Route path={AppRoutes.CV} element={<NataliaCV/>}/>
             <Route path={AppRoutes.BTN} element={<NataComp/>}/>
         </Routes>
-
 
 
     </div>
