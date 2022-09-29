@@ -1,22 +1,22 @@
 import React from "react";
-import OneBtn from "./OneBtn";
+import OneBtn from "./BtnOne";
 import styles from "../../Natalia/DumbCompNata/CompNata.module.scss";
-import TwoBtn from "./Two.Btn";
+import TwoBtn from "./BtnTwo";
 
 
 const NataComp = () => {
     const [hex,setHex] = useState("#Box");
-    const handleOneBtn = () => {
-        setHex(false)
-    }
+    // const handleOneBtn = () => {
+    //     setHex(false)
+    // }
 
     return(
         <>
             <div className={styles.box} style={{backgroundColor: hex}}></div>
-            <BtnOne
+            <OneBtn
                 setHex={setHex}
            />
-            <BtnTwo
+            <TwoBtn
                 // setHex={setHex}
                 // hex = {hex}
                 handelClick= { () => hex === "red" ? setHex("purple") :setHex("orange") }
