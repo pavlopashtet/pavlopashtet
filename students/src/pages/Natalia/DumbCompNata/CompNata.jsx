@@ -1,9 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
+import OneBtn from "./OneBtn";
 import styles from "../../Natalia/DumbCompNata/CompNata.module.scss";
-import BtnOne from "./BtnOne";
-import BtnTwo from "./BtnTwo";
-
-
+import TwoBtn from "./Two.Btn";
 
 
 const NataComp = () => {
