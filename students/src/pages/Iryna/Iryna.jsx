@@ -3,14 +3,17 @@ import React, { useState } from "react";
 import { AppRoutes, RedirectRoutes } from "../../common/Routes";
 import Con from "./CV/CV";
 import { Link } from "react-router-dom";
+import MainComponent from "./liftState/liftState";
 // import NotFoundPAge from "../404/NotFoundPAge";
+import styles from "./Iryna.module.css";
 
 const Iryna = () => {
   const [action, setAction] = useState("true");
   return (
-    <>
-      <button
-        style={{ margin: "50px", width: "200px", height: "100px" }}
+    <div className={styles.Main}>
+
+<button
+        style={{ margin: "50px 800px", width: "300px", height: "150px", backgroundColor:"deeppink", color:"white"}}
         onClick={() => setAction(!action)}
       >
         {" "}
@@ -21,11 +24,19 @@ const Iryna = () => {
       <Link to={`${RedirectRoutes.Iryna}${AppRoutes.CV}`}>
         <span style={{ fontSize: "50px" }}>CV</span>
       </Link>    
+      <Link to={`${RedirectRoutes.Iryna}${AppRoutes.MainComponent}`}>
+        <span style={{ fontSize: "50px" }}>liftState</span>
+      </Link>  
       <Routes>
         <Route path={AppRoutes.CV} element={<Con/>} />
+        <Route path={AppRoutes.MainComponent} element={<MainComponent/>} />
       </Routes>
-     
-    </>
+
+
+    </div>
+    
+
+    
     
   );
 };
