@@ -16,7 +16,6 @@ const Buttons = ({showInfo, setShowInfo}) => {
     }
     useEffect(()=>{
         // console.log("here")
-        {inputValue.length ===4 && inputValue === "0000" && count === 5 && setScript(true)}
 
     },[inputValue, count])
     return (
