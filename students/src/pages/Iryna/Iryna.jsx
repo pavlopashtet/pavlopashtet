@@ -11,7 +11,7 @@ import MainForm from "./formState/MainForm";
 const Iryna = () => {
   const [action, setAction] = useState("true");
   return (
-    <div className={styles.Main}>      
+    <div className={styles.Main}>
       <button
         style={{
           margin: "50px 800px",
