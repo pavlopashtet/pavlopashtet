@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import MainComponent from "./liftState/liftState";
 // import NotFoundPAge from "../404/NotFoundPAge";
 import styles from "./Iryna.module.css";
+import InputState from "./inputState/inputState";
 
 const Iryna = () => {
   const [action, setAction] = useState("true");
@@ -27,9 +28,13 @@ const Iryna = () => {
       <Link to={`${RedirectRoutes.Iryna}${AppRoutes.MainComponent}`}>
         <span style={{ fontSize: "50px" }}>liftState</span>
       </Link>  
+      <Link to={`${RedirectRoutes.Iryna}${AppRoutes.InputState}`}>
+        <span style={{ fontSize: "50px" }}>InputState</span>
+      </Link> 
       <Routes>
         <Route path={AppRoutes.CV} element={<Con/>} />
         <Route path={AppRoutes.MainComponent} element={<MainComponent/>} />
+        <Route path={AppRoutes.InputState} element={<InputState/>} />
       </Routes>
 
 

@@ -1,0 +1,29 @@
+.inputState {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #fcfcfc;
+    background-color: aquamarine;
+}
+
+.preview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+.button {
+    width: 100px;
+    margin: 10px;
+}
+
+.input {
+    margin: 10px;
+}
+
+.p {
+    color: #ffffff;
+}
