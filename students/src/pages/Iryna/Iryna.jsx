@@ -7,6 +7,7 @@ import MainComponent from "./liftState/liftState";
 // import NotFoundPAge from "../404/NotFoundPAge";
 import styles from "./Iryna.module.css";
 import InputState from "./inputState/inputState";
+import FormState from "./formState/formState";
 
 const Iryna = () => {
   const [action, setAction] = useState("true");
@@ -31,10 +32,14 @@ const Iryna = () => {
       <Link to={`${RedirectRoutes.Iryna}${AppRoutes.InputState}`}>
         <span style={{ fontSize: "50px" }}>InputState</span>
       </Link> 
+      <Link to={`${RedirectRoutes.Iryna}${AppRoutes.FormState}`}>
+        <span style={{ fontSize: "50px" }}>FormState</span>
+      </Link> 
       <Routes>
         <Route path={AppRoutes.CV} element={<Con/>} />
         <Route path={AppRoutes.MainComponent} element={<MainComponent/>} />
         <Route path={AppRoutes.InputState} element={<InputState/>} />
+        <Route path={AppRoutes.FormState} element={<FormState/>} />
       </Routes>
 
 

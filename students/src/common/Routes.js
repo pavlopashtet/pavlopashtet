@@ -11,7 +11,8 @@ export const AppRoutes = {
     Sasha: "/sasha/*",
     FORM: "/form",
     MainComponent:"/liftState",
-    InputState:"/inputState"
+    InputState:"/inputState",
+    FormState:"/formState"
 
 }
 
@@ -27,6 +28,7 @@ export const RedirectRoutes = {
     Iryna:"/Iryna",
     CV:"/cv",
     MainComponent:"/liftState",
-    InputState:"/inputState"
+    InputState:"/inputState",
+    FormState:"/formState"
 }
 
