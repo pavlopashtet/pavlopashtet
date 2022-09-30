@@ -21,8 +21,9 @@ const NataComp = () => {
                 setHex={setHex()}
            />
             <BtnTwo
-                setHex={setHex()}
-                hex = {hex}
+                // setHex={setHex()}
+                // hex = {hex}
+                onClick = {(setHex("red") ? setHex("purpl") :setHex("orange"))}
             />
         </>
     )
