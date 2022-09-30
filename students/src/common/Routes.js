@@ -31,6 +31,7 @@ export const RedirectRoutes = {
     Sasha: "/sasha",
     Iryna:"/Iryna",
     CV:"/cv",
-    MainComponent:"/liftState"
+    MainComponent:"/liftState",
+    NATALIA: "/natalia"
 }
 
