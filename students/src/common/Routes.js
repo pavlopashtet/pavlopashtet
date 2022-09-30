@@ -11,7 +11,8 @@ export const AppRoutes = {
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
     FORM: "/form",
-    BTN: "/NataComp"
+    BTN: "/NataComp",
+    INPUT:"/NataInputComp"
 
 }
 
@@ -26,7 +27,7 @@ export const RedirectRoutes = {
     Sasha: "/sasha",
     Iryna:"/Iryna",
     CV:"/cv",
-    NATALIA: "/natalia",
+    NATALIA:"/natalia",
     MainComponent:"/liftState",
 
 }

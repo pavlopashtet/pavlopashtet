@@ -3,6 +3,7 @@ import {Link, Route, Routes} from "react-router-dom";
 import {AppRoutes, RedirectRoutes} from "../../common/Routes";
 import NataliaCV from "./Natalia.cv";
 import NataComp from "./DumbCompNata/CompNata";
+import NataInputComp from "./InputNatalia/InputNataliaPage";
 
 
 class Natalia extends React.Component{
@@ -33,10 +34,15 @@ class Natalia extends React.Component{
                 <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.BTN}`}>
                     <span style={{ fontSize: "50px" }}>BTN</span>
                 </Link>
+                <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.INPUT}`}>
+                    <span style={{ fontSize: "50px" }}>INPUT</span>
+                </Link>
 
         <Routes>
             <Route path={AppRoutes.CV} element={<NataliaCV/>}/>
             <Route path={AppRoutes.BTN} element={<NataComp/>}/>
+            <Route path={AppRoutes.INPUT} element={<NataInputComp/>}/>
+
         </Routes>
 
 
