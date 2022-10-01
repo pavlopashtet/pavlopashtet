@@ -15,6 +15,7 @@ import Vitalii from "./pages/Vitalii/Vitalii";
 import SashaComp from "./pages/SashaLsnk/lysenko";
 import "rsuite/dist/rsuite.min.css";
 import ConsultContainer from "./pages/additional pages/consult/Consult";
+import AxiosPage from "./pages/Mentor/Axios";
 
 
 const App = () => {
@@ -54,6 +55,7 @@ const App = () => {
                 {/*}/>*/}
                 <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
+                <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
             </Routes>
         </>
