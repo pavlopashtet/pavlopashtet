@@ -10,6 +10,8 @@ import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
 import SashaComp from "./pages/SashaLsnk/lysenko";
 import "rsuite/dist/rsuite.min.css";
+import ConsultContainer from "./pages/additional pages/consult/Consult";
+import AxiosPage from "./pages/Mentor/Axios";
 
 
 const App = () => {
@@ -41,12 +43,14 @@ const App = () => {
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
                 <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
                 <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
+                <Route path={AppRoutes.CONSULT} element={<ConsultContainer/>}/>
                 {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
                 {/*<Route path={AppRoutes.MENTOR} element={*/}
                 {/*    <MentorRoute authUser={authUser} Component={MentorContainerPage}/>*/}
                 {/*}/>*/}
                 <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
+                <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
             </Routes>
         </>
