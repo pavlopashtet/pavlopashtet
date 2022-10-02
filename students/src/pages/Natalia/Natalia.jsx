@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link, Route, Routes} from "react-router-dom";
 import {AppRoutes, RedirectRoutes} from "../../common/Routes";
 import NataliaCV from "./Natalia.cv";
 import NataComp from "./DumbCompNata/CompNata";
-import NataInputComp from "./InputNatalia/InputNataliaPage";
+// import FormNataState from "./FormNata/FormNata";
+import NataCompInput from "../Natalia/InputNatalia/InputNataliaPage"
 
-
+// const [FormValue, setFormValue] = useState();
 class Natalia extends React.Component{
     constructor(props) {
         super(props);
@@ -37,11 +38,17 @@ class Natalia extends React.Component{
                 <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.INPUT}`}>
                     <span style={{ fontSize: "50px" }}>INPUT</span>
                 </Link>
+                <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.FORM}`}>
+                    <span style={{ fontSize: "50px" }}>Form</span>
+                </Link>
 
         <Routes>
             <Route path={AppRoutes.CV} element={<NataliaCV/>}/>
             <Route path={AppRoutes.BTN} element={<NataComp/>}/>
-            <Route path={AppRoutes.INPUT} element={<NataInputComp/>}/>
+            <Route path={AppRoutes.INPUT} element={<NataCompInput/>}/>
+            {/*<Route path={AppRoutes.FORM} element={< FormNataState/>}/>*/}
+
+
 
         </Routes>
 
