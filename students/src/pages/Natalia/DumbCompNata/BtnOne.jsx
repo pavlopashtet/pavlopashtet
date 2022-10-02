@@ -9,9 +9,8 @@ const BtnOne= ({setHex}) =>{
     return (
         <button
             className={styles.btn}
-            onClick={() => {
-                setHex(randomColor)
-            }}
+            onClick={() => setHex(randomColor)
+            }
         >
             One
         </button>

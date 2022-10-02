@@ -8,28 +8,24 @@ import BtnTwo from "./BtnTwo";
 
 const NataComp = () => {
     const [hex,setHex] = useState("#Box");
-    const handleOneBtn = () =>{
+    const handleOneBtn = () => {
         setHex(false)
     }
 
-
-
     return(
         <>
-            <div className={styles.box}></div>
+            <div className={styles.box} style={{backgroundColor: hex}}></div>
             <BtnOne
-                setHex={setHex()}
+                setHex={setHex}
            />
             <BtnTwo
-                // setHex={setHex()}
+                // setHex={setHex}
                 // hex = {hex}
-                onClick = {(setHex("red") ? setHex("purpl") :setHex("orange"))}
+                handelClick= { () => hex === "red" ? setHex("purple") :setHex("orange") }
             />
         </>
     )
 }
-
-
 
 export default NataComp;
 

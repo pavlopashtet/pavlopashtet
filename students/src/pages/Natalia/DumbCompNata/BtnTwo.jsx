@@ -1,11 +1,10 @@
 import styles from "./CompNata.module.scss";
 
-const BtnTwo= ({nameofClass}) =>{
+const BtnTwo= ({nameofClass,handelClick}) =>{
     return (
         <button
-            className={nameofClass}
-            className={styles.btn}
-            // onClick={handelClick}
+            className={`${nameofClass} ${styles.btn}`}
+            onClick={handelClick}
 
   >
             Two
