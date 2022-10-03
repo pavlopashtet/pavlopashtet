@@ -15,7 +15,6 @@ const VitComponent = () => {
                 </div>
 
 
-
                 <ButtonOne
                     setBtnColor = {setBtnColor}
                 />
