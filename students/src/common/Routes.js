@@ -12,6 +12,7 @@ export const AppRoutes = {
     FORM: "/form",
     MainComponent:"/liftState",
     CONSULT: "/consult",
+    AXIOS: "/axios"
 }
 
 export const RedirectRoutes = {
