@@ -7,7 +7,6 @@ const initialData = {
     age: "36",
     agree: true,
 }
-
 const Forms = () => {
     const [ formValues, setFormValues ] = useState({});
     const [ data, setData ] = useState();
@@ -123,5 +122,6 @@ const Forms = () => {
         </>
     )
 }
+
 
 export default Forms
