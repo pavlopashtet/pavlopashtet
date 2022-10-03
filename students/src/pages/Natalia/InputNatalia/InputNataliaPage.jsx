@@ -15,14 +15,6 @@ const NataCompInput = () => {
     const [ textState,  setTextState ] = useState("Text");
     const [ ageState,  setAgeState ] = useState("Age");
     const [ dataState,  setDataState ] = useState("Data");
-};
-
-    // const showClickInfo = (info) => console.log(`Clicked on ${info}`)
-    // const showInfo = () => console.log(`Clicked`)
-    // //
-    // useEffect(() => {
-    //         // console.log(inputState)
-    //     },
 
 
   return (
@@ -32,43 +24,55 @@ const NataCompInput = () => {
                     ? <Input className={styles.box}
                              placeholder="Enter name"
                              value={firstNameState}
-                             onChange={(value) => setfirstNameState((value))}
+                             onChange={(value) => setFirstNameState((value))}
                     />
                     : <p className={styles.p}>{firstNameState}</p>
+            }
+            {
                 editMode
                         ? <Input className={styles.box}
                                  placeholder="Enter second name"
                                  value={secondNameState}
-                                 onChange={(value) => setsecondNameState((value))}
+                                 onChange={(value) => setSecondNameState((value))}
                         />
                         : <p className={styles.p}>{secondNameState}</p>
+            }
+            {
                 editMode
                             ? <Input className={styles.box}
                                      placeholder="Enter some text"
                                      value={textState}
-                                     onChange={(value) => settextState((value))}
+                                     onChange={(value) => setTextState((value))}
                             />
                             : <p className={styles.p}>{textState}</p>
+            }
+            {
                 editMode
                                 ? <Input className={styles.box}
                                          placeholder="Enter your age"
                                          value={ageState}
-                                         onChange={(value) => setageState((value))}
+                                         onChange={(value) => setAgeState((value))}
                                 />
                                 : <p className={styles.p}>{ageState}</p>
+            }
+            {
                 editMode
                                     ? <Input className={styles.box}
                                              placeholder="Enter some data"
                                              value={dataState}
-                                             onChange={(value) => setdataState((value))}
+                                             onChange={(value) => setDataState((value))}
                                     />
                                     : <p className={styles.p}>{dataState}</p>
+            }
+            {
 
             }
                 <Button className={styles.btn} color="green" appearance="primary"
                         onClick={() => setEditMode((prevState) => !prevState)}>
             {editMode ? "Save" : "Edit"}
                 </Button>
+
+
 
                 </div>
     )
