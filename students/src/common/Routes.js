@@ -17,7 +17,6 @@ export const AppRoutes = {
     InputState:"/inputState",
     FormState:"/formState",
     CONSULT: "/consult",
-    AXIOS: "/axios"
 }
 
 export const RedirectRoutes = {
