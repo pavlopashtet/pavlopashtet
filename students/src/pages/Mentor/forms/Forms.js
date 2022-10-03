@@ -6,7 +6,6 @@ const initialData = {
     age: "36",
     agree: true,
 }
-
 const Forms = () => {
     const [ formValues, setFormValues ] = useState({});
 
@@ -73,5 +72,6 @@ const handleSubmit =(e) => {
         </form>
     )
 }
+
 
 export default Forms

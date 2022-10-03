@@ -1,10 +1,10 @@
 .clearfix {
     clear: both;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
-.container {
+.container {    
     width: 70%;
     margin: 0 auto;
     background-color: white;
