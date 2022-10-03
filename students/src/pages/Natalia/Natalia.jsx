@@ -5,6 +5,7 @@ import NataliaCV from "./Natalia.cv";
 import NataComp from "./DumbCompNata/CompNata";
 // import FormNataState from "./FormNata/FormNata";
 import NataCompInput from "../Natalia/InputNatalia/InputNataliaPage"
+import FormNataState from "./FormNata/FormNata";
 
 // const [FormValue, setFormValue] = useState();
 class Natalia extends React.Component{
@@ -46,7 +47,7 @@ class Natalia extends React.Component{
             <Route path={AppRoutes.CV} element={<NataliaCV/>}/>
             <Route path={AppRoutes.BTN} element={<NataComp/>}/>
             <Route path={AppRoutes.INPUT} element={<NataCompInput/>}/>
-            {/*<Route path={AppRoutes.FORM} element={< FormNataState/>}/>*/}
+            <Route path={AppRoutes.FORM} element={< FormNataState/>}/>
 
 
 

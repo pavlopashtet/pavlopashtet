@@ -4,7 +4,10 @@ import React, {useState} from "react";
 
 
 const FormNataState = () => {
-    const [formValue, setFormValue] = useState("kjb");
+    const [formValue, setFormValue] = useState({
+        name:"",
+        email:"",
+    })
     // const handleChange = (event) =>{
     //     setFormValue(event.target.event);
     // }
@@ -16,13 +19,16 @@ const FormNataState = () => {
         <>
         <form >
               <label>
-                  Enter text
-                  <input name="usertext" value={formValue} onChange={this.handleChange}/>
+                 <h1> Enter text</h1>
+                  <input name="usertext" value={formValue.name}
+                         onChange={(event) => setFormValue(event.target.value)
+                         }/>
               </label>
             </form>
-        <button onClick={this.handleSubmit}>Submit</button>
+        <button>Submit</button>
         </>
     )
+
 
 }
 export default FormNataState;

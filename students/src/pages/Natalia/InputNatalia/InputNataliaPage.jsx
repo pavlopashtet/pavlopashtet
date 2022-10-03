@@ -10,8 +10,8 @@ import React, {useEffect, useState} from "react";
 
 const NataCompInput = () => {
     const [ editMode, setEditMode ] = useState(false);
-    const [ firstNameState,  setFirstNameState ] = useState("FirstName");
-    const [ secondNameState,  setSecondNameState ] = useState("SecondName");
+    const [ firstNameState,  setFirstNameState ] = useState("First Name");
+    const [ secondNameState,  setSecondNameState ] = useState("Second Name");
     const [ textState,  setTextState ] = useState("Text");
     const [ ageState,  setAgeState ] = useState("Age");
     const [ dataState,  setDataState ] = useState("Data");
@@ -72,9 +72,13 @@ const NataCompInput = () => {
             {editMode ? "Save" : "Edit"}
                 </Button>
 
+            <h3>{firstNameState.name}</h3>
+            <h3>{secondNameState.name}</h3>
 
 
-                </div>
+
+        </div>
+
     )
             }
 
