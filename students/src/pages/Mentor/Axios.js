@@ -4,11 +4,28 @@ import { deleteCharacter, getCharacter } from "../../api/apiCalls";
 
 const AxiosPage = () => {
     const [ data, setData ] = useState();
+    const [ error, setError ] = useState(null);
 
     useEffect(() => {
         getCharacter()
-            .then((data) => setData(data.data))
+            .then((data) => {
+                setData(data.data)
+                setError(null)
+            })
+            .catch((e) => setError(e))
+                .finally(()=> console.log(" Finally done"))
+
+        // getData()
     }, [])
+
+    // const getData = async () => {
+    //      await fetch('https://rickandmortyapi.com/api/character')
+    //         .then((data) => data.json())
+    //         .then((data) => setData(data))
+    //         .catch((e) => console.warn(e))
+    //         .finally(()=> console.log(" Finally done"))
+
+    // }
 
     // const deleteUser = async (id) =>{
     //     setLoading(true)
@@ -31,7 +48,9 @@ const AxiosPage = () => {
         <div>
             <h1>Axios</h1>
             {/*{error && <span>{error.response.message}</span>}*/}
-            {data && data?.results.map((item) => (
+
+
+            {data && data?.results?.map((item) => (
                     <div key={item.id}>
                             <p>{item.name}</p>
                         <img src={item.image} alt=""/>
@@ -39,6 +58,7 @@ const AxiosPage = () => {
                     </div>
                 )
             )}
+            {error && <h1>{error.message}</h1>}
             )
         </div>
     )
