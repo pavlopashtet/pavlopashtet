@@ -14,6 +14,8 @@ export const AppRoutes = {
     BTN: "/NataComp",
     INPUT:"/NataInputComp",
     MainComponent:"/liftState",
+    InputState:"/inputState",
+    FormState:"/formState",
     CONSULT: "/consult",
     AXIOS: "/axios"
 }
@@ -31,6 +33,7 @@ export const RedirectRoutes = {
     CV:"/cv",
     NATALIA:"/natalia",
     MainComponent:"/liftState",
-
+    InputState:"/inputState",
+    FormState:"/formState"
 }
 
