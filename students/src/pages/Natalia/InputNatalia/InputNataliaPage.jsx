@@ -1,12 +1,20 @@
 import styles from "../../Natalia/InputNatalia/InputNataliaPage.module.scss";
-import button from "../../additional pages/consult/page components/Button";
 import {Button, Input} from "rsuite";
 import React, {useEffect, useState} from "react";
 
-//
-// const NataCompInput = ({firstName,secondName,text,age, data}) => {
 
-// const [ inputState, setInputState ] = useState({
+
+export const Container = ({ firstName, secondName,text,age, data }) => {
+    return (
+        <div className={styles.container}>
+            <h4>{firstName}</h4>
+            <h5>{secondName}</h5>
+            <h4>{text}</h4>
+            <h4>{age}</h4>
+            <h4>{data}</h4>
+        </div>
+    );
+};
 
 const NataCompInput = () => {
     const [ editMode, setEditMode ] = useState(false);
@@ -18,13 +26,13 @@ const NataCompInput = () => {
 
 
   return (
-        <div>
+        <div className={styles.wrap}>
             {
                 editMode
                     ? <Input className={styles.box}
                              placeholder="Enter name"
                              value={firstNameState}
-                             onChange={(value) => setFirstNameState((value))}
+                             onChange={(value) => setFirstNameState(value)}
                     />
                     : <p className={styles.p}>{firstNameState}</p>
             }
@@ -33,7 +41,7 @@ const NataCompInput = () => {
                         ? <Input className={styles.box}
                                  placeholder="Enter second name"
                                  value={secondNameState}
-                                 onChange={(value) => setSecondNameState((value))}
+                                 onChange={(value) => setSecondNameState(value)}
                         />
                         : <p className={styles.p}>{secondNameState}</p>
             }
@@ -42,7 +50,7 @@ const NataCompInput = () => {
                             ? <Input className={styles.box}
                                      placeholder="Enter some text"
                                      value={textState}
-                                     onChange={(value) => setTextState((value))}
+                                     onChange={(value) => setTextState(value)}
                             />
                             : <p className={styles.p}>{textState}</p>
             }
@@ -51,7 +59,7 @@ const NataCompInput = () => {
                                 ? <Input className={styles.box}
                                          placeholder="Enter your age"
                                          value={ageState}
-                                         onChange={(value) => setAgeState((value))}
+                                         onChange={(value) => setAgeState(value)}
                                 />
                                 : <p className={styles.p}>{ageState}</p>
             }
@@ -60,28 +68,35 @@ const NataCompInput = () => {
                                     ? <Input className={styles.box}
                                              placeholder="Enter some data"
                                              value={dataState}
-                                             onChange={(value) => setDataState((value))}
+                                             onChange={(value) => setDataState(value)}
                                     />
                                     : <p className={styles.p}>{dataState}</p>
             }
             {
 
             }
-                <Button className={styles.btn} color="green" appearance="primary"
+                <Button className={styles.btn}
+                        color="green"
+                        appearance="primary"
                         onClick={() => setEditMode((prevState) => !prevState)}>
             {editMode ? "Save" : "Edit"}
                 </Button>
 
-            <h3>{firstNameState.name}</h3>
-            <h3>{secondNameState.name}</h3>
 
+            <Container
+            firstName = {firstNameState}
+            SecondName = {secondNameState}
+            Text = {textState}
+            Age = {ageState}
+            Data = {dataState}
+            >
 
+            </Container>
 
         </div>
 
     )
             }
-
 
 export default NataCompInput;
 
@@ -89,13 +104,3 @@ export default NataCompInput;
 
 
 
-
-    // <div className={styles.container}>
-    //     <h3>{firstName}</h3>First name
-    //     <input name/>
-    //     <h3>{secondName}</h3>
-    //     <h3>{text}</h3>
-    //     <h3>{age}</h3>
-    //     <h3>{data}</h3>
-    // </div>
-    //

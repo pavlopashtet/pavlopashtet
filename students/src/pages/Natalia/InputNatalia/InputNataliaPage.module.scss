@@ -1,11 +1,23 @@
 .box{
   width: 100%;
   height: 30px;
+  display: flex;
+  flex-direction: column;
 }
+
 .btn{
   width: 90px;
   height: 50px;
 }
+
 .p{
   color: blue;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #a9daf6;
 }
