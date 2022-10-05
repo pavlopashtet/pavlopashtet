@@ -1,19 +1,28 @@
 import { useEffect, useState } from "react";
 import { Endpoints } from "../../api/Endpoints";
 import { deleteCharacter, getCharacter } from "../../api/apiCalls";
+import { charactersActions } from "../../redux/action/charactersSctions";
+import { useDispatch, useSelector } from "react-redux";
 
 const AxiosPage = () => {
-    const [ data, setData ] = useState();
+    const dispatch = useDispatch()
+    const characters = useSelector((state) => state.characters.items?.data?.results)
+    // const [ data, setData ] = useState();
     const [ error, setError ] = useState(null);
 
     useEffect(() => {
+        dispatch(charactersActions.setLoading(true))
         getCharacter()
             .then((data) => {
-                setData(data.data)
+                // setData(data.data)
+                dispatch(charactersActions.addCharacter(data))
                 setError(null)
             })
             .catch((e) => setError(e))
-                .finally(()=> console.log(" Finally done"))
+                .finally(()=> {
+                    dispatch(charactersActions.setLoading(false))
+                    console.log(" Finally done")
+                })
 
         // getData()
     }, [])
@@ -41,8 +50,8 @@ const AxiosPage = () => {
     // }
 
     useEffect(() => {
-        console.log("data", data)
-    }, [ data ])
+        console.log("characters", characters)
+    }, [ characters ])
 
     return (
         <div>
@@ -50,7 +59,7 @@ const AxiosPage = () => {
             {/*{error && <span>{error.response.message}</span>}*/}
 
 
-            {data && data?.results?.map((item) => (
+            {characters && characters?.map((item) => (
                     <div key={item.id}>
                             <p>{item.name}</p>
                         <img src={item.image} alt=""/>
