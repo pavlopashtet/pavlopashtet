@@ -4,7 +4,7 @@ import { charactersReducerTypes } from "./actionTypes";
 const initialState = {
     items: {},
     error: null,
-    loading: false
+    loading: true
 }
 
 const charactersReducer = (state = initialState, action) => {
@@ -12,7 +12,18 @@ const charactersReducer = (state = initialState, action) => {
         case charactersReducerTypes.ADD_CHARACTERS:
             return {
                 ...state,
-                items: action.data
+                items: action.data,
+            }
+        case charactersReducerTypes.ADD_MORE_CHARACTERS:
+            return {
+                ...state,
+                items: {
+                    info: action.data.info,
+                    results: [
+                        ...state.items.results,
+                        ...action.data.results
+                    ]
+                },
             }
         case charactersReducerTypes.SET_LOADING:
             return {

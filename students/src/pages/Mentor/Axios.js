@@ -1,30 +1,27 @@
 import { useEffect, useState } from "react";
 import { Endpoints } from "../../api/Endpoints";
 import { deleteCharacter, getCharacter } from "../../api/apiCalls";
-import { charactersActions } from "../../redux/action/charactersSctions";
+import { getCharactersThunk, getMoreCharactersThunk } from "../../redux/action/charactersSctions";
 import { useDispatch, useSelector } from "react-redux";
+
+const btnStyle = {
+    margin: "20px",
+   backgroundColor: "blue",
+    color: "yellow",
+    padding: "10px",
+}
 
 const AxiosPage = () => {
     const dispatch = useDispatch()
-    const characters = useSelector((state) => state.characters.items?.data?.results)
-    // const [ data, setData ] = useState();
-    const [ error, setError ] = useState(null);
+    const characters = useSelector((state) => state.characters.items?.results)
+    const info = useSelector((state) => state.characters.items?.info)
+    const isLoading = useSelector((state) => state.characters.loading)
+    const error = useSelector((state) => state.characters.error)
+    const getCharacters = () => dispatch(getCharactersThunk())
+    const getMoreCharacters = (url) => dispatch(getMoreCharactersThunk(url))
 
     useEffect(() => {
-        dispatch(charactersActions.setLoading(true))
-        getCharacter()
-            .then((data) => {
-                // setData(data.data)
-                dispatch(charactersActions.addCharacter(data))
-                setError(null)
-            })
-            .catch((e) => setError(e))
-                .finally(()=> {
-                    dispatch(charactersActions.setLoading(false))
-                    console.log(" Finally done")
-                })
-
-        // getData()
+        getCharacters();
     }, [])
 
     // const getData = async () => {
@@ -49,19 +46,19 @@ const AxiosPage = () => {
     //         .finally(()=> setLoading(false))
     // }
 
-    useEffect(() => {
-        console.log("characters", characters)
-    }, [ characters ])
+    // useEffect(() => {
+    //     console.log("characters", characters)
+    // }, [ characters ])
 
     return (
         <div>
             <h1>Axios</h1>
             {/*{error && <span>{error.response.message}</span>}*/}
 
-
-            {characters && characters?.map((item) => (
+            {isLoading && <h1>Loading ... </h1>}
+            {characters && !isLoading && characters?.map((item) => (
                     <div key={item.id}>
-                            <p>{item.name}</p>
+                        <p>{item.name}</p>
                         <img src={item.image} alt=""/>
                         {/*<button>Delete</button>*/}
                     </div>
@@ -69,6 +66,7 @@ const AxiosPage = () => {
             )}
             {error && <h1>{error.message}</h1>}
             )
+            <button style={btnStyle} onClick={() => getMoreCharacters(info.next)}> Get more</button>
         </div>
     )
 }
