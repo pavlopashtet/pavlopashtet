@@ -5,11 +5,17 @@ export const AppRoutes = {
     MENTOR: "/mentor/*",
     HOC: "/hoc",
     CV: "/cv",
+    NATALIA: "/natalia/*",
     Solomiya: '/solomiya/*',
     Iryna:"/Iryna/*",
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
-    FORM: "/form",    
+    FORM: "/form",
+    BTN: "/NataComp",
+    INPUT:"/NataInputComp",
+    MainComponent:"/liftState",
+    InputState:"/inputState",
+    FormState:"/formState",
     CONSULT: "/consult",
     AXIOS: "/axios"
 }
@@ -24,6 +30,10 @@ export const RedirectRoutes = {
     Vitalii: '/vitalii',
     Sasha: "/sasha",
     Iryna:"/Iryna",
-    CV:"/cv",    
+    CV:"/cv",
+    NATALIA:"/natalia",
+    MainComponent:"/liftState",
+    InputState:"/inputState",
+    FormState:"/formState"
 }
 

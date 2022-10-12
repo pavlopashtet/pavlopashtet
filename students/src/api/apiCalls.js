@@ -22,6 +22,8 @@ const instance = axios.create({
 export const getCharacter = () =>
     instance.get(Endpoints.CHARACTER)
 
+export const getMoreCharacters = (url) =>
+    axios.get(url)
 
 export const postPostToPlaceholder = (data) =>
     axios.post('https://jsonplaceholder.typicode.com/posts', data)
