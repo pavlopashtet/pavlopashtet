@@ -12,10 +12,7 @@ export const AppRoutes = {
     Sasha: "/sasha/*",
     FORM: "/form",
     BTN: "/NataComp",
-    INPUT:"/NataInputComp",
-    MainComponent:"/liftState",
-    InputState:"/inputState",
-    FormState:"/formState",
+    INPUT:"/NataInputComp",    
     CONSULT: "/consult",
     AXIOS: "/axios"
 }
@@ -31,9 +28,6 @@ export const RedirectRoutes = {
     Sasha: "/sasha",
     Iryna:"/Iryna",
     CV:"/cv",
-    NATALIA:"/natalia",
-    MainComponent:"/liftState",
-    InputState:"/inputState",
-    FormState:"/formState"
+    NATALIA:"/natalia"    
 }
 
