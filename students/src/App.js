@@ -5,6 +5,10 @@ import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import { AppRoutes } from "./common/Routes";
 import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
+import HOC from "./components/HOC/HOC";
+import { useEffect } from "react";
+import { MentorRoute } from "./components/HOC/MentorRoute";
+import NataliaComponent from "./pages/Natalia/Natalia";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
@@ -43,6 +47,7 @@ const App = () => {
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
                 <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
                 <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
+                <Route path={AppRoutes.NATALIA} element={<NataliaComponent/>}/>
                 <Route path={AppRoutes.CONSULT} element={<ConsultContainer/>}/>
                 {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
                 {/*<Route path={AppRoutes.MENTOR} element={*/}
@@ -52,6 +57,7 @@ const App = () => {
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
                 <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
+
             </Routes>
         </>
     );
