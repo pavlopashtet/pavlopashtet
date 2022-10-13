@@ -1,18 +1,66 @@
 import './App.css';
-import Miki from "./components/solomiya/hanets.jsx"
-// import Sasha from "./components/Sasha/Sasha";
-// import IhorComponent from "./components/Ihor/Ihor";
-import Iryna from './Iryna/Iryna';
-import SashaComp from "./components/SashaLsnk/lysenko.jsx"
+import Iryna from './pages/Iryna/Iryna';
+import Header from "./components/header/Header";
+import { Routes, Route } from "react-router-dom";
+import NotFoundPAge from "./pages/404/NotFoundPAge";
+import { AppRoutes } from "./common/Routes";
+import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
+import HOC from "./components/HOC/HOC";
+import { useEffect } from "react";
+import { MentorRoute } from "./components/HOC/MentorRoute";
+import NataliaComponent from "./pages/Natalia/Natalia";
+import IhorComponent from "./pages/Ihor/Ihor";
+import Solomiya from "./pages/Solomiya/Solomiya";
+import Vitalii from "./pages/Vitalii/Vitalii";
+import SashaComp from "./pages/SashaLsnk/lysenko";
+import "rsuite/dist/rsuite.min.css";
+import ConsultContainer from "./pages/additional pages/consult/Consult";
+import AxiosPage from "./pages/Mentor/Axios";
+
 
 const App = () => {
-  return (
-<div>
-  <Miki />
-  <Iryna/>
-  <SashaComp/>
-</div>
-  );
+    // const authUser = JSON.parse(localStorage.getItem("authUser"));
+    // useEffect(()=>{
+    //     localStorage.setItem("authUser", JSON.stringify({user: "Ihor", role: "mentor"}))
+    // },[])
+    //
+    // console.log(authUser);
+    return (
+        // <>
+        //     <Header />
+        //     <Routes>
+        //         <Route path="/404" element={<NotFoundPAge/>}/>
+        //         <Route path="*" element={<NotFoundPAge/>}/>
+        //     </Routes>
+        //     {/*<Miki/>*/}
+        //     {/*<Iryna/>*/}
+        //     {/*<SashaComp/>*/}
+        // {/*<Vitalii/>*/}
+        // </>
+        <>
+            <Header/>
+            <Routes>
+
+                <Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>
+                <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
+                <Route path={AppRoutes.Iryna} element={<Iryna/>}/>
+                <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
+                <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
+                <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
+                <Route path={AppRoutes.NATALIA} element={<NataliaComponent/>}/>
+                <Route path={AppRoutes.CONSULT} element={<ConsultContainer/>}/>
+                {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
+                {/*<Route path={AppRoutes.MENTOR} element={*/}
+                {/*    <MentorRoute authUser={authUser} Component={MentorContainerPage}/>*/}
+                {/*}/>*/}
+                <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
+                <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
+                <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
+                <Route path="*" element={<NotFoundPAge/>}/>
+
+            </Routes>
+        </>
+    );
 }
 
 export default App;
