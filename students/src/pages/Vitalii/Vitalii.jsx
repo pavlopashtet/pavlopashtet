@@ -4,6 +4,7 @@ import {SolutionRoutes} from "./VitaliiRouts";
 import {RedirectRoutes} from "../../common/Routes";
 import styles from "./CVpages/VitaliiPage.module.scss"
 import VitaliiComponentPage from "./CVpages/CVPageVitalii";
+import State from "./liftState/liftState";
 
 
 const Main = () => {
@@ -29,6 +30,7 @@ export const Vitalii = ()=> {
         <Routes>
             <Route path={SolutionRoutes.MAIN} element={<Main/>}/>
             <Route path={SolutionRoutes.CV} element={<VitaliiComponentPage/>}/>
+            <Route path={SolutionRoutes.STATE} element={<State/>}/>
         </Routes>
     )
 }

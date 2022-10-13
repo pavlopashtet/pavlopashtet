@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import {React,useState} from "react";
 import OneBtn from "./BtnOne";
 import styles from "../../Natalia/DumbCompNata/CompNata.module.scss";
 import TwoBtn from "./BtnTwo";
@@ -17,8 +17,6 @@ const NataComp = () => {
                 setHex={setHex}
            />
             <TwoBtn
-                // setHex={setHex}
-                // hex = {hex}
                 handelClick= { () => hex === "red" ? setHex("purple") :setHex("orange") }
             />
         </>
@@ -26,35 +24,3 @@ const NataComp = () => {
 }
 
 export default NataComp;
-
-
-
-
-
-// const NataComp = () => {
-//     // const [color,setColor] = useState('#000');
-//     // const [bgr, setBgr] = useState('#000')
-//
-//     // const handelClick = () => {
-//     //     const color = {
-//     //         r: getRgb(),
-//     //         g: getRgb(),
-//     //         b: getRgb()
-//     //
-//     //     };
-//     //     setColor(rgbToHex(color.r,color.g,color.b,))
-//
-//      return(
-//          <>
-//          <div className={styles.box}><h1>BOX</h1></div>
-//              <OneBtn
-//                  // setBgr = {(setBgr)}
-//              />
-//              <TwoBtn />
-// </>
-//      )
-//          }
-//
-//
-//
-// export default NataComp;
