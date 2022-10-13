@@ -1,14 +1,20 @@
-
+import {React,useState} from "react";
 import styles from "./liftState.module.css";
-import {React} from "react";
+import Button from "./DumbComponent/Button";
 
+function Color() {
+    return "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
 
 const State = () => {
-
+    const [background, setBackground] = useState("red");
     return (
         <div className={styles.container}>
-           <button>Color1</button>
-            <button>Color2</button>
+            <div className={styles.first} style={{ backgroundColor: background }}>
+            </div>
+            <Button setBackground={setBackground} Color={Color()}></Button>
+            <Button setBackground={setBackground} Color={Color()}></Button>
+
         </div>
     );
 };
