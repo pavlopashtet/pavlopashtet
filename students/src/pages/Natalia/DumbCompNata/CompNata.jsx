@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import OneBtn from "./BtnOne";
 import styles from "../../Natalia/DumbCompNata/CompNata.module.scss";
 import TwoBtn from "./BtnTwo";
