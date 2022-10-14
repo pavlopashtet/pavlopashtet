@@ -28,6 +28,7 @@ const MentorContainerPage = () => {
     return (
         <div className={styles.container}>
             <h1>Hello this is my page</h1>
+            <h2>New Group</h2>
             <h1>Hello this is my page</h1>
             <h1>Hello this is my page</h1>
             <h1>Hello this is my page</h1>
