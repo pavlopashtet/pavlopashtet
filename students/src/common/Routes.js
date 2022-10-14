@@ -27,6 +27,7 @@ export const RedirectRoutes = {
     MENTOR: "/mentor",
     HOC: "/hoc",
     Solomiya: '/solomiya',
+    NATALIA: "/natalia/*",
     Vitalii: '/vitalii',
     Sasha: "/sasha",
     Iryna:"/Iryna",
