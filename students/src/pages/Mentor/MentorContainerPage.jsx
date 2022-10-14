@@ -28,9 +28,6 @@ const MentorContainerPage = () => {
     return (
         <div className={styles.container}>
             <h1>Hello this is my page</h1>
-            <h2>New Group</h2>
-            <h2>New Group</h2>
-            <h2>New Group</h2>
             {/*<img src={mentorImg} alt="image"/>*/}
             <Link to={`${RedirectRoutes.MENTOR}${AppRoutes.CV}`}>
                 <span style={{fontSize: '20px'}}>CV</span>
