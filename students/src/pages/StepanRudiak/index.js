@@ -3,7 +3,7 @@ import React from 'react';
 const IndexRS = () => {
   return (
     <div>
-      test
+      test 2
     </div>
   );
 };
