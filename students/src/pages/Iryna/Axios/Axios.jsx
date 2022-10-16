@@ -14,7 +14,7 @@ const SampleAxios = () => {
 
   useEffect(() => {
     getCharacter().then((data) => {
-      setData(data.data)
+      setData(data.data);
       dispatch(IrynaAction.adding(data));
     });
   }, []);
