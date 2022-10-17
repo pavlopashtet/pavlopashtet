@@ -9,7 +9,8 @@ import styles from "./Iryna.module.css";
 import InputState from "./inputState/inputState";
 import MainForm from "./formState/MainForm";
 import SampleAxios from "./Axios/Axios";
-
+import SampleRedux from "./Redux/Redux";
+import SampleReduxThunk from "./ReduxThunk/ReduxThunk";
 const Iryna = () => {
   const [action, setAction] = useState("true");
   return (
@@ -44,12 +45,20 @@ const Iryna = () => {
       <Link to={`${RedirectRoutes.Iryna}${MyRoutes.AXIOS}`}>
         <span style={{ fontSize: "50px" }}>Axios</span>
       </Link>
+      <Link to={`${RedirectRoutes.Iryna}${MyRoutes.REDUX}`}>
+        <span style={{ fontSize: "50px" }}>Redux</span>
+      </Link>
+      <Link to={`${RedirectRoutes.Iryna}${MyRoutes.REDUX_THUNK}`}>
+        <span style={{ fontSize: "50px" }}>ReduxThunk</span>
+      </Link>
       <Routes>
         <Route path={MyRoutes.CV} element={<Con />} />
         <Route path={MyRoutes.MainComponent} element={<MainComponent />} />
         <Route path={MyRoutes.InputState} element={<InputState />} />
         <Route path={MyRoutes.FormState}  element={<MainForm/>}/>
         <Route path={MyRoutes.AXIOS}  element={<SampleAxios/>}/>
+        <Route path={MyRoutes.REDUX}  element={<SampleRedux/>}/>
+        <Route path={MyRoutes.REDUX_THUNK}  element={<SampleReduxThunk/>}/>
       </Routes>
     </div>
   );

@@ -3,5 +3,7 @@ export const MyRoutes = {
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",    
-    AXIOS: "/axios"
+    AXIOS: "/axios",
+    REDUX:"/redux",
+    REDUX_THUNK:"/redux_thunk"
 }

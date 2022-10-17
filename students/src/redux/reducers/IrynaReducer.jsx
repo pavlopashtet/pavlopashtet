@@ -3,7 +3,7 @@ import { IrynaReducerTypes } from "./IrynaReducerTypes";
 const initialState = {
   items: {},
   error: null,
-  loading: false,
+  loading: true,
 };
 
 export const IrynaReducer = (state = initialState, action) => {
@@ -23,6 +23,17 @@ export const IrynaReducer = (state = initialState, action) => {
         ...state,
         error: action.error,
       };
+      case IrynaReducerTypes.MORE_ADDING:
+        return {
+          ...state,
+          items: {
+            info: action.data.info,
+            results: [
+              ...state.items.results,
+              ...action.data.results
+            ]
+          }
+        };
     default:
       return state;
   }

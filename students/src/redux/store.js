@@ -6,7 +6,7 @@ import { IrynaReducer } from "./reducers/IrynaReducer";
 
 const rootReducer = combineReducers({
   characters: charactersReducer,
-  Iryna: IrynaReducer,
+  Iryna: IrynaReducer, 
 });
 
 const composeEnhancers = composeWithDevToolsDevelopmentOnly({

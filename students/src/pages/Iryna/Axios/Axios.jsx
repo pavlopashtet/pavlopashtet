@@ -1,21 +1,17 @@
 import { React, useEffect, useState } from "react";
-import { IrynaAction } from "../../../redux/action/IrynaAction";
-// import { Endpoints } from "./Endpoints";
 import { getCharacter } from "./apiCall";
-import { useDispatch } from "react-redux";
+
 
 const SampleAxios = () => {
-  const dispatch = useDispatch();
   const [data, setData] = useState();
-  const a = "https://rickandmortyapi.com/api/character/?page=2";
-  const More = (b) => {
-    b = "a";
-  };
+  // const a = "https://rickandmortyapi.com/api/character/?page=2";
+  // const More = (b) => {
+  //   b = "a";
+  // };
 
   useEffect(() => {
     getCharacter().then((data) => {
-      setData(data.data);
-      dispatch(IrynaAction.adding(data));
+      setData(data.data);     
     });
   }, []);
 
@@ -33,7 +29,7 @@ const SampleAxios = () => {
             <img src={item.image} alt="" />
           </div>
         ))}
-      <button onClick={More}>More</button>
+      {/* <button onClick={More}>More</button> */}
     </div>
   );
 };
