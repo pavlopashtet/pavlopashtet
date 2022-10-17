@@ -16,6 +16,7 @@ import SashaComp from "./pages/SashaLsnk/lysenko";
 import "rsuite/dist/rsuite.min.css";
 import ConsultContainer from "./pages/additional pages/consult/Consult";
 import AxiosPage from "./pages/Mentor/Axios";
+import NataliaKoziarComponent from './pages/NataliaKoziar/NataliaKoziarComponent';
 
 
 const App = () => {
@@ -48,6 +49,7 @@ const App = () => {
                 <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
                 <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
                 <Route path={AppRoutes.NATALIA} element={<NataliaComponent/>}/>
+                <Route path={AppRoutes.NataliaKoziar} element={<NataliaKoziarComponent/>}/>
                 <Route path={AppRoutes.CONSULT} element={<ConsultContainer/>}/>
                 {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
                 {/*<Route path={AppRoutes.MENTOR} element={*/}
