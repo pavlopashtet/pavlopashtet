@@ -45,7 +45,8 @@ const App = () => {
         <>
             <Header/>
             <Routes>
-                {/*<Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>*/}
+
+                <Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>
                 <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
                 <Route path={AppRoutes.Iryna} element={<Iryna/>}/>
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
