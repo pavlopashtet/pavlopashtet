@@ -4,11 +4,6 @@ import { getCharacter } from "./apiCall";
 
 const SampleAxios = () => {
   const [data, setData] = useState();
-  // const a = "https://rickandmortyapi.com/api/character/?page=2";
-  // const More = (b) => {
-  //   b = "a";
-  // };
-
   useEffect(() => {
     getCharacter().then((data) => {
       setData(data.data);     
