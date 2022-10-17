@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCharacter, postPostToPlaceholder } from "../../../api/apiCalls";
+import { Link } from "react-router-dom";
+import { RedirectRoutes } from "../../../common/Routes";
 
 const initialData = {
     firstname: "Ihor",
@@ -119,6 +121,9 @@ const Forms = () => {
                 )
             )}
             <button onClick={loadMore}>More</button>
+            <Link to= {RedirectRoutes.Iryna}>
+                <span style={{fontSize:"20px"}}>IRYNA</span>
+            </Link>
         </>
     )
 }
