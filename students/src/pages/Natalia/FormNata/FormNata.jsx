@@ -12,7 +12,7 @@ const  FormNataState= ({ setFormValue, setEdit}) => {
         <>
             <form>
                 <label>
-                    Введіть текст:
+                    Enter text:
                     <br></br>
                     <br></br>
                     <textarea
