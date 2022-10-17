@@ -1,5 +1,6 @@
 export const AppRoutes = {
     MAIN: "/",
+    Andrian:"/Andrian/*",
     Ihor: '/ihor/*',
     NOT_FOUND: "/404",
     MENTOR: "/mentor/*",
@@ -17,11 +18,13 @@ export const AppRoutes = {
     InputState:"/inputState",
     FormState:"/formState",
     CONSULT: "/consult",
-    AXIOS: "/axios"
+    AXIOS: "/axios",
+   
 }
 
 export const RedirectRoutes = {
     MAIN: "/",
+    Andrian:"/Andrian/",
     Ihor: '/ihor',
     NOT_FOUND: "/404",
     MENTOR: "/mentor",
@@ -32,6 +35,8 @@ export const RedirectRoutes = {
     Iryna:"/Iryna",
     CV:"/cv",
     MainComponent:"/liftState",
-    NATALIA: "/natalia"
+    NATALIA: "/natalia",
+    News:"News",
+    Applause:"Applause"
 }
 

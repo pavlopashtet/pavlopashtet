@@ -1,7 +1,8 @@
 import React from "react";
-import OneBtn from "./OneBtn";
+import OneBtn from "./BtnOne";
 import styles from "../../Natalia/DumbCompNata/CompNata.module.scss";
-import TwoBtn from "./Two.Btn";
+import TwoBtn from "./BtnTwo";
+import { useState } from "react";
 
 
 const NataComp = () => {
@@ -13,10 +14,10 @@ const NataComp = () => {
     return(
         <>
             <div className={styles.box} style={{backgroundColor: hex}}></div>
-            <BtnOne
+            <OneBtn
                 setHex={setHex}
            />
-            <BtnTwo
+            <TwoBtn
                 // setHex={setHex}
                 // hex = {hex}
                 handelClick= { () => hex === "red" ? setHex("purple") :setHex("orange") }

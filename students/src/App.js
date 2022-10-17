@@ -9,6 +9,7 @@ import HOC from "./components/HOC/HOC";
 import { useEffect } from "react";
 import { MentorRoute } from "./components/HOC/MentorRoute";
 import NataliaComponent from "./pages/Natalia/Natalia";
+import Andrian from "./pages/Andrian/Andrian.jsx";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
@@ -42,6 +43,7 @@ const App = () => {
             <Routes>
 
                 <Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>
+                <Route path={AppRoutes.Andrian} element={<Andrian/>}/>
                 <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
                 <Route path={AppRoutes.Iryna} element={<Iryna/>}/>
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
