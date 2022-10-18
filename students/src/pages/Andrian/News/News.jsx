@@ -26,7 +26,8 @@ const themeMode=true
     var height=scrollHeight-clientHeight;
     var scrollTop=window.pageYOffset || document.documentElement.scrollTop||document.body.scrollTop;
 
-    if(height===scrollTop){
+
+    if(height=== Math.floor(scrollTop) ){
       setNewItemsSectionShow(newItemsSectionShow+9)
       console.log(newItemsSectionShow)
     }
@@ -131,7 +132,7 @@ return(
 
 <div  ref={errorRef} className={s.errorHidden} >internet problem...</div>
 
-  <ul> 
+  <ul className={s.ulMy} > 
     {newsData.filter((el,index)=>index<newItemsSectionShow).map(el =><li   key={el.title} > 
 
     
