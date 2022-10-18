@@ -13,9 +13,9 @@ background-color: rgb(122, 193, 42);
 box-sizing: border-box;
 
 }
-ul{
+.ulMy{
     list-style-type: none;
-    width: 100vw;
+    width: 100vw!important;
     height: 100%;
     margin-top: 20px;
     display: flex;
@@ -26,6 +26,7 @@ ul{
     position: relative;
     overflow: hidden; 
     box-sizing: border-box; 
+    max-width: 2000px;
 
 }
 li{
