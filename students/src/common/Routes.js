@@ -18,7 +18,8 @@ export const AppRoutes = {
     InputState:"/inputState",
     FormState:"/formState",
     CONSULT: "/consult",
-    AXIOS: "/axios"
+    AXIOS: "/axios",
+    newAxios:"/newAxios"
 }
 
 export const RedirectRoutes = {
@@ -36,6 +37,7 @@ export const RedirectRoutes = {
     NataliaKoziar:"/NataliaKoziar",
     MainComponent:"/liftState",
     InputState:"/inputState",
-    FormState:"/formState"
+    FormState:"/formState",
+    newAxios:"/newAxios"
 }
 
