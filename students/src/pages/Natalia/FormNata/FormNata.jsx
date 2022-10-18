@@ -13,8 +13,7 @@ const  FormNataState= ({ setFormValue, setEdit}) => {
             <form>
                 <label>
                     Enter text:
-                    <br></br>
-                    <br></br>
+                    <span></span>
                     <textarea
                         value={inputValue.name}
                         onChange={(e) =>
