@@ -10,14 +10,14 @@ export const AppRoutes = {
     Iryna:"/Iryna/*",
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
+    NataliaKoziar:"/NataliaKoziar/*",
     FORM: "/form",
     BTN: "/NataComp",
     INPUT:"/NataInputComp",
-    MainComponent:"/liftState",
-    InputState:"/inputState",
-    FormState:"/formState",
     CONSULT: "/consult",
-    AXIOS: "/axios"
+    AXIOS: "/axios",
+    newAxios:"/newAxios",
+    StepanRudiak: "/StepanRudiak/*"
 }
 
 export const RedirectRoutes = {
@@ -27,11 +27,16 @@ export const RedirectRoutes = {
     MENTOR: "/mentor",
     HOC: "/hoc",
     Solomiya: '/solomiya',
-    NATALIA: "/natalia/*",
     Vitalii: '/vitalii',
     Sasha: "/sasha",
     Iryna:"/Iryna",
     CV:"/cv",
-    MainComponent:"/liftState"
+    NATALIA:"/natalia",
+    NataliaKoziar:"/NataliaKoziar",
+    newAxios:"/newAxios",
+    MainComponent:"/liftState",
+    InputState:"/inputState",
+    FormState:"/formState",
+    StepanRudiak: "/StepanRudiak"
 }
 

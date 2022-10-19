@@ -3,10 +3,11 @@ import {Link, Route, Routes} from "react-router-dom";
 import {AppRoutes, RedirectRoutes} from "../../common/Routes";
 import NataliaCV from "./Natalia.cv";
 import NataComp from "./DumbCompNata/CompNata";
-import NataCompInput from "../Natalia/InputNatalia/InputNataliaPage"
-// import FormNataState from "./FormNata/FormNata";
+import NataCompInput from "../Natalia/InputNatalia/InputNataliaPage";
+import MainFormContainer from "../Natalia/FormNata/MainFormContainer"
 
-// const [FormValue, setFormValue] = useState();
+
+
 class Natalia extends React.Component{
     constructor(props) {
         super(props);
@@ -46,7 +47,8 @@ class Natalia extends React.Component{
             <Route path={AppRoutes.CV} element={<NataliaCV/>}/>
             <Route path={AppRoutes.BTN} element={<NataComp/>}/>
             <Route path={AppRoutes.INPUT} element={<NataCompInput/>}/>
-            {/*<Route path={AppRoutes.FORM} element={< FormNataState/>}/>*/}
+            <Route path={AppRoutes.FORM} element={< MainFormContainer/>}/>
+
 
 
 
