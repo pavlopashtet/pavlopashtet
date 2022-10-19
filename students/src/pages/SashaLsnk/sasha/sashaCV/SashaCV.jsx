@@ -1,8 +1,9 @@
 import React from "react";
-import "./styles.css";
+import "../sashaCV/SashaCV.css";
 
-const SashaLysenkoCV = () => (
-  <>
+const SashaCV = () => {
+    return(
+        <>
     <link
       href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light"
       rel="stylesheet"
@@ -110,6 +111,7 @@ const SashaLysenkoCV = () => (
       </div>
     </div>
   </>
-);
+    )
+}
 
-export default SashaLysenkoCV;
+export default SashaCV;

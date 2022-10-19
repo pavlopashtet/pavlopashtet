@@ -10,11 +10,13 @@ export const AppRoutes = {
     Iryna:"/Iryna/*",
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
+    NataliaKoziar:"/NataliaKoziar/*",
     FORM: "/form",
     BTN: "/NataComp",
     INPUT:"/NataInputComp",    
     CONSULT: "/consult",
-    AXIOS: "/axios"
+    AXIOS: "/axios",
+    newAxios:"/newAxios"
 }
 
 export const RedirectRoutes = {
@@ -28,6 +30,8 @@ export const RedirectRoutes = {
     Sasha: "/sasha",
     Iryna:"/Iryna",
     CV:"/cv",
-    NATALIA:"/natalia"    
+    NATALIA:"/natalia",
+    NataliaKoziar:"/NataliaKoziar",
+    newAxios:"/newAxios"
 }
 
