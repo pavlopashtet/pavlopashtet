@@ -41,7 +41,7 @@ export const RedirectRoutes = {
     newAxios:"/newAxios",
     MainComponent:"/liftState",
     News:"News",
-    Applause:"Applause"
+    Applause:"Applause",
     InputState:"/inputState",
     FormState:"/formState",
     StepanRudiak: "/StepanRudiak"
