@@ -18,6 +18,8 @@ import AxiosPage from "./pages/Mentor/Axios";
 import NataliaKoziarComponent from './pages/NataliaKoziar/NataliaKoziarComponent';
 import SashaComp from "./pages/SashaLsnk/sasha/sashaComponent/SashaComp";
 import NewAxiosPage from "./pages/Mentor/NewAxios";
+import StepanRudiak from "./pages/StepanRudiak";
+
 
 
 const App = () => {
@@ -59,6 +61,7 @@ const App = () => {
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
                 <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
                 <Route path={AppRoutes.newAxios} element={<NewAxiosPage/>}/>
+                <Route path={AppRoutes.StepanRudiak} element={<StepanRudiak/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
             </Routes>
         </>

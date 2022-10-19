@@ -16,7 +16,8 @@ export const AppRoutes = {
     INPUT:"/NataInputComp",    
     CONSULT: "/consult",
     AXIOS: "/axios",
-    newAxios:"/newAxios"
+    newAxios:"/newAxios",
+    StepanRudiak: "/StepanRudiak/*"
 }
 
 export const RedirectRoutes = {
@@ -33,5 +34,9 @@ export const RedirectRoutes = {
     NATALIA:"/natalia",
     NataliaKoziar:"/NataliaKoziar",
     newAxios:"/newAxios"
+    MainComponent:"/liftState",
+    InputState:"/inputState",
+    FormState:"/formState",
+    StepanRudiak: "/StepanRudiak"
 }
 
