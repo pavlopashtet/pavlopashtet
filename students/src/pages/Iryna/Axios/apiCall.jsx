@@ -12,4 +12,4 @@ export const getCharacter = () => instance.get(Endpoints.CHARACTER);
 export const getMore = (url) =>
     axios.get(url)
 
-export const More = (a) => axios.post(a);
+

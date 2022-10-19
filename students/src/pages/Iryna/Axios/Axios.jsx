@@ -1,12 +1,25 @@
 import { React, useEffect, useState } from "react";
-import { getCharacter } from "./apiCall";
-
+import { getCharacter, getMore } from "./apiCall";
+import styles from "../Iryna.module.css";
 
 const SampleAxios = () => {
   const [data, setData] = useState();
+
+  const getNext = () => {
+    getMore(data?.info?.next);
+    getCharacter().then((data) => {
+      setData((prevState) => {
+        return {
+          info: data.data.info,
+          results: [...prevState.results, ...data.data.results],
+        };
+      });
+    });
+  };
+
   useEffect(() => {
     getCharacter().then((data) => {
-      setData(data.data);     
+      setData(data.data);
     });
   }, []);
 
@@ -24,7 +37,11 @@ const SampleAxios = () => {
             <img src={item.image} alt="" />
           </div>
         ))}
-      {/* <button onClick={More}>More</button> */}
+      {data?.info?.next !== null && (
+        <button className={styles.btn} onClick={() => getNext()}>
+          Get More
+        </button>
+      )}
     </div>
   );
 };
