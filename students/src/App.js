@@ -1,6 +1,6 @@
 import './App.css';
 import Iryna from './pages/Iryna/Iryna';
-import Header from "./components/header/Header"
+import Header from "./components/header/Header";
 import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import { AppRoutes } from "./common/Routes";
@@ -18,6 +18,7 @@ import AxiosPage from "./pages/Mentor/Axios";
 import NataliaKoziarComponent from './pages/NataliaKoziar/NataliaKoziarComponent';
 import SashaComp from "./pages/SashaLsnk/sasha/sashaComponent/SashaComp";
 import NewAxiosPage from "./pages/Mentor/NewAxios";
+import AndrewComponent from "./pages/Andrew/Andrew";
 import StepanRudiak from "./pages/StepanRudiak";
 
 
@@ -59,6 +60,7 @@ const App = () => {
                 }/>
                 <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
+                <Route path={AppRoutes.Andrew} element={<AndrewComponent/>}/>
                 <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
                 <Route path={AppRoutes.newAxios} element={<NewAxiosPage/>}/>
                 <Route path={AppRoutes.StepanRudiak} element={<StepanRudiak/>}/>
