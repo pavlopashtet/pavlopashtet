@@ -30,3 +30,8 @@ export const postPostToPlaceholder = (data) =>
 
 export const loadMoreData = (url) =>
     axios.post(url)
+
+
+export const loadData = (url = Endpoints.CHARACTER) => {
+    return instance.get(url)
+}

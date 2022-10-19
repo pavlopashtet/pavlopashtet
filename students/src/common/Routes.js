@@ -11,15 +11,16 @@ export const AppRoutes = {
     Iryna:"/Iryna/*",
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
+    NataliaKoziar:"/NataliaKoziar/*",
+    Andrew: '/andrew/*',
     FORM: "/form",
     BTN: "/NataComp",
     INPUT:"/NataInputComp",
-    MainComponent:"/liftState",
-    InputState:"/inputState",
-    FormState:"/formState",
     CONSULT: "/consult",
     AXIOS: "/axios",
-   
+    newAxios:"/newAxios",
+    StepanRudiak: "/StepanRudiak/*",
+    REDUX: "/redux",
 }
 
 export const RedirectRoutes = {
@@ -34,9 +35,15 @@ export const RedirectRoutes = {
     Sasha: "/sasha",
     Iryna:"/Iryna",
     CV:"/cv",
+    NATALIA:"/natalia",
+    NataliaKoziar:"/NataliaKoziar",
+    Andrew:'/andrew',
+    newAxios:"/newAxios",
     MainComponent:"/liftState",
-    NATALIA: "/natalia",
     News:"News",
     Applause:"Applause"
+    InputState:"/inputState",
+    FormState:"/formState",
+    StepanRudiak: "/StepanRudiak"
 }
 

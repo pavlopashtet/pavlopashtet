@@ -5,6 +5,8 @@ import {RedirectRoutes} from "../../common/Routes";
 import styles from "./CVpages/VitaliiPage.module.scss"
 import VitaliiComponentPage from "./CVpages/CVPageVitalii";
 import State from "./liftState/liftState";
+import UserInput from "./InputState/UserInfo";
+
 
 
 const Main = () => {
@@ -21,6 +23,10 @@ const Main = () => {
                 <span style={{fontSize: '20px'}}>States</span>
             </Link>
 
+            <Link className={styles.box} to={`${RedirectRoutes.Vitalii}${SolutionRoutes.INPUT}`}>
+                <span style={{fontSize: '20px'}}>InputState</span>
+            </Link>
+
         </div>
     )
 };
@@ -31,6 +37,7 @@ export const Vitalii = ()=> {
             <Route path={SolutionRoutes.MAIN} element={<Main/>}/>
             <Route path={SolutionRoutes.CV} element={<VitaliiComponentPage/>}/>
             <Route path={SolutionRoutes.STATE} element={<State/>}/>
+            <Route path={SolutionRoutes.INPUT} element={<UserInput/>}/>
         </Routes>
     )
 }

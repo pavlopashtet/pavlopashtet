@@ -1,0 +1,27 @@
+.container {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  
+}
+
+.biggestContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 500px;
+}
+
+.btn {
+  width: 100px;
+  background-color: deeppink;
+  color: azure;
+}
