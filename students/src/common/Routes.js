@@ -18,7 +18,8 @@ export const AppRoutes = {
     CONSULT: "/consult",
     AXIOS: "/axios",
     newAxios:"/newAxios",
-    StepanRudiak: "/StepanRudiak/*"
+    StepanRudiak: "/StepanRudiak/*",
+    REDUX: "/redux",
 }
 
 export const RedirectRoutes = {

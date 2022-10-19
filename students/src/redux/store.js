@@ -3,10 +3,12 @@ import { composeWithDevToolsDevelopmentOnly } from "@redux-devtools/extension";
 import charactersReducer from "./reducers/charactersReducer";
 import thunk from "redux-thunk";
 import { IrynaReducer } from "./reducers/IrynaReducer";
+import rickAndMorty from "./reducers/rickAndMorty";
 
 const rootReducer = combineReducers({
   characters: charactersReducer,
-  Iryna: IrynaReducer, 
+  Iryna: IrynaReducer,
+  rickAndMorty
 });
 
 const composeEnhancers = composeWithDevToolsDevelopmentOnly({
