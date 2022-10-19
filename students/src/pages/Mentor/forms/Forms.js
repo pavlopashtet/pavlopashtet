@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import
+{ useEffect, useState } from "react";
 import { getCharacter, postPostToPlaceholder } from "../../../api/apiCalls";
 import { Link } from "react-router-dom";
 import { RedirectRoutes } from "../../../common/Routes";
