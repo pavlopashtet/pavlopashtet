@@ -1,0 +1,16 @@
+.message{
+    margin: 10px 0px;
+    padding: 7px;
+    background-color: rgb(255, 254, 240);
+    border-radius: 5px;
+    .text{
+        font-size: 16px;
+        padding: 5px 0px 10px;
+    }
+    .details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+    }
+}
