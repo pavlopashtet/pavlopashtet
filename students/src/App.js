@@ -17,6 +17,7 @@ import ConsultContainer from "./pages/additional pages/consult/Consult";
 import AxiosPage from "./pages/Mentor/Axios";
 import SashaComp from "./pages/SashaLsnk/sasha/sashaComponent/SashaComp";
 import NewAxiosPage from "./pages/Mentor/NewAxios";
+import AndrewComponent from "./pages/Andrew/Andrew";
 
 
 const App = () => {
@@ -55,6 +56,7 @@ const App = () => {
                 }/>
                 <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
+                <Route path={AppRoutes.Andrew} element={<AndrewComponent/>}/>
                 <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
                 <Route path={AppRoutes.newAxios} element={<NewAxiosPage/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
