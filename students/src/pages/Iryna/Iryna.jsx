@@ -5,6 +5,7 @@ import { MyRoutes } from "./MyRoutes";
 import Con from "./CV/CV";
 import { Link } from "react-router-dom";
 import MainComponent from "./liftState/liftState";
+// import NotFoundPAge from "../404/NotFoundPAge";
 import styles from "./Iryna.module.css";
 import InputState from "./inputState/inputState";
 import MainForm from "./formState/MainForm";
@@ -14,7 +15,7 @@ import SampleReduxThunk from "./ReduxThunk/ReduxThunk";
 const Iryna = () => {
   const [action, setAction] = useState("true");
   return (
-    <div className={styles.Main}>      
+    <div className={styles.Main}>
       <button
         style={{
           margin: "50px 800px",
@@ -60,7 +61,13 @@ const Iryna = () => {
         <Route path={MyRoutes.REDUX}  element={<SampleRedux/>}/>
         <Route path={MyRoutes.REDUX_THUNK}  element={<SampleReduxThunk/>}/>
       </Routes>
+
+
     </div>
+    
+
+    
+    
   );
 };
 export default Iryna;
