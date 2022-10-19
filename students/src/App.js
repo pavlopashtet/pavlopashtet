@@ -1,13 +1,13 @@
 import './App.css';
 import Iryna from './pages/Iryna/Iryna';
-import Header from "./Components/header/Header";
+import Header from "./components/header/Header";
 import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import { AppRoutes } from "./common/Routes";
 import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 // import HOC from "./Components/HOC/HOC";
 import { useEffect } from "react";
-import { MentorRoute } from "./Components/HOC/MentorRoute";
+import { MentorRoute } from "./components/HOC/MentorRoute";
 import NataliaComponent from "./pages/Natalia/Natalia";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
