@@ -25,6 +25,7 @@ export const AppRoutes = {
 
 export const RedirectRoutes = {
     MAIN: "/",
+    Andrian:"/Andrian/",
     Ihor: '/ihor',
     NOT_FOUND: "/404",
     MENTOR: "/mentor",
@@ -34,7 +35,15 @@ export const RedirectRoutes = {
     Sasha: "/sasha",
     Iryna:"/Iryna",
     CV:"/cv",
+    NATALIA:"/natalia",
+    NataliaKoziar:"/NataliaKoziar",
+    Andrew:'/andrew',
+    newAxios:"/newAxios",
     MainComponent:"/liftState",
-    NATALIA: "/natalia"
+    News:"News",
+    Applause:"Applause",
+    InputState:"/inputState",
+    FormState:"/formState",
+    StepanRudiak: "/StepanRudiak"
 }
 
