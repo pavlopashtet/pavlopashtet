@@ -1,13 +1,13 @@
 import './App.css';
 import Iryna from './pages/Iryna/Iryna';
-import Header from "./components/header/Header";
+import Header from "./Components/header/Header";
 import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import { AppRoutes } from "./common/Routes";
 import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
-import HOC from "./components/HOC/HOC";
+// import HOC from "./Components/HOC/HOC";
 import { useEffect } from "react";
-import { MentorRoute } from "./components/HOC/MentorRoute";
+import { MentorRoute } from "./Components/HOC/MentorRoute";
 import NataliaComponent from "./pages/Natalia/Natalia";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
@@ -15,6 +15,7 @@ import Vitalii from "./pages/Vitalii/Vitalii";
 import "rsuite/dist/rsuite.min.css";
 import ConsultContainer from "./pages/additional pages/consult/Consult";
 import AxiosPage from "./pages/Mentor/Axios";
+import NataliaKoziarComponent from './pages/NataliaKoziar/NataliaKoziarComponent';
 import SashaComp from "./pages/SashaLsnk/sasha/sashaComponent/SashaComp";
 import NewAxiosPage from "./pages/Mentor/NewAxios";
 
@@ -48,6 +49,7 @@ const App = () => {
                 <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
                 <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
                 <Route path={AppRoutes.NATALIA} element={<NataliaComponent/>}/>
+                <Route path={AppRoutes.NataliaKoziar} element={<NataliaKoziarComponent/>}/>
                 <Route path={AppRoutes.CONSULT} element={<ConsultContainer/>}/>
                 {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
                 <Route path={AppRoutes.MENTOR} element={
