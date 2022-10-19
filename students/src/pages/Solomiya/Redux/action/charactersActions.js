@@ -1,5 +1,5 @@
-import {charactersReducerTypes} from "../solomiyaReducers/actionTypes";
 import {getCharacter, getMoreCharacters} from "../../api/apiCalls";
+import { charactersReducerTypes } from "../../../../redux/reducers/actionTypes";
 
 
 export const charactersActions = {

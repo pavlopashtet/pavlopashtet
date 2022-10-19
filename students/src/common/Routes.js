@@ -35,7 +35,7 @@ export const RedirectRoutes = {
     NATALIA:"/natalia",
     NataliaKoziar:"/NataliaKoziar",
     Andrew:'/andrew',
-    newAxios:"/newAxios"
+    newAxios:"/newAxios",
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
