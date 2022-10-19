@@ -1,0 +1,24 @@
+.widgetContainer
+  display: grid
+  place-items: center
+.weatherWidget
+  border: 2px solid lightgreen
+  width: 200px
+  padding: 10px
+  border-radius: 10px
+  p
+    color: black
+    text-align: center
+    &:nth-child(1)
+      color: green
+      font-size: 20px
+    font-size: 1rem
+
+  div
+    display: flex
+    justify-content: center
+  div , p
+    font-size: 1rem
+    padding: 5px 0
+    &:not(:last-child)
+      border-bottom: 1px solid lightgray

@@ -35,6 +35,9 @@ const Header = () => (
         <Link to={RedirectRoutes.newAxios}>
             <span style={{ fontSize: "20px" }}>New Axios</span>
         </Link>
+        <Link to={RedirectRoutes.StepanRudiak}>
+          <span style={{ fontSize: "20px" }}>StepanRudiak</span>
+        </Link>
     </div>
 );
 

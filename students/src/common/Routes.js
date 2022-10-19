@@ -20,7 +20,8 @@ export const AppRoutes = {
     FormState:"/formState",
     CONSULT: "/consult",
     AXIOS: "/axios",
-    newAxios:"/newAxios"
+    newAxios:"/newAxios",
+    StepanRudiak: "/StepanRudiak/*"
 }
 
 export const RedirectRoutes = {
@@ -40,6 +41,7 @@ export const RedirectRoutes = {
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
-    newAxios:"/newAxios"
+    newAxios:"/newAxios",
+    StepanRudiak: "/StepanRudiak"
 }
 
