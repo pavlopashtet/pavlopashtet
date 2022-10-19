@@ -5,10 +5,10 @@
     background-color: blueviolet;
     color: whitesmoke;
     font-weight: bolder;
-    margin: 0 15px;
+    margin: 0 15px;    
 }
 
-.container {
+.container {   
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     background-color: deepskyblue;
     color: white;
     font-weight: bolder;
-    border: 3px solid white;
+    border: 3px solid white;    
 }
 
 label {

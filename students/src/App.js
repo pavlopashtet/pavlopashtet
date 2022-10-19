@@ -65,7 +65,6 @@ const App = () => {
                 <Route path={AppRoutes.newAxios} element={<NewAxiosPage/>}/>
                 <Route path={AppRoutes.StepanRudiak} element={<StepanRudiak/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
-
             </Routes>
         </>
     );

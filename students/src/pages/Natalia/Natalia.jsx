@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link, Route, Routes} from "react-router-dom";
 import {AppRoutes, RedirectRoutes} from "../../common/Routes";
 import NataliaCV from "./Natalia.cv";
@@ -56,6 +56,8 @@ class Natalia extends React.Component{
 
 
     </div>
+
+
 
 
         )
