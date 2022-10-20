@@ -9,16 +9,16 @@ const Sidebar = () => {
     return (
         <div className={s.container__sidebar}>
             <div className={s.item}>
-                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${AppRoutes.CV}`}>Cv</NavLink>
+                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${RedirectRoutes.CV}`}>Cv</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${AppRoutes.MainComponent}`}>liftState</NavLink>
+                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${RedirectRoutes.MainComponent}`}>liftState</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${AppRoutes.InputState}`}>InputState</NavLink>
+                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${RedirectRoutes.InputState}`}>InputState</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${AppRoutes.FormState}`}>FormState</NavLink>
+                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${RedirectRoutes.FormState}`}>FormState</NavLink>
             </div>
         </div>
     );
