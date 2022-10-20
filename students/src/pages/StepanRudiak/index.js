@@ -6,6 +6,7 @@ import {Routes, Route} from "react-router-dom";
 import WeatherWidget from "./components/WeatherWidget";
 import FormSR from "./components/FormSR";
 import CVRude from "./components/CVRude";
+import ReduxSR from "./components/reduxSR";
 
 const StepanRudiak = () => {
   return (
@@ -13,10 +14,10 @@ const StepanRudiak = () => {
       <div className={styleModule.container}>
         <div className={styleModule.navigate}>
           <div className={styleModule.all}>
-            <div className={styleModule.lefter}>
-              <div className={styleModule.text}>Work in progress</div>
-            </div>
-            <NavLink className={styleModule.left} to={RedirectRoutes.StepanRudiak + AppRoutes.FormState}>
+            <NavLink className={styleModule.lefter} to={RedirectRoutes.StepanRudiak + '/reduxSR'}>
+              <div className={styleModule.text}>Redux</div>
+            </NavLink>
+            <NavLink className={styleModule.left} to={RedirectRoutes.StepanRudiak + AppRoutes.FORM}>
               <div className={styleModule.text}>form</div>
             </NavLink>
             <NavLink className={styleModule.center} to={RedirectRoutes.StepanRudiak + AppRoutes.CV}>
@@ -36,7 +37,8 @@ const StepanRudiak = () => {
         <Routes>
           <Route path={'/weather'} element={<WeatherWidget/>}/>
           <Route path={AppRoutes.CV} element={<CVRude/>}/>
-          <Route path={AppRoutes.FormState} element={<FormSR/>}/>
+          <Route path={AppRoutes.FORM} element={<FormSR/>}/>
+          <Route path={'/reduxSR'} element={<ReduxSR/>}/>
         </Routes>
       </div>
 
