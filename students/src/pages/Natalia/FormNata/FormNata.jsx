@@ -1,34 +1,33 @@
 import React, {useState} from "react";
+import styles from "../FormNata/FormNata.module.scss";
 
 
-
-
-const FormNataState = () => {
-    const [formValue, setFormValue] = useState({
-        name:"",
-        email:"",
-    })
-    // const handleChange = (event) =>{
-    //     setFormValue(event.target.event);
-    // }
-    // handleSubmit (event)
-    // {
-    //     event.preventDefault()
-    // }
-    return(
+const  FormNataState= ({ setFormValue, setEdit}) => {
+    const [inputValue, setInputValue] = useState({ name: "" });
+    const handleClick = () => {
+        setFormValue(inputValue)
+        setEdit((prevState) => !prevState)
+    }
+    return (
         <>
-        <form >
-              <label>
-                 <h1> Enter text</h1>
-                  <input name="usertext" value={formValue.name}
-                         onChange={(event) => setFormValue(event.target.value)
-                         }/>
-              </label>
+            <form>
+                <label>
+                    Enter text:
+                    <br></br>
+                    <br></br>
+                    <textarea
+                        value={inputValue.name}
+                        onChange={(e) =>
+                            setInputValue({
+                                ...inputValue,
+                                name: e.target.value })
+                        }
+                    />
+                </label>
             </form>
-        <button>Submit</button>
+            <button className = {styles.btn} onClick={handleClick}> Submit</button>
         </>
-    )
+    );
+};
 
-
-}
 export default FormNataState;

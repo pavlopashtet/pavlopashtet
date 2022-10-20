@@ -5,10 +5,11 @@ import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import { AppRoutes } from "./common/Routes";
 import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
-import HOC from "./components/HOC/HOC";
+// import HOC from "./Components/HOC/HOC";
 import { useEffect } from "react";
 import { MentorRoute } from "./components/HOC/MentorRoute";
 import NataliaComponent from "./pages/Natalia/Natalia";
+import Andrian from "./pages/Andrian/Andrian.jsx";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
@@ -18,6 +19,9 @@ import AxiosPage from "./pages/Mentor/Axios";
 import NataliaKoziarComponent from './pages/NataliaKoziar/NataliaKoziarComponent';
 import SashaComp from "./pages/SashaLsnk/sasha/sashaComponent/SashaComp";
 import NewAxiosPage from "./pages/Mentor/NewAxios";
+import AndrewComponent from "./pages/Andrew/Andrew";
+import StepanRudiak from "./pages/StepanRudiak";
+
 
 
 const App = () => {
@@ -42,7 +46,9 @@ const App = () => {
         <>
             <Header/>
             <Routes>
+
                 {/*<Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>*/}
+                <Route path={AppRoutes.Andrian} element={<Andrian/>}/>
                 <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
                 <Route path={AppRoutes.Iryna} element={<Iryna/>}/>
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
@@ -57,9 +63,12 @@ const App = () => {
                 }/>
                 <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
                 <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
+                <Route path={AppRoutes.Andrew} element={<AndrewComponent/>}/>
                 <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
                 <Route path={AppRoutes.newAxios} element={<NewAxiosPage/>}/>
+                <Route path={AppRoutes.StepanRudiak} element={<StepanRudiak/>}/>
                 <Route path="*" element={<NotFoundPAge/>}/>
+
             </Routes>
         </>
     );

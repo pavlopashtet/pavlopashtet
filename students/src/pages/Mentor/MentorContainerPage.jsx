@@ -5,11 +5,12 @@ import { AppRoutes, RedirectRoutes } from "../../common/Routes";
 import React, { useEffect, useState } from "react";
 import { Button, Input } from "rsuite";
 import Forms from "./forms/Forms";
-import mentorImg from "../../assets/images/IMG_0171.JPG";
+import Redux from "./Redux";
+// import mentorImg from "../../assets/images/IMG_0171.JPG";
 
-const titleArr = [
-    "Text 1", "Text 2", "Text 3", "Text 4", "Text 5", "Text 6"
-]
+// const titleArr = [
+//     "Text 1", "Text 2", "Text 3", "Text 4", "Text 5", "Text 6"
+// ]
 
 const MentorContainerPage = () => {
     const [ editMode, setEditMode ] = useState(false);
@@ -42,6 +43,9 @@ const MentorContainerPage = () => {
             </Link>
             <Link to="/mentor/form">
                 <span style={{fontSize: '20px'}}>Form</span>
+            </Link>
+            <Link to="/mentor/redux">
+                <span style={{fontSize: '20px'}}>Redux</span>
             </Link>
 
             {
@@ -86,6 +90,7 @@ const MentorContainerPage = () => {
                     showInfo={showInfo}
                 />}/>
                 <Route path={AppRoutes.FORM} element={<Forms />}/>
+                <Route path={AppRoutes.REDUX} element={<Redux />}/>
             </Routes>
         </div>
     )
