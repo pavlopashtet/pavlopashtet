@@ -11,19 +11,19 @@ const FormState = ({ setFormValue, setEdit}) => {
     <>
       <form>
         <label>
-          Введіть текст: 
+          Введіть текст:
           <br></br>
-          <br></br>        
+          <br></br>
           <textarea
             value={inputValue.text}
             onChange={(e) =>
-              setInputValue({ 
-                ...inputValue, 
+              setInputValue({
+                ...inputValue,
                 text: e.target.value })
             }
           />
         </label>
-      </form>      
+      </form>
       <button className = {styles.btn} onClick={handleButtonClick}> Submit</button>
     </>
   );
