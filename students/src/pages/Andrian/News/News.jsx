@@ -29,7 +29,7 @@ const themeMode=true
 
     if(height=== Math.floor(scrollTop) ){
       setNewItemsSectionShow(newItemsSectionShow+9)
-      console.log(newItemsSectionShow)
+      // console.log(newItemsSectionShow)
     }
 
   })
@@ -51,7 +51,7 @@ const themeMode=true
         .then(function (response) {
           setPreviousNewsData(response.data)
           setNewsData(response.data)
-console.log(response.data)
+// console.log(response.data)
           if (errorRef.current) {
             errorRef.current.classList.remove(`${s.errorHidden}`)
             errorRef.current.classList.add(`${s.errorHidden}`)
