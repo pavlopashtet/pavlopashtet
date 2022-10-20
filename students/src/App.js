@@ -8,6 +8,7 @@ import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 // import HOC from "./Components/HOC/HOC";
 import { useEffect } from "react";
 import { MentorRoute } from "./components/HOC/MentorRoute";
+import OlhaNovikRoutes from "./pages/OlyaNovik/OlhaNovik"
 import NataliaComponent from "./pages/Natalia/Natalia";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
@@ -52,6 +53,7 @@ const App = () => {
                 <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
                 <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
                 <Route path={AppRoutes.NATALIA} element={<NataliaComponent/>}/>
+                <Route path={AppRoutes.OlhaNovik} element={<OlhaNovikRoutes/>}/>
                 <Route path={AppRoutes.NataliaKoziar} element={<NataliaKoziarComponent/>}/>
                 <Route path={AppRoutes.CONSULT} element={<ConsultContainer/>}/>
                 {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
