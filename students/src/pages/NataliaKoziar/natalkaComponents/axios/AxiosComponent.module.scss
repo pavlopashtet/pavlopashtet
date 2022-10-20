@@ -1,0 +1,42 @@
+.weather{
+    width: 100%;
+
+.description {
+    padding: 10px 0px;
+    height: 350px;
+    width: 300px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    p {
+        font-size: 16px;
+        color: black;
+    }
+
+    .temp {
+        font-size: 30px;
+    }
+}
+.weather_cards{
+    display: flex;
+    justify-content: space-around;
+
+  
+    .card {
+        height: 200px;
+        width: 115px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}}
