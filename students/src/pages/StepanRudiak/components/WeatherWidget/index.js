@@ -14,7 +14,6 @@ const WeatherWidget = () => {
     axios.get(`${param.url}weather?id=${cityId}&units=metric&APPID=${param.appid}`)
       .then(resp => resp.data)
       .then(resp => {
-        console.log(resp)
         setWeatherSt(resp)
       })
   }, [])
