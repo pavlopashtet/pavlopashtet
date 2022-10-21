@@ -1,5 +1,5 @@
 import styles from "./MentorContainerPage.module.scss"
-import UserCard from "../../components/userCard/UserCard";
+import UserCard from "../../Components/userCard/UserCard";
 import { Link, Route, Routes } from "react-router-dom";
 import { AppRoutes, RedirectRoutes } from "../../common/Routes";
 import React, { useEffect, useState } from "react";
