@@ -21,10 +21,10 @@ const themeMode=true
 
 
   window.addEventListener('scroll', function() {
-    var scrollHeight=document.documentElement.scrollHeight;
-    var clientHeight=document.documentElement.clientHeight;
-    var height=scrollHeight-clientHeight;
-    var scrollTop=window.pageYOffset || document.documentElement.scrollTop||document.body.scrollTop;
+    let scrollHeight=document.documentElement.scrollHeight;
+    let clientHeight=document.documentElement.clientHeight;
+    let height=scrollHeight-clientHeight;
+    let scrollTop=window.pageYOffset || document.documentElement.scrollTop||document.body.scrollTop;
 
 
     if(height=== Math.floor(scrollTop) ){
