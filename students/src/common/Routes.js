@@ -44,6 +44,7 @@ export const RedirectRoutes = {
     Applause:"Applause",
     InputState:"/inputState",
     FormState:"/formState",
-    StepanRudiak: "/StepanRudiak"
+    StepanRudiak: "/StepanRudiak",
+    mentor_users: "/mentor/users",
 }
 
