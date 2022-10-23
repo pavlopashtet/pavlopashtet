@@ -1,27 +1,34 @@
-const initialState = { counter: 0 }
+const initialState = { characters: [], error: null, loading: true }
 export const StepanReducerActionTypes = {
-  INCREMENT: 'INCREMENT',
-  DECREMENT: 'DECREMENT',
-  INCREMENT_BY_VALUE: 'INCREMENT_BY_VALUE',
-  DECREMENT_BY_VALUE: 'DECREMENT_BY_VALUE'
+  ADD_CHARACTERS_ON_INIT: "ADD_CHARACTERS_ON_INIT",
+  ADD_INFO: 'ADD_INFO',
+  LOADING: "LOADING",
+  ADD_CHARACTERS: 'ADD_CHARACTERS',
 }
 const StepanReducer = (state = initialState, action) => {
   switch (action.type) {
-    case StepanReducerActionTypes.INCREMENT:
+    case StepanReducerActionTypes.ADD_CHARACTERS_ON_INIT:
       return {
-        counter: state.counter += 1
+        ...state,
+        characters: action.data
       }
-    case StepanReducerActionTypes.DECREMENT:
+    case StepanReducerActionTypes.ADD_INFO:
       return {
-        counter: state.counter -= 1
+        ...state,
+        info: action.info
       }
-    case StepanReducerActionTypes.INCREMENT_BY_VALUE:
+    case StepanReducerActionTypes.LOADING:
       return {
-        counter: state.counter += action.data
+        ...state,
+        loading: action.loading
       }
-    case StepanReducerActionTypes.DECREMENT_BY_VALUE:
+    case StepanReducerActionTypes.ADD_CHARACTERS:
       return {
-        counter: state.counter -= action.data
+        ...state,
+        characters: [
+          ...state.characters,
+          ...action.data
+        ]
       }
     default:
       return state
