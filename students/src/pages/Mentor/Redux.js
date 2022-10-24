@@ -12,6 +12,8 @@ import { getCharactersOnInit, getMoreCharacters, rickAndMortyActions } from "../
 import Button from "../../components/Btn/Button";
 // import { useNavigate } from "react-router-dom";
 import { AppRoutes } from "../../common/Routes";
+import WrapperComp from "../../components/HOC/children/Wrapper";
+import NotFoundPAge from "../404/NotFoundPAge";
 
 const btnStyle = {
     margin: "20px",
@@ -86,6 +88,10 @@ const _getMoreCharacters = (next) => dispatch(getMoreCharacters(next))
 
             {info?.next !== null
                 && <Button title="Get More" handleClick={()=>_getMoreCharacters(info?.next)}/>}
+
+            <WrapperComp>
+                <NotFoundPAge/>
+            </WrapperComp>
 
         </div>
     )
