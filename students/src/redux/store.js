@@ -4,11 +4,13 @@ import charactersReducer from "./reducers/charactersReducer";
 import thunk from "redux-thunk";
 import { IrynaReducer } from "./reducers/IrynaReducer";
 import rickAndMorty from "./reducers/rickAndMorty";
+import StepanReducer from "./reducers/StepanReducer";
 
 const rootReducer = combineReducers({
   characters: charactersReducer,
   Iryna: IrynaReducer,
-  rickAndMorty
+  rickAndMorty,
+  Stepan: StepanReducer,
 });
 
 const composeEnhancers = composeWithDevToolsDevelopmentOnly({
