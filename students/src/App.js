@@ -1,14 +1,13 @@
 import './App.css';
 import Iryna from './pages/Iryna/Iryna';
-import Header from "./Components/header/Header"
 import { Routes, Route } from "react-router-dom";
 import NotFoundPAge from "./pages/404/NotFoundPAge";
 import { AppRoutes } from "./common/Routes";
 import MentorContainerPage from "./pages/Mentor/MentorContainerPage";
 // import HOC from "./components/HOC/HOC";
 import { useEffect } from "react";
-import {MentorRoute} from "./Components/HOC/MentorRoute";
 import NataliaComponent from "./pages/Natalia/Natalia";
+import Andrian from "./pages/Andrian/Andrian.jsx";
 import IhorComponent from "./pages/Ihor/Ihor";
 import Solomiya from "./pages/Solomiya/Solomiya";
 import Vitalii from "./pages/Vitalii/Vitalii";
@@ -20,6 +19,8 @@ import SashaComp from "./pages/SashaLsnk/sasha/sashaComponent/SashaComp";
 import NewAxiosPage from "./pages/Mentor/NewAxios";
 import AndrewComponent from "./pages/Andrew/Andrew";
 import StepanRudiak from "./pages/StepanRudiak";
+import Header from "./components/header/Header";
+import { MentorRoute } from "./components/HOC/MentorRoute";
 
 
 
@@ -46,7 +47,8 @@ const App = () => {
             <Header/>
             <Routes>
 
-                <Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>
+                {/*<Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>*/}
+                <Route path={AppRoutes.Andrian} element={<Andrian/>}/>
                 <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
                 <Route path={AppRoutes.Iryna} element={<Iryna/>}/>
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
