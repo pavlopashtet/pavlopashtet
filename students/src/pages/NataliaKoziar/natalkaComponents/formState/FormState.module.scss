@@ -1,0 +1,12 @@
+form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    label{
+        color: black;
+    }
+}
+input:focus{
+    outline: none;
+}
