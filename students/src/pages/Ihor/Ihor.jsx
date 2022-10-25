@@ -7,6 +7,7 @@ import {MyRoutes} from "../Iryna/MyRoutes";
 import IhorCV from "./CV/IhorCV";
 import IhorContainerPage from "./liftState/DumbComponentIhor";
 import InputIh from "./InputIhor/Input";
+import AxiosPg from "./Axios/AxiosIhor";
 
 const IhorComponent = ()=>{
     return(
@@ -25,10 +26,15 @@ const IhorComponent = ()=>{
                 <span style={{ fontSize: "20px" }}>Input</span>
             </Link>
 
+            <Link to={`${RedirectRoutes.Ihor}${IhorRout.Axios}`}>
+                <span style={{ fontSize: "20px" }}>Axios</span>
+            </Link>
+
     <Routes>
         <Route path={IhorRout.CVROUTE} element={<IhorCV/>}/>
         <Route path={IhorRout.LiftState} element={<IhorContainerPage/>}/>
         <Route path={IhorRout.InputState} element={<InputIh/>}/>
+        <Route path={IhorRout.Axios} element={<AxiosPg/>}/>
     </Routes>
         </div>
     )

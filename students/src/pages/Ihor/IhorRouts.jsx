@@ -1,6 +1,7 @@
 export const IhorRout = {
     CVROUTE: 'cv',
     LiftState: '/liftState',
-    InputState: '/Input'
+    InputState: '/Input',
+    Axios: '/Axios'
 
 }
