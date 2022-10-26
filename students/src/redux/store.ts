@@ -13,6 +13,8 @@ const rootReducer = combineReducers({
   Stepan: StepanReducer,
 });
 
+export type AppStateType = ReturnType<typeof store.getState>;
+
 const composeEnhancers = composeWithDevToolsDevelopmentOnly({
   trace: true,
   traceLimit: 25,
