@@ -47,6 +47,7 @@ export const RedirectRoutes = {
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
-    StepanRudiak: "/StepanRudiak"
+    StepanRudiak: "/StepanRudiak",
+    mentor_users: "/mentor/users",
 }
 

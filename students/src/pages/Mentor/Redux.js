@@ -7,7 +7,13 @@ import {
 } from "../../api/apiCalls";
 import { getCharactersThunk, getMoreCharactersThunk } from "../../redux/action/charactersSctions";
 import { useDispatch, useSelector } from "react-redux";
-import { rickAndMortyActions } from "../../redux/action/actionsRickAndMorty";
+import { useNavigate } from "react-router-dom";
+import { getCharactersOnInit, getMoreCharacters, rickAndMortyActions } from "../../redux/action/actionsRickAndMorty";
+import Button from "../../components/Btn/Button";
+// import { useNavigate } from "react-router-dom";
+import { AppRoutes } from "../../common/Routes";
+import WrapperComp from "../../components/HOC/children/Wrapper";
+import NotFoundPAge from "../404/NotFoundPAge";
 
 const btnStyle = {
     margin: "20px",
@@ -19,16 +25,20 @@ const btnStyle = {
 const Redux = () => {
 const [range, setRange] = useState([])
 const dispatch = useDispatch();
+// const history = useHistory();
 const characters = useSelector((state)=>state.rickAndMorty.characters)
 const isLoading = useSelector((state)=>state.rickAndMorty.loading)
 const info = useSelector((state)=>state.rickAndMorty.info)
+const _getCharactersOnInit = (str) => dispatch(getCharactersOnInit(str))
+const _getMoreCharacters = (next) => dispatch(getMoreCharacters(next))
+
 
     const calculateRange = useCallback((total) => {
         let pages =[];
         for(let i = 1; i<=total; i++){
             pages.push(i);
         }
-        console.log("pages",pages)
+        // console.log("pages",pages)
         setRange(pages);
     }, [info?.pages])
 
@@ -37,39 +47,29 @@ const info = useSelector((state)=>state.rickAndMorty.info)
     },[info?.pages])
 
 
+    let navigate = useNavigate();
 
     useEffect(() => {
-        dispatch(rickAndMortyActions.setLoading(true))
-        setTimeout(() => {
-            loadData()
-                    .then((data) => {
-                        // console.log(data.data)
-                        dispatch(rickAndMortyActions.addCharactersOnInit(data.data.results))
-                        dispatch(rickAndMortyActions.addInfo(data.data.info))
-                    })
-                    .catch((err) => console.log(err))
-                    .finally(() => dispatch(rickAndMortyActions.setLoading(false)))
-            }, 2000
-        )
-
+        _getCharactersOnInit("Hello");
+// setTimeout(()=>   navigate(AppRoutes.NOT_FOUND),5000)
     }, [])
-
-    console.log("characters", characters)
+    //
+    // console.log("characters", characters)
 
     // useEffect(()=>{
     //     characters.results && console.log(characters)
     // }, [characters])
 
-    const getMore = () => {
-        dispatch(rickAndMortyActions.setLoading(true))
-        loadData(info?.next)
-            .then((data) => {
-                dispatch(rickAndMortyActions.addCharacters(data.data.results))
-                dispatch(rickAndMortyActions.addInfo(data.data.info))
-            })
-            .catch((err) => console.log(err))
-            .finally(() => dispatch(rickAndMortyActions.setLoading(false)))
-    }
+    // const getMore = () => {
+    //     dispatch(rickAndMortyActions.setLoading(true))
+    //     loadData(info?.next)
+    //         .then((data) => {
+    //             dispatch(rickAndMortyActions.addCharacters(data.data.results))
+    //             dispatch(rickAndMortyActions.addInfo(data.data.info))
+    //         })
+    //         .catch((err) => console.log(err))
+    //         .finally(() => dispatch(rickAndMortyActions.setLoading(false)))
+    // }
 
     return (
         <div>
@@ -83,8 +83,22 @@ const info = useSelector((state)=>state.rickAndMorty.info)
                     </div>
                 ))
             }
+            {/*{info?.next !== null*/}
+            {/*    && <button onClick={()=> _getMoreCharacters(info?.next)}>Get More</button>}*/}
+
             {info?.next !== null
-                && <button onClick={getMore}>Get More</button>}
+                && <Button title="Get More" handleClick={()=>_getMoreCharacters(info?.next)}/>}
+
+            <WrapperComp>
+                <NotFoundPAge/>
+                <h1>Hello</h1>
+                <WrapperComp>
+                    <NotFoundPAge/>
+                    <h1>Hello</h1>
+                    <NotFoundPAge/>
+                </WrapperComp>
+                <NotFoundPAge/>
+            </WrapperComp>
 
         </div>
     )

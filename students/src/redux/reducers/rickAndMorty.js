@@ -13,7 +13,7 @@ export const rickAndMortyActionTypes = {
     LOADING: "LOADING"
 }
 
-const rickAndMorty = (state=initialState, action) => { //Reducer function
+const rickAndMorty = (state= initialState, action) => { //Reducer function
     switch(action.type){
         case rickAndMortyActionTypes.ADD_CHARACTERS_ON_INIT:{
             return {
