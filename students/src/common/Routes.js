@@ -21,6 +21,9 @@ export const AppRoutes = {
     newAxios:"/newAxios",
     StepanRudiak: "/StepanRudiak/*",
     REDUX: "/redux",
+    MainComponent:"/liftState",
+    InputState:"/inputState",
+    FormState:"/formState",
 }
 
 export const RedirectRoutes = {
@@ -39,11 +42,12 @@ export const RedirectRoutes = {
     NataliaKoziar:"/NataliaKoziar",
     Andrew:'/andrew',
     newAxios:"/newAxios",
-    MainComponent:"/liftState",
     News:"News",
     Applause:"Applause",
+    MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
-    StepanRudiak: "/StepanRudiak"
+    StepanRudiak: "/StepanRudiak",
+    mentor_users: "/mentor/users",
 }
 

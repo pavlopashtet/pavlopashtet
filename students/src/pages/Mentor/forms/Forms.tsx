@@ -1,28 +1,36 @@
 import
-{ useEffect, useState } from "react";
+{useEffect, useState} from "react";
 import { getCharacter, postPostToPlaceholder } from "../../../api/apiCalls";
 import { Link } from "react-router-dom";
 import { RedirectRoutes } from "../../../common/Routes";
+import {Character, Info} from "../Redux";
 
-const initialData = {
-    firstname: "Ihor",
-    lastname: "Kurylov",
-    age: "36",
-    agree: true,
+interface InitialData {
+    firstname: string,
+    lastname: string,
+    age: string,
+    agree: boolean,
 }
-const Forms = () => {
-    const [ formValues, setFormValues ] = useState({});
-    const [ data, setData ] = useState();
 
-    useEffect(() => {
-        setFormValues(initialData);
-    }, [])
+
+const Forms = () => {
+    const [ formValues, setFormValues ] = useState<InitialData>({
+        firstname: "",
+        lastname: "",
+        age: "",
+        agree: false,
+    });
+    const [ data, setData ] = useState<{info: Info, results: Character[]}>();
+
+    // useEffect(() => {
+    //     setFormValues(initialData);
+    // }, [])
 
     // useEffect(() => {
     //     console.log(formValues)
     // }, [formValues])
 
-    const handleInputChange = (key, value) => {
+    const handleInputChange = (key: string, value: string) => {
         console.log(key, value)
         setFormValues({
             ...formValues,
@@ -30,7 +38,7 @@ const Forms = () => {
         })
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
         try {
             const data = await postPostToPlaceholder({
@@ -107,6 +115,7 @@ const Forms = () => {
                         name="agree"
                         type="checkbox"
                         checked={formValues.agree}
+                        //@ts-ignore
                         onChange={(e) => handleInputChange("agree", e.target.checked)}
                     />
                 </label>
@@ -122,8 +131,8 @@ const Forms = () => {
                 )
             )}
             <button onClick={loadMore}>More</button>
-            <Link to= {RedirectRoutes.Iryna}>
-                <span style={{fontSize:"20px"}}>IRYNA</span>
+            <Link to={RedirectRoutes.Iryna}>
+                <span style={{fontSize: "20px"}}>IRYNA</span>
             </Link>
         </>
     )
