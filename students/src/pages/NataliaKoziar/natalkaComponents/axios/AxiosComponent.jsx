@@ -4,7 +4,7 @@ import { useState } from "react";
 import { WeatherCard } from "./WeatherCard";
 import s from "./AxiosComponent.module.scss"
 
-const instance2 = axios.create({
+const instance = axios.create({
     baseURL: "https://weatherdbi.herokuapp.com/data/weather/",
     headers: {
         "Content-Type": "application/json",
@@ -19,7 +19,7 @@ export const AxiosComponent = () => {
     const [isLoading, setLoading] = useState()
 
     const getWeather = (url = "lviv") => {
-        return instance2.get(url)
+        return instance.get(url)
     }
     const getSearch = () => {
         setCity(searchCity)
@@ -41,7 +41,7 @@ export const AxiosComponent = () => {
 
     // }, [])
     useEffect(() => {
-        console.log("render2");
+        console.log("render");
         setLoading(true)
         getWeather(city)
             .then((response) => {
