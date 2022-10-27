@@ -1,4 +1,5 @@
-import styles from "./MentorContainerPage.module.scss"
+//@ts-ignore
+import styles from "./MentorContainerPage.module.scss";
 import UserCard from "../../components/userCard/UserCard";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { AppRoutes, RedirectRoutes } from "../../common/Routes";
@@ -11,16 +12,28 @@ import Redux from "./Redux";
 // const titleArr = [
 //     "Text 1", "Text 2", "Text 3", "Text 4", "Text 5", "Text 6"
 // ]
+export interface InputState {
+    name: string,
+    role: string,
+}
+
+enum Names {
+    Facebook=345,
+    Instagram = 997,
+    Twitter=9873,
+}
 
 const MentorContainerPage = () => {
-    const [ editMode, setEditMode ] = useState(false);
-    const [ inputState, setInputState ] = useState({
+    const [ editMode, setEditMode ] = useState<boolean>(false);
+    const [ inputState, setInputState ] = useState<InputState>({
         name: "Ihor",
-        role: "mentor"
+        role: "mentor",
     });
-    const showClickInfo = (info) => console.log(`Clicked on ${info}`)
+    const showClickInfo = (info: string) => console.log(`Clicked on ${info}`)
     const showInfo = () => console.log(`Clicked`)
     //
+
+    console.log(Names[Names.Facebook])
     useEffect(() => {
             // console.log(inputState)
         },
@@ -85,7 +98,7 @@ const MentorContainerPage = () => {
             <Routes>
                 <Route path={AppRoutes.CV} element={<h1>CV</h1>}/>
                 <Route path="/users" element={<UserCard
-                    title={"CARD"}
+                    title="CARD"
                     handleClick={showClickInfo}
                     showInfo={showInfo}
                 />}/>
