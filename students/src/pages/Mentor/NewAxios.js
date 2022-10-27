@@ -23,7 +23,7 @@ const NewAxiosPage = () => {
     useEffect(() => {
         loadData()
             .then((data) => {
-                console.log(data.data)
+                // console.log(data.data)
                 setCharacters(data.data)
             })
             .catch((err) => console.log(err))

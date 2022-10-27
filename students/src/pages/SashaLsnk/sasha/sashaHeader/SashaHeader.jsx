@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import styles from "../sashaHeader/SashaHeader.module.css";
-import { RedirectRoutes, SashaRoutes } from "../../../common/routes/AppRoutes";
+// import { RedirectRoutes, SashaRoutes } from "../../../common/routes/AppRoutes";
 
 import SashaCV from "../sashaCV/SashaCV";
 import SashaLift from "../sashaLiftState/SashaLift";
@@ -16,42 +16,42 @@ const MainSashaHeader = () =>
         Sasha's Page
       </h1>
 
-      <div className={styles.container}>
+    {/*  <div className={styles.container}>*/}
 
-      <Link to={`${RedirectRoutes.SASHA}${SashaRoutes.COMP}`}>
-          <span>Component</span>
-        </Link>
+    {/*  <Link to={`${RedirectRoutes.Sasha}${SashaRoutes.COMP}`}>*/}
+    {/*      <span>Component</span>*/}
+    {/*    </Link>*/}
 
-        <Link to={`${RedirectRoutes.SASHA}${SashaRoutes.CV}`}>
-          <span>CV</span>
-        </Link>
+    {/*    <Link to={`${RedirectRoutes.Sasha}${SashaRoutes.CV}`}>*/}
+    {/*      <span>CV</span>*/}
+    {/*    </Link>*/}
 
-        <Link to={`${RedirectRoutes.SASHA}${SashaRoutes.LIFT}`}>
-          <span>Lift State</span>
-        </Link>
+    {/*    <Link to={`${RedirectRoutes.Sasha}${SashaRoutes.LIFT}`}>*/}
+    {/*      <span>Lift State</span>*/}
+    {/*    </Link>*/}
 
-        <Link to={`${RedirectRoutes.SASHA}${SashaRoutes.INPUTS}`}>
-          <span>Inputs</span>
-        </Link>
+    {/*    <Link to={`${RedirectRoutes.Sasha}${SashaRoutes.INPUTS}`}>*/}
+    {/*      <span>Inputs</span>*/}
+    {/*    </Link>*/}
 
-        <Link to={`${RedirectRoutes.SASHA}${SashaRoutes.FORM}`}>
-          <span>Form</span>
-        </Link>
-        
-      </div>
+    {/*    <Link to={`${RedirectRoutes.Sasha}${SashaRoutes.FORM}`}>*/}
+    {/*      <span>Form</span>*/}
+    {/*    </Link>*/}
 
-      <Routes>
-      <Route path={SashaRoutes.MAIN} element={<MainSashaHeader />} /> 
-      <Route path={SashaRoutes.CV} element={<SashaCV />} />
-      <Route path={SashaRoutes.LIFT} element={<SashaLift />} />
-      <Route path={SashaRoutes.COMP} element={<SashaComp />} />
-      <Route path={SashaRoutes.INPUTS} element={<InputsParent />} />
-      <Route path={SashaRoutes.FORM} element={<FormsParent />} />
-      
-      
+    {/*  </div>*/}
+
+    {/*  <Routes>*/}
+    {/*  <Route path={SashaRoutes.MAIN} element={<MainSashaHeader />} />*/}
+    {/*  <Route path={SashaRoutes.CV} element={<SashaCV />} />*/}
+    {/*  <Route path={SashaRoutes.LIFT} element={<SashaLift />} />*/}
+    {/*  <Route path={SashaRoutes.COMP} element={<SashaComp />} />*/}
+    {/*  <Route path={SashaRoutes.INPUTS} element={<InputsParent />} />*/}
+    {/*  <Route path={SashaRoutes.FORM} element={<FormsParent />} />*/}
 
 
-    </Routes>
+
+
+    {/*</Routes>*/}
 
 
     </>

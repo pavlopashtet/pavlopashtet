@@ -1,3 +1,4 @@
+
 import styles from "../liftState.module.css";
 
 const Component = ({ setBg, Color}) => {
@@ -13,3 +14,4 @@ const Component = ({ setBg, Color}) => {
   );
 };
 export default Component;
+

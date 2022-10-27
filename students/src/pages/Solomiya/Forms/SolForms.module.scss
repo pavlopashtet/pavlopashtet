@@ -1,0 +1,46 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  //color: #fcfcfc;
+  background-color: #a4e4fa;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+}
+
+input {
+  width: 250px;
+  margin: 10px;
+}
+
+form {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-gap: 5px;
+
+}
+.formWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.infoBlock {
+  height: 400px;
+  width: 40%;
+  margin-top: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  border: 2px solid #fff429;
+  border-radius: 15px;
+
+}
+.background {
+  background-color: #a4e4fa;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import MainSashaHeader from "../sashaHeader/SashaHeader";
 
 const SashaComp = () => {
  
@@ -10,7 +11,8 @@ const SashaComp = () => {
     };  
 
     return(
-        <div> 
+        <div>
+            {/*<MainSashaHeader />*/}
         <div 
         style={{
             backgroundColor: isActive ? "pink" : "",

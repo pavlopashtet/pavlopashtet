@@ -1,5 +1,6 @@
 export const AppRoutes = {
     MAIN: "/",
+    Andrian:"/Andrian/*",
     Ihor: '/ihor/*',
     NOT_FOUND: "/404",
     MENTOR: "/mentor/*",
@@ -11,19 +12,23 @@ export const AppRoutes = {
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
     NataliaKoziar:"/NataliaKoziar/*",
+    Andrew: '/andrew/*',
     FORM: "/form",
     BTN: "/NataComp",
     INPUT:"/NataInputComp",
+    CONSULT: "/consult",
+    AXIOS: "/axios",
+    newAxios:"/newAxios",
+    StepanRudiak: "/StepanRudiak/*",
+    REDUX: "/redux",
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
-    CONSULT: "/consult",
-    AXIOS: "/axios",
-    newAxios:"/newAxios"
 }
 
 export const RedirectRoutes = {
     MAIN: "/",
+    Andrian:"/Andrian/",
     Ihor: '/ihor',
     NOT_FOUND: "/404",
     MENTOR: "/mentor",
@@ -35,9 +40,14 @@ export const RedirectRoutes = {
     CV:"/cv",
     NATALIA:"/natalia",
     NataliaKoziar:"/NataliaKoziar",
+    Andrew:'/andrew',
+    newAxios:"/newAxios",
+    News:"News",
+    Applause:"Applause",
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
-    newAxios:"/newAxios"
+    StepanRudiak: "/StepanRudiak",
+    mentor_users: "/mentor/users",
 }
 

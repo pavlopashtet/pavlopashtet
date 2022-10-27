@@ -5,6 +5,9 @@ import {RedirectRoutes} from "../../common/Routes";
 
 const Header = () => (
     <div className={styles.container}>
+     <Link to= {RedirectRoutes.Andrian}>
+            <span style={{fontSize:"20px"}}>Andrian</span>
+        </Link>
         <Link to= {RedirectRoutes.Iryna}>
             <span style={{fontSize:"20px"}}>IRYNA</span>
         </Link>
@@ -29,8 +32,14 @@ const Header = () => (
         <Link to={RedirectRoutes.NataliaKoziar}>
             <span style={{ fontSize: "20px" }}>Natalia_Koziar</span>
         </Link>
+        <Link to={RedirectRoutes.Andrew}>
+            <span style={{ fontSize: "20px" }}>Andrew</span>
+        </Link>
         <Link to={RedirectRoutes.newAxios}>
             <span style={{ fontSize: "20px" }}>New Axios</span>
+        </Link>
+        <Link to={RedirectRoutes.StepanRudiak}>
+          <span style={{ fontSize: "20px" }}>StepanRudiak</span>
         </Link>
     </div>
 );
