@@ -27,20 +27,7 @@ export const AxiosComponent = () => {
         setShowMore(false)
     }
 
-    // useEffect(() => {
-    //     console.log("render");
-    //    getWeather()
-    //         .then((response) => {
-    //             console.log(response.data);
-    //             setItem(response.data)
-
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         })
-
-    // }, [])
-    useEffect(() => {
+        useEffect(() => {
         console.log("render");
         setLoading(true)
         getWeather(city)
@@ -68,7 +55,7 @@ export const AxiosComponent = () => {
                     <p className={s.temp}>{item.currentConditions?.temp.c}ºC</p>
                     <p>humidity: {item.currentConditions?.humidity}</p>
                     <p>precip: {item.currentConditions?.precip}</p>
-                    <p>wind: {(item.currentConditions?.wind.km / 3, 6).toFixed(1)} m/s</p>
+                    <p>wind: {(item.currentConditions?.wind.km / 3.6).toFixed(1)} m/s</p>
                 </>}
             </div>
             <button onClick={() => setShowMore(prev => !prev)}>

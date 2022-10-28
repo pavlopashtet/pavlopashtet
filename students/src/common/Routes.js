@@ -24,6 +24,7 @@ export const AppRoutes = {
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
+    Thunk: "/redux-thunk",
 }
 
 export const RedirectRoutes = {
