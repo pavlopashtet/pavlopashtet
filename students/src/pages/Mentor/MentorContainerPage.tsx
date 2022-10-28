@@ -1,9 +1,9 @@
-import styles from "./MentorContainerPage.module.scss"
+// import styles from "./MentorContainerPage.module.scss"
 import UserCard from "../../components/userCard/UserCard";
-import { Link, Route, Routes } from "react-router-dom";
+// import { Link, Route, Routes } from "react-router-dom";
 //@ts-ignore
 import styles from "./MentorContainerPage.module.scss";
-import UserCard from "../../components/userCard/UserCard";
+// import UserCard from "../../components/userCard/UserCard";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { AppRoutes, RedirectRoutes } from "../../common/Routes";
 import React, { useEffect, useState } from "react";
@@ -21,7 +21,7 @@ const MentorContainerPage = () => {
         name: "Ihor",
         role: "mentor"
     });
-    const showClickInfo = (info) => console.log(`Clicked on ${info}`)
+    const showClickInfo = (info: any) => console.log(`Clicked on ${info}`)
     const showInfo = () => console.log(`Clicked`)
     //
     useEffect(() => {

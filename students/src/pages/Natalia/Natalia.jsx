@@ -5,6 +5,7 @@ import NataliaCV from "./Natalia.cv";
 import NataComp from "./DumbCompNata/CompNata";
 import NataCompInput from "../Natalia/InputNatalia/InputNataliaPage";
 import MainFormContainer from "../Natalia/FormNata/MainFormContainer"
+import AxiosNataComp from "./Axios.Nata/Axios.Nata";
 
 
 
@@ -42,13 +43,16 @@ class Natalia extends React.Component{
                 <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.FORM}`}>
                     <span style={{ fontSize: "50px" }}>Form</span>
                 </Link>
+                <Link to={`${RedirectRoutes.NATALIA}${AppRoutes.AXIOS}`}>
+                    <span style={{ fontSize: "50px" }}>Axios</span>
+                </Link>
 
         <Routes>
             <Route path={AppRoutes.CV} element={<NataliaCV/>}/>
             <Route path={AppRoutes.BTN} element={<NataComp/>}/>
             <Route path={AppRoutes.INPUT} element={<NataCompInput/>}/>
             <Route path={AppRoutes.FORM} element={< MainFormContainer/>}/>
-
+            <Route path={AppRoutes.AXIOS} element={< AxiosNataComp/>}/>
 
 
 
