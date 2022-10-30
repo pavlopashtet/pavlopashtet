@@ -30,6 +30,3 @@ export const loadInitialData = () => {
 export const loadMoreCharactersData = (url) =>
     axios.get(url)
 
-// export const loadData = (url = "") => {
-//     return axios.get(`${REACT_APP_API_BASEURL}${Endpoints.CHARACTER}${url}`)
-// }

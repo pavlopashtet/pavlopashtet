@@ -24,6 +24,9 @@ const Sidebar = () => {
             <div className={s.item}>
                 <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${AppRoutes.Axios}`}>Axios</NavLink>
             </div>
+            <div className={s.item}>
+                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${AppRoutes.Redux}`}>Redux</NavLink>
+            </div>
         </div>
     );
 };
