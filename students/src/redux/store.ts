@@ -6,6 +6,7 @@ import { IrynaReducer } from "./reducers/IrynaReducer";
 import {nKoziarReducer} from "./reducers/nKoziarReducer/nKoziarReducer"
 import rickAndMorty from "./reducers/rickAndMorty";
 import StepanReducer from "./reducers/StepanReducer";
+import AndrewReducer from "./reducers/AndrewReducer";
 
 const rootReducer = combineReducers({
   characters: charactersReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   rickAndMorty,
   Stepan: StepanReducer,
   NataliaKoziar:nKoziarReducer
+  Andrew: AndrewReducer,
 });
 
 export type AppStateType = ReturnType<typeof store.getState>;

@@ -1,0 +1,6 @@
+export const AndrewReducerTypes = {
+    ADD_CHARACTERS_ON_INIT: "ADD_CHARACTERS_ON_INIT",
+    ADD_CHARACTERS: "ADD_CHARACTERS",
+    ADD_INFO: "ADD_INFO",
+    LOADING: "LOADING"
+};
