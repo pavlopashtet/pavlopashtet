@@ -13,7 +13,7 @@ const Main = () => {
     return (
         <div className={styles.container}>
 
-            <h1 className={styles.header}>Vitalii Component Page</h1>
+            <h1 className={styles.header}>Vitalii Component Page1</h1>
 
             <Link className={styles.box} to={`${RedirectRoutes.Vitalii}${SolutionRoutes.CV}`}>
                 <span style={{fontSize: '20px'}}>CV</span>
