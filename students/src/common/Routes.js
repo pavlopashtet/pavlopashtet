@@ -24,6 +24,9 @@ export const AppRoutes = {
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
+    LOGIN:"/signin",
+    SIGN_UP:"/signup",
+    Admin:"/admin",
     Thunk: "/redux-thunk",
 }
 

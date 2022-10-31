@@ -30,6 +30,10 @@ const Forms = () => {
     //     console.log(formValues)
     // }, [formValues])
 
+    // useEffect(() => {
+    //     console.log(formValues)
+    // }, [formValues])
+
     const handleInputChange = (key: string, value: string) => {
         console.log(key, value)
         setFormValues({

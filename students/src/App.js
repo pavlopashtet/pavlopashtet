@@ -21,14 +21,20 @@ import AndrewComponent from "./pages/Andrew/Andrew";
 import StepanRudiak from "./pages/StepanRudiak";
 import Header from "./components/header/Header";
 import { MentorRoute } from "./components/HOC/MentorRoute";
+import Login from "./pages/Login/LOgin";
+import SignUp from "./pages/SignIn/SignIn";
+import { EnterTypes } from "./common/Types";
 
 
 
 const App = () => {
     const authUser = JSON.parse(localStorage.getItem("authUser"));
+    const admin = JSON.parse(localStorage.getItem("user"));
+    console.log(admin?.user?.uid)
     useEffect(()=>{
         localStorage.setItem("authUser", JSON.stringify({user: "Ihor", role: "mentor"}))
     },[])
+
     //
     // console.log(authUser);
     return (
@@ -47,26 +53,30 @@ const App = () => {
             <Header/>
             <Routes>
 
-                {/*<Route path={AppRoutes.MENTOR} element={<MentorContainerPage/>}/>*/}
-                <Route path={AppRoutes.Andrian} element={<Andrian/>}/>
-                <Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>
-                <Route path={AppRoutes.Iryna} element={<Iryna/>}/>
+                {/*<Route path={AppRoutes.Andrian} element={<Andrian/>}/>*/}
+                {/*<Route path={AppRoutes.Solomiya} element={<Solomiya/>}/>*/}
+                {/*<Route path={AppRoutes.Iryna} element={<Iryna/>}/>*/}
                 <Route path={AppRoutes.MAIN} element={<h1>Main</h1>}/>
-                <Route path={AppRoutes.Sasha} element={<SashaComp/>}/>
-                <Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>
-                <Route path={AppRoutes.NATALIA} element={<NataliaComponent/>}/>
-                <Route path={AppRoutes.NataliaKoziar} element={<NataliaKoziarComponent/>}/>
-                <Route path={AppRoutes.CONSULT} element={<ConsultContainer/>}/>
-                {/*<Route path={AppRoutes.HOC} element={<HOC Component={<h1>COMPONENT argument</h1>} a={12}/>}/>*/}
-                <Route path={AppRoutes.MENTOR} element={
-                    <MentorRoute authUser={authUser} Component={MentorContainerPage}/>
-                }/>
-                <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>
-                <Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>
-                <Route path={AppRoutes.Andrew} element={<AndrewComponent/>}/>
-                <Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>
-                <Route path={AppRoutes.newAxios} element={<NewAxiosPage/>}/>
-                <Route path={AppRoutes.StepanRudiak} element={<StepanRudiak/>}/>
+                <Route path={AppRoutes.LOGIN} element={<SignUp page={EnterTypes.SIGN_IN}/>}/>
+                <Route path={AppRoutes.SIGN_UP} element={<SignUp page={EnterTypes.SIGN_UP}/>}/>
+                {/*<Route path={AppRoutes.CV} element={<h1>CV</h1>}/>*/}
+                {/*<Route path={AppRoutes.Admin} element={<h1>Admin</h1>}/>*/}
+
+
+                {/*<Route path={AppRoutes.Sasha} element={<SashaComp/>}/>*/}
+                {/*<Route path={AppRoutes.Vitalii} element={<Vitalii/>}/>*/}
+                {/*<Route path={AppRoutes.NATALIA} element={<NataliaComponent/>}/>*/}
+                {/*<Route path={AppRoutes.NataliaKoziar} element={<NataliaKoziarComponent/>}/>*/}
+                {/*<Route path={AppRoutes.CONSULT} element={<ConsultContainer/>}/>*/}
+                {/*<Route path={AppRoutes.MENTOR} element={*/}
+                {/*    <MentorRoute authUser={authUser} Component={MentorContainerPage}/>*/}
+                {/*}/>*/}
+                {/*<Route path={AppRoutes.NOT_FOUND} element={<NotFoundPAge/>}/>*/}
+                {/*<Route path={AppRoutes.Ihor} element={<IhorComponent/>}/>*/}
+                {/*<Route path={AppRoutes.Andrew} element={<AndrewComponent/>}/>*/}
+                {/*<Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>*/}
+                {/*<Route path={AppRoutes.newAxios} element={<NewAxiosPage/>}/>*/}
+                {/*<Route path={AppRoutes.StepanRudiak} element={<StepanRudiak/>}/>*/}
                 <Route path="*" element={<NotFoundPAge/>}/>
 
             </Routes>
