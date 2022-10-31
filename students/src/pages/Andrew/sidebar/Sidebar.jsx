@@ -27,6 +27,9 @@ const Sidebar = () => {
             <div className={s.item}>
                 <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${AppRoutes.Redux}`}>Redux</NavLink>
             </div>
+            <div className={s.item}>
+                <NavLink className={setActive} to = {`${RedirectRoutes.Andrew}${AppRoutes.ReduxThunk}`}>ReduxThunk</NavLink>
+            </div>
         </div>
     );
 };

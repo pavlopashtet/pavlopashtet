@@ -4,7 +4,8 @@ export const AppRoutes = {
     InputState:"/inputState",
     FormState:"/formState",
     Axios:"/axios",
-    Redux: "/redux"
+    Redux: "/redux",
+    ReduxThunk: "/reduxThunk"
 }
 
 

@@ -5,12 +5,14 @@ import thunk from "redux-thunk";
 import { IrynaReducer } from "./reducers/IrynaReducer";
 import rickAndMorty from "./reducers/rickAndMorty";
 import StepanReducer from "./reducers/StepanReducer";
+import AndrewReducer from "./reducers/AndrewReducer";
 
 const rootReducer = combineReducers({
   characters: charactersReducer,
   Iryna: IrynaReducer,
   rickAndMorty,
   Stepan: StepanReducer,
+  Andrew: AndrewReducer,
 });
 
 export type AppStateType = ReturnType<typeof store.getState>;
