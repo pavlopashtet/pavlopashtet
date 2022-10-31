@@ -1,24 +1,23 @@
 import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+//@ts-ignore
 import s from './reduxStyle.module.sass';
-import {stepGetCharactersOnInit, stepGetMoreCharacters} from "../../../../redux/action/StepanActions";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {useStepActions} from "../../hooks/useStepActions";
+
 const ReduxSr = () => {
-  const dispatch = useDispatch();
-  const characters = useSelector(state => state.Stepan.characters);
-  const isLoading = useSelector(state => state.Stepan.loading);
-  const info = useSelector(state => state.Stepan.info);
-  const _stepGetCharactersOnInitThunk = () => dispatch(stepGetCharactersOnInit())
-  const _stepGetMoreCharactersThunk = (someInfo) => dispatch(stepGetMoreCharacters(someInfo))
+  const {info, characters, loading} = useTypedSelector(state => state.Stepan)
+  const {StepAddCharactersOnInit, StepGetMoreCharacters} = useStepActions()
+
   useEffect(() =>{
-    _stepGetCharactersOnInitThunk()
+    StepAddCharactersOnInit()
   }, []);
   const getMore = () => {
-    _stepGetMoreCharactersThunk(info.next)
+    StepGetMoreCharacters(info?.next)
   }
   return (
     <div>
       <div className={s.charactersContainer}>
-        {isLoading ?
+        {loading ?
         <h1>Data is Loading... </h1>
           :
           characters.length > 0 && characters.map(item => (

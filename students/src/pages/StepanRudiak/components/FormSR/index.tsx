@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormSR = () => {
+const Index:React.FC = () => {
   return (
     <div>
       Form in progress
@@ -8,4 +8,4 @@ const FormSR = () => {
   );
 };
 
-export default FormSR;
+export default Index;
