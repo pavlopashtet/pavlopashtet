@@ -1,14 +1,21 @@
+//@ts-ignore
 import s from "./ReduxComponent.module.scss"
 import { getData } from "../axios/apiCall";
 import { useEffect } from "react";
 import { nKoziarActions } from "../../../../redux/action/nKoziarAction/nKoziarAction"
 import { useDispatch, useSelector } from "react-redux";
+import { Istate } from "../../../../redux/reducers/nKoziarReducer/models";
+import { Dispatch } from 'redux'
+import { useTypedSelector } from "../../../../components/hooks/useTypedSelector";
+import { TypeOfAction } from "../../../../redux/reducers/nKoziarReducer/actionTypes";
 
 
-export const ReduxComponent = () => {
-      const items = useSelector((state) => state.NataliaKoziar.items?.results)
-    const nextPage = useSelector((state) => state.NataliaKoziar.items?.info?.next)
-    const dispatch = useDispatch()
+export const ReduxComponent:React.FC = () => {
+    //   const items:Istate = useSelector((state) => state.NataliaKoziar.items?.results)
+    // const nextPage:string = useSelector((state) => state.NataliaKoziar.items?.info?.next)
+    const items = useTypedSelector(state=> state.NataliaKoziar.items?.results)
+    const nextPage = useTypedSelector(state=> state.NataliaKoziar.items?.info?.next)
+    const dispatch:Dispatch = useDispatch()
   
     
     useEffect(() => {
@@ -20,7 +27,7 @@ export const ReduxComponent = () => {
             .catch((err) => {
                 console.log(err);
             })
-            .finally(dispatch(nKoziarActions.setLoading(false)))
+            .finally(()=>dispatch(nKoziarActions.setLoading(false)))
     }, [])
 
     const getMore = () => {
@@ -32,7 +39,7 @@ export const ReduxComponent = () => {
             .catch((err) => {
                 console.log(err);
             })
-            .finally(dispatch(nKoziarActions.setLoading(false)))
+            .finally(()=>dispatch(nKoziarActions.setLoading(false)))
     }
 
 

@@ -1,7 +1,9 @@
 import axios from "axios";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { WeatherCard } from "./WeatherCard";
+import { NextDays, Response } from "./models"
+// @ts-ignore
 import s from "./AxiosComponent.module.scss"
 
 const instance = axios.create({
@@ -12,27 +14,26 @@ const instance = axios.create({
 });
 
 export const AxiosComponent = () => {
-    const [item, setItem] = useState({})
-    const [city, setCity] = useState('lviv')
-    const [searchCity, setSearchCity] = useState('')
-    const [shoveMore, setShowMore] = useState(false)
-    const [isLoading, setLoading] = useState()
+    const [item, setItem] = useState<Response>({})
+    const [city, setCity] = useState<string>('lviv')
+    const [searchCity, setSearchCity] = useState<string>('')
+    const [shoveMore, setShowMore] = useState<boolean>(false)
+    const [isLoading, setLoading] = useState<boolean>(false)
 
-    const getWeather = (url = "lviv") => {
-        return instance.get(url)
+    const getWeather = (url: string = "lviv") => {
+        return instance.get<Response>(url)
     }
-    const getSearch = () => {
+    const getSearch = (): void => {
         setCity(searchCity)
         setSearchCity('')
         setShowMore(false)
     }
 
-        useEffect(() => {
+    useEffect(() => {
         console.log("render");
         setLoading(true)
         getWeather(city)
             .then((response) => {
-                console.log(response.data);
                 setItem(response.data)
             })
             .catch((err) => {
@@ -43,7 +44,7 @@ export const AxiosComponent = () => {
 
     return (
         <div className={s.weather}>
-            <input type="text" value={searchCity} onChange={(e) => setSearchCity(e.target.value)} placeholder='Choose city...' />
+            <input type="text" value={searchCity} onChange={(e:React.ChangeEvent<HTMLInputElement>) => setSearchCity(e.target.value)} placeholder='Choose city...' />
             <button onClick={getSearch}>Show the weather</button>
             <div className={s.description}>
                 {isLoading && <h4>Loading ... </h4>}
@@ -52,18 +53,18 @@ export const AxiosComponent = () => {
                     <h6>{item.currentConditions?.dayhour}</h6>
                     <img width={'80px'} src={item.currentConditions?.iconURL} alt='icon' />
                     <p>{item.currentConditions?.comment}</p>
-                    <p className={s.temp}>{item.currentConditions?.temp.c}ºC</p>
+                    <p className={s.temp}>{item.currentConditions?.temp?.c}ºC</p>
                     <p>humidity: {item.currentConditions?.humidity}</p>
                     <p>precip: {item.currentConditions?.precip}</p>
-                    <p>wind: {(item.currentConditions?.wind.km / 3.6).toFixed(1)} m/s</p>
+                    <p>wind: {item.currentConditions?.wind?.km ? (item.currentConditions?.wind?.km / 3.6).toFixed(1) : ""} m/s</p>
                 </>}
             </div>
             <button onClick={() => setShowMore(prev => !prev)}>
                 {shoveMore ? 'Hide forecast' : "See for a week"}
             </button>
             <div className={s.weather_cards}>
-                {shoveMore && item.next_days?.filter((el, i) => i > 0)
-                    .map((element, i) => <WeatherCard key={i} data={element} />)}
+                {shoveMore && item.next_days?.filter((el: NextDays, i: number) => i > 0)
+                    .map((element: NextDays, i: number) => <WeatherCard key={i} data={element} />)}
             </div>
         </div>
     )
