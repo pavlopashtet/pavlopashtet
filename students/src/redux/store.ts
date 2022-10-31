@@ -18,6 +18,7 @@ const rootReducer = combineReducers({
 });
 
 export type AppStateType = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof rootReducer>
 
 const composeEnhancers = composeWithDevToolsDevelopmentOnly({
   trace: true,

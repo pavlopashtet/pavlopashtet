@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CVRude = () => {
+const CVRude:React.FC = () => {
   return (
     <div>
       CV in progress

@@ -1,4 +1,5 @@
 import React from 'react';
+//@ts-ignore
 import styleModule from './style/rudeStyle.module.sass';
 import {NavLink} from "react-router-dom";
 import {AppRoutes, RedirectRoutes} from "../../common/Routes";
@@ -8,7 +9,7 @@ import FormSR from "./components/FormSR";
 import CVRude from "./components/CVRude";
 import ReduxSR from "./components/reduxSR";
 
-const StepanRudiak = () => {
+const StepanRudiak:React.FC = () => {
   return (
     <div className={styleModule.wrapper}>
       <div className={styleModule.container}>

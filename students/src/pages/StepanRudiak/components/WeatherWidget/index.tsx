@@ -1,20 +1,49 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+//@ts-ignore
 import s from './WeaterWidgetStyle.module.sass';
 
 const param = {
   "url" : "https://api.openweathermap.org/data/2.5/",
   "appid" : "fd85180c75c408f6a4c3e7af5f79ba6a"
 }
-const WeatherWidget = () => {
-  const [weatherSt, setWeatherSt] = useState({});
+interface tWeatherState {
+  name: string
+  main: {
+    temp: number
+    pressure: number
+    humidity: number
+  }
+  weather: [{
+    icon: string
+    description: string
+  }],
+  wind: {
+    speed: number
+  }
+}
+const WeatherWidget:React.FC = () => {
+  const [weatherSt, setWeatherSt] = useState<tWeatherState>({
+    name: '',
+    main: {
+      temp: 0,
+      pressure: 0,
+      humidity: 0
+    },
+    weather: [{
+      icon: '',
+      description: ''
+    }],
+    wind: {
+      speed: 0
+    }
+  });
 
   useEffect(() => {
     const cityId = '702550';
     axios.get(`${param.url}weather?id=${cityId}&units=metric&APPID=${param.appid}`)
-      .then(resp => resp.data)
       .then(resp => {
-        setWeatherSt(resp)
+        setWeatherSt(resp.data)
       })
   }, [])
 
