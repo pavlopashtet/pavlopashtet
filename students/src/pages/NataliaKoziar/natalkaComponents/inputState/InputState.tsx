@@ -1,9 +1,13 @@
 import { useState } from "react"
 import { Message } from "./Message";
+export interface Coment{
+    id:number
+    text:string
+}
 
 export const InputStateComponent = () => {
-    const [value, setValue] = useState('');
-    const [coments, setComents] = useState([]);
+    const [value, setValue] = useState<string>('');
+    const [coments, setComents] = useState<Coment[]>([]);
 
     const addComent = ()=>{
         if(value.trim().length){
@@ -17,7 +21,7 @@ export const InputStateComponent = () => {
             setValue('');
         }
     }
-    const removeComent = (id)=>{
+    const removeComent = (id:number)=>{
         setComents(coments.filter(el=>el.id !== id))
     }
 

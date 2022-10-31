@@ -1,9 +1,16 @@
 import { useState } from "react"
+//@ts-ignore
 import s from "./Message.module.scss"
-export const Message = ({ el, remove }) => {
+import {Coment} from "./InputState"
+interface MessageProps{
+    el:Coment
+    remove: (id:number)=>void
+}
+
+export const Message = ({ el, remove }:MessageProps) => {
     const [count, setCount] = useState(0)
 
-    const getDataComent = (date) => {
+    const getDataComent = (date:number) => {
         return new Date(date).toLocaleDateString()
     }
     const addLike = () => {
