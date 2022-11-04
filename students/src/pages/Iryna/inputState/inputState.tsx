@@ -1,8 +1,17 @@
+
 import React, { useState } from "react";
+// @ts-ignore
 import styles from "./inputState.module.css";
 import { Button, Input } from "rsuite";
 
-export const Preview = ({ Name, Surname, Age, Education, Hobby }) => {
+export interface Props {
+  Name: string,
+  Surname:string,
+  Age: number | string,
+  Education: string,
+  Hobby:string,
+}
+export const Preview = ({ Name, Surname, Age, Education, Hobby }:Props) => {
   return (
     <div className={styles.preview}>
       <h3>{Name}</h3>
@@ -77,6 +86,7 @@ const InputState = () => {
 
       <Button
         className={styles.button}
+        //@ts-ignore
         color="pink"
         appearance="primary"
         onClick={() => setEdit((prevState) => !prevState)}

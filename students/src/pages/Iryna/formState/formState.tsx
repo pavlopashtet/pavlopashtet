@@ -1,11 +1,14 @@
+//@ts-ignore
 import styles from "../formState/formState.module.css";
+//@ts-ignore
 import { React, useState } from "react";
+import { Pa } from "./MainForm";
 
-const FormState = ({ setFormValue, setEdit}) => {
-  const [inputValue, setInputValue] = useState({ text: "" });
+const FormState = ({ setFormValue, setEdit}:any) => {
+  const [inputValue, setInputValue] = useState<Pa>({ text: "" });
   const handleButtonClick = () => {
     setFormValue(inputValue)
-    setEdit((prevState) => !prevState)
+    setEdit((prevState:boolean) => !prevState)
   }
   return (
     <>
