@@ -9,4 +9,5 @@ export const SolRoutes = {
     AXIOS: "/axios",
     REDUX: "/redux",
     NEWAXIOS: "/newaxios",
+    LECTURE: "/lecture",
 }

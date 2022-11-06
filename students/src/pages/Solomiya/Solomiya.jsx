@@ -12,6 +12,7 @@ import MyPractice from "./Practice/SolPractice";
 import SolsAxios from "./Axios/Axios";
 import SolsRedux from "./Redux/Redux";
 import NewAxios from "./AxiosNew/NewAxios";
+import Lecture from "./lecture/lecture1910"
 
 
 const Main = () => {
@@ -47,6 +48,9 @@ const Main = () => {
             <Link className={styles.box} to={`${RedirectRoutes.Solomiya}${SolRoutes.NEWAXIOS}`}>
                 <span style={{fontSize: '20px'}}>New Axios</span>
             </Link>
+            <Link className={styles.box} to={`${RedirectRoutes.Solomiya}${SolRoutes.LECTURE}`}>
+                <span style={{fontSize: '20px'}}>lecture</span>
+            </Link>
 
         </div>
     )
@@ -65,6 +69,7 @@ export const Solomiya = ()=> {
             <Route path={SolRoutes.AXIOS} element={<SolsAxios/>}/>
             <Route path={SolRoutes.REDUX} element={<SolsRedux/>}/>
             <Route path={SolRoutes.NEWAXIOS} element={<NewAxios/>}/>
+            <Route path={SolRoutes.LECTURE} element={<Lecture/>}/>
 
         </Routes>
     )
