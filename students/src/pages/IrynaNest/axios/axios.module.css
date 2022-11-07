@@ -1,0 +1,10 @@
+.avatar {
+  width: 80px;
+  height: 80px; 
+}
+
+.wrapper {
+  width: 100%;
+  height: 600px;
+  overflow-y: scroll;
+}

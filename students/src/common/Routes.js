@@ -28,6 +28,7 @@ export const AppRoutes = {
     SIGN_UP:"/signup",
     Admin:"/admin",
     Thunk: "/redux-thunk",
+    IrynaNestorko: "/IrynaNest/*",
 }
 
 export const RedirectRoutes = {
@@ -53,5 +54,6 @@ export const RedirectRoutes = {
     FormState:"/formState",
     StepanRudiak: "/StepanRudiak",
     mentor_users: "/mentor/users",
+    IrynaNestorko: "/IrynaNest"
 }
 

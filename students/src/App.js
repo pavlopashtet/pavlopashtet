@@ -24,6 +24,7 @@ import { MentorRoute } from "./components/HOC/MentorRoute";
 import Login from "./pages/Login/LOgin";
 import SignUp from "./pages/SignIn/SignIn";
 import { EnterTypes } from "./common/Types";
+import IrynaNestorko from "./pages/IrynaNest";
 
 
 
@@ -77,6 +78,7 @@ const App = () => {
                 {/*<Route path={AppRoutes.AXIOS} element={<AxiosPage/>}/>*/}
                 {/*<Route path={AppRoutes.newAxios} element={<NewAxiosPage/>}/>*/}
                 {/*<Route path={AppRoutes.StepanRudiak} element={<StepanRudiak/>}/>*/}
+                {/* <Route path={AppRoutes.IrynaNestorko} element={<IrynaNestorko/>}/> */}
                 <Route path="*" element={<NotFoundPAge/>}/>
 
             </Routes>
