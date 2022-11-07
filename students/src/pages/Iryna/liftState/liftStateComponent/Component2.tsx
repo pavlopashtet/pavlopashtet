@@ -1,5 +1,10 @@
+//@ts-ignore
 import styles from "../liftState.module.css";
-const Component2 = ({ setBg, Color}) => {
+export interface Props{
+  setBg: (bg: string) => void,
+  Color:string
+}
+const Component2 = ({ setBg, Color}:Props) => {
   return (
     <button
       className={styles.bt}
