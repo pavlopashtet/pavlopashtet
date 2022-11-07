@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
   Iryna: IrynaReducer,
   rickAndMorty,
   Stepan: StepanReducer,
-  NataliaKoziar:nKoziarReducer
+  NataliaKoziar:nKoziarReducer,
   Andrew: AndrewReducer,
 });
 

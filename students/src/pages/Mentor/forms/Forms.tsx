@@ -1,88 +1,181 @@
 import
 {useEffect, useState} from "react";
-import { getCharacter, postPostToPlaceholder } from "../../../api/apiCalls";
-import { Link } from "react-router-dom";
-import { RedirectRoutes } from "../../../common/Routes";
+import {getCharacter, postPostToPlaceholder} from "../../../api/apiCalls";
+import {Link} from "react-router-dom";
+import {RedirectRoutes} from "../../../common/Routes";
 import {Character, Info} from "../Redux";
+import db, {storage} from "../../../firebase";
+import {collection, addDoc, onSnapshot, doc, deleteDoc, setDoc} from "firebase/firestore";
+import {ref, uploadBytesResumable, getDownloadURL, deleteObject} from "firebase/storage";
+import {useDispatch, useSelector} from "react-redux";
+import rickAndMorty, {rickAndMortyActionTypes} from "../../../redux/reducers/rickAndMorty";
+import {rickAndMortyActions} from "../../../redux/action/actionsRickAndMorty";
+import compNata from "../../Natalia/DumbCompNata/CompNata";
 
 interface InitialData {
     firstname: string,
     lastname: string,
     age: string,
     agree: boolean,
+    image?: string | null,
+    imageName?: string | null
 }
 
+interface User {
+    age: string
+    agree: boolean
+    firstname: string
+    id: string
+    lastname: string
+    image?: string | null
+    imageName?: string | null
+}
 
 const Forms = () => {
-    const [ formValues, setFormValues ] = useState<InitialData>({
+    const collectionRef = collection(db, "users")
+    const [editID, setEditID] = useState<string>("")
+    const [isDisabled, setIsDisabled] = useState<boolean>(false)
+    const [formValues, setFormValues] = useState<InitialData>({
         firstname: "",
         lastname: "",
         age: "",
         agree: false,
+        image: null,
+        imageName: null
     });
-    const [ data, setData ] = useState<{info: Info, results: Character[]}>();
-
-    // useEffect(() => {
-    //     setFormValues(initialData);
-    // }, [])
-
-    // useEffect(() => {
-    //     console.log(formValues)
-    // }, [formValues])
-
-    // useEffect(() => {
-    //     console.log(formValues)
-    // }, [formValues])
-
+    const [editFormValues, setEditFormValues] = useState<InitialData>({
+        firstname: "",
+        lastname: "",
+        age: "",
+        agree: false,
+        image: null,
+        imageName: null
+    });
+    // const [ data, setData ] = useState<{info: Info, results: Character[]}>();
+    // const [users, setUsers] = useState<User[]>([]);
+    // @ts-ignore
+    const users: User[] = useSelector(state => state.rickAndMorty.users)
+    const dispatch = useDispatch();
     const handleInputChange = (key: string, value: string) => {
-        console.log(key, value)
         setFormValues({
             ...formValues,
             [key]: value
         })
     };
-
-    const handleSubmit = async (e: any) => {
-        e.preventDefault();
+    const addInfo = async () => {
         try {
-            const data = await postPostToPlaceholder({
-                title: formValues.firstname,
-                body: formValues.lastname,
-                userId: formValues.age,
-            })
-            console.log(data)
-            if (data.status === 201) {
-                try {
-                    const character = await getCharacter()
-                    console.log(character)
-                    character && setData(character.data)
-                } catch (solomiyaError) {
-                    console.warn(solomiyaError)
-                } finally {
-                    console.log("finally")
-                }
-            }
+            const docRef = await addDoc(collectionRef, formValues)
+            console.log(docRef)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    const getInfo = () => {
+        onSnapshot(collectionRef, (snapshot) => {
+            // @ts-ignore
+            // dispatch(rickAndMortyActions.setUsers(snapshot.docs.map(doc => ({...doc.data(), id: doc.id}))))
+            dispatch({
+                type: rickAndMortyActionTypes.SET_USERS,
+                users: snapshot.docs.map(doc => ({...doc.data(), id: doc.id}))
+            });
+        })
+    }
+    const deleteUser = async (userId: string) => {
+        const docRef = doc(db, "users", userId)
+        try {
+            await deleteDoc(docRef);
         } catch (e) {
             console.log(e)
         }
     }
 
-    // {
-    //     id: 1,
-    //         title: '...',
-    //     body: '...',
-    //     userId: 1
-    // }
+    const editUser = async (user: User) => {
+        const docRef = doc(db, "users", user.id)
+        try {
+            await setDoc(docRef, {
+                firstname: user.firstname,
+                lastname: user.lastname,
+                age: user.age,
+                agree: user.agree,
+                image: user.image,
+                imageName: user.imageName,
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        addInfo();
+    }
 
-    const loadMore = () => {
-        // https://rickandmortyapi.com/api/character/?page=2
-        // https://rickandmortyapi.com/api/character/?page=3
-        // https://rickandmortyapi.com/api/character/?page=4
-        // https://rickandmortyapi.com/api/character/?page=5
+    useEffect(() => {
+        getInfo();
+    }, [])
+
+    useEffect(() => {
+        users?.length > 0 && console.log(users)
+    }, [users])
+
+    const handleUpload = (e: any) => {
+        setIsDisabled((prevState) => !prevState)
+        const storageRef = ref(storage, `/images/${e.target.files[0].name}`)
+        const uploadData = uploadBytesResumable(storageRef, e.target.files[0])
+
+        uploadData.on("state_changed", (snapshot)=>{
+            const prog = ((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
+            console.log(prog)
+        }, (err)=> console.log(err), ()=>{
+            getDownloadURL(uploadData.snapshot.ref)
+                .then(url => {
+                    setEditFormValues({
+                        ...editFormValues,
+                        image: url,
+                        imageName: e.target.files[0].name
+                    })
+                    setIsDisabled((prevState) => !prevState)
+                })
+        })
 
     }
+
+
+    const handleEdit = (user: User) => {
+        if (user.id === editID) {
+            //@ts-ignore
+            editUser(editFormValues)
+            setEditID("")
+        } else {
+            setEditID(user.id)
+            setEditFormValues(user)
+        }
+    }
+
+    const handleDeleteImage = (item: User) => {
+        const imageRef = ref(storage, `images/${item.imageName}`);
+// Delete the file
+        deleteObject(imageRef).then(() => {
+            editUser({
+                ...item,
+                imageName: null,
+                image: null
+            })
+        }).catch((error) => {
+            // Uh-oh, an error occurred!
+        });
+    }
+
+    // @ts-ignore
+    // @ts-ignore
     return (
         <>
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<input type="file" onChange={handleUpload}/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
             <form onSubmit={handleSubmit}>
                 <label>
                     Firstname
@@ -125,19 +218,44 @@ const Forms = () => {
                 </label>
                 <input type="submit" value="Submit"/>
             </form>
-
-            {data && data?.results?.map((item) => (
+            {users?.length > 0 && users?.map((item) => (
                     <div key={item.id}>
-                        <p>{item.name}</p>
-                        <img src={item.image} alt=""/>
-                        {/*<button>Delete</button>*/}
+                        {editID !== item.id ? <>
+                        <h3>{item.firstname} {item.lastname}</h3>
+                                {item?.image && <>
+                                    <img style={{width: "200px"}} src={item.image} alt=""/>
+                                    {/*// @ts-ignore*/}
+                                    <button onClick={() => handleDeleteImage(item)}>Delete Image</button>
+                                    </>}
+                        </>
+                            : <>
+                                {/*// @ts-ignore*/}
+                                <input type="file" onChange={handleUpload}/>
+                                <input
+                                    type="text"
+                                    value={editFormValues.firstname}
+                                    onChange={(e) => setEditFormValues({
+                                        ...editFormValues,
+                                        firstname: e.target.value
+                                    })}/>
+                                <input
+                                    type="text"
+                                    value={editFormValues.lastname}
+                                    onChange={(e) => setEditFormValues({
+                                        ...editFormValues,
+                                        lastname: e.target.value
+                                    })}/>
+                            </>}
+                        {/*<img src={item.image} alt=""/>*/}
+                        <button onClick={() => deleteUser(item.id)}>Delete</button>
+                        <button disabled={editID === item.id && isDisabled} onClick={() => handleEdit(item)}>{editID !== item.id ? "Edit" : "Save"}</button>
                     </div>
                 )
             )}
-            <button onClick={loadMore}>More</button>
-            <Link to={RedirectRoutes.Iryna}>
-                <span style={{fontSize: "20px"}}>IRYNA</span>
-            </Link>
+            {/*<button onClick={loadMore}>More</button>*/}
+            {/*<Link to={RedirectRoutes.Iryna}>*/}
+            {/*    <span style={{fontSize: "20px"}}>IRYNA</span>*/}
+            {/*</Link>*/}
         </>
     )
 }
