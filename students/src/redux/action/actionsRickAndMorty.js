@@ -1,4 +1,5 @@
 import { rickAndMortyActionTypes } from "../reducers/rickAndMorty";
+import { loadData } from "../../api/apiCalls";
 
 export const rickAndMortyActions = {
     addCharactersOnInit: (data) => ({
@@ -16,5 +17,34 @@ export const rickAndMortyActions = {
     setLoading: (loading) => ({
         type: rickAndMortyActionTypes.LOADING,
         loading
+    }),
+    setUsers: (users) => ({
+        type: rickAndMortyActionTypes.SET_USERS,
+        users
     })
+}
+
+
+
+export const getCharactersOnInit = (str) => (dispatch) => {
+    dispatch(rickAndMortyActions.setLoading(true))
+            loadData()
+                .then((data) => {
+                    // console.log(data.data)
+                    dispatch(rickAndMortyActions.addCharactersOnInit(data.data.results))
+                    dispatch(rickAndMortyActions.addInfo(data.data.info))
+                })
+                .catch((err) => console.log(err))
+                .finally(() => dispatch(rickAndMortyActions.setLoading(false)))
+}
+
+export const getMoreCharacters = (next) => (dispatch) => {
+    dispatch(rickAndMortyActions.setLoading(true))
+    loadData(next)
+        .then((data) => {
+            dispatch(rickAndMortyActions.addCharacters(data.data.results))
+            dispatch(rickAndMortyActions.addInfo(data.data.info))
+        })
+        .catch((err) => console.log(err))
+        .finally(() => dispatch(rickAndMortyActions.setLoading(false)))
 }

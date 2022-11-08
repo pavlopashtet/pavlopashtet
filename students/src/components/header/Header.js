@@ -41,6 +41,9 @@ const Header = () => (
         <Link to={RedirectRoutes.StepanRudiak}>
           <span style={{ fontSize: "20px" }}>StepanRudiak</span>
         </Link>
+        <Link to={RedirectRoutes.IrynaNestorko}>
+          <span style={{ fontSize: "20px" }}>IrynaNest</span>
+        </Link>
     </div>
 );
 

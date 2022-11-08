@@ -1,0 +1,31 @@
+export interface NextDays{
+    day:string
+    comment:string
+    iconURL:string 
+    max_temp:{
+        c:number
+        f:number
+    }
+    min_temp:{
+        c:number
+        f:number
+    }
+}
+export interface Response {
+    region?:string
+    currentConditions?:{
+        dayhour?:string
+        temp?:{
+            c?:number
+            f?:number
+        }
+        precip?:string|number
+        humidity?:string|number
+        wind?:{
+            km?:number
+        } 
+        comment?:string
+        iconURL?:string 
+    }
+    next_days?:NextDays[]
+}
