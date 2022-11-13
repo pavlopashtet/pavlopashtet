@@ -24,6 +24,11 @@ export const AppRoutes = {
     MainComponent:"/liftState",
     InputState:"/inputState",
     FormState:"/formState",
+    LOGIN:"/signin",
+    SIGN_UP:"/signup",
+    Admin:"/admin",
+    Thunk: "/redux-thunk",
+    IrynaNestorko: "/IrynaNest/*",
 }
 
 export const RedirectRoutes = {
@@ -49,5 +54,6 @@ export const RedirectRoutes = {
     FormState:"/formState",
     StepanRudiak: "/StepanRudiak",
     mentor_users: "/mentor/users",
+    IrynaNestorko: "/IrynaNest"
 }
 

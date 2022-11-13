@@ -7,7 +7,9 @@ import { FormStateComponent } from "./natalkaComponents/formState/FormState";
 import { InputStateComponent } from "./natalkaComponents/inputState/InputState";
 import { StateComponent } from "./natalkaComponents/state/State";
 import {AxiosComponent} from "./natalkaComponents/axios/AxiosComponent"
+import { ReduxComponent } from "./natalkaComponents/redux/ReduxComponent";
 import s from "./NataliaK.module.scss"
+import { ThunkComponent } from "./natalkaComponents/redux-thunk/ThunkComponent";
 
 
 
@@ -30,6 +32,12 @@ const NataliaKoziarComponent = () => {
         <NavLink to ={`${RedirectRoutes.NataliaKoziar}${AppRoutes.AXIOS}`}>
             <span>Axios</span>
         </NavLink>
+        <NavLink to ={`${RedirectRoutes.NataliaKoziar}${AppRoutes.REDUX}`}>
+            <span>Redux</span>
+        </NavLink>
+        <NavLink to ={`${RedirectRoutes.NataliaKoziar}${AppRoutes.Thunk}`}>
+            <span>Redux-thunk</span>
+        </NavLink>
             </div>
             <div className={s.description}>
         <Routes>
@@ -38,6 +46,8 @@ const NataliaKoziarComponent = () => {
             <Route path={AppRoutes.InputState} element={<InputStateComponent/>}/>
             <Route path={AppRoutes.FormState} element={<FormStateComponent/>}/>
             <Route path={AppRoutes.AXIOS} element={<AxiosComponent/>}/>
+            <Route path={AppRoutes.REDUX} element={<ReduxComponent/>}/>
+            <Route path={AppRoutes.Thunk} element={<ThunkComponent/>}/>
         </Routes>
             </div>
 

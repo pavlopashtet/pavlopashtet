@@ -17,6 +17,10 @@ export const rickAndMortyActions = {
     setLoading: (loading) => ({
         type: rickAndMortyActionTypes.LOADING,
         loading
+    }),
+    setUsers: (users) => ({
+        type: rickAndMortyActionTypes.SET_USERS,
+        users
     })
 }
 
