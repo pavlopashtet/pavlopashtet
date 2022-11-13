@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-// import { getCharacter, postPostToPlaceholder } from "../../../api/apiCalls";
-// import { Link } from "react-router-dom";
-// import { RedirectRoutes } from "../../../common/Routes";
-// import {Character, Info} from "../Redux";
 import styles from "../inputState/inputState.module.css";
-import db from "../Firebase/firebase";
+import db, { storage } from "../Firebase/firebase";
+import {
+  ref,
+  getDownloadURL,
+  uploadBytesResumable,
+  deleteObject,
+} from "firebase/storage";
 import {
   addDoc,
   collection,
@@ -13,19 +15,23 @@ import {
   setDoc,
   onSnapshot,
 } from "firebase/firestore";
-
 const FirebaseForm = () => {
   const [formValues, setFormValues] = useState({
     firstname: "",
     lastname: "",
     age: "",
+    image: null,
+    imageName: null,
   });
   const [editFormValues, setEditFormValues] = useState({
     firstname: "",
     lastname: "",
     age: "",
+    image: null,
+    imageName: null,
   });
   const [editID, setEditID] = useState("");
+  const [isDisabled, setIsDisabled] = useState(false);
   const [users, setUsers] = useState([]);
   const collectionRef = collection(db, "users");
   const handleInputChange = (key, value) => {
@@ -63,6 +69,8 @@ const FirebaseForm = () => {
         firstname: user.firstname,
         lastname: user.lastname,
         age: user.age,
+        image: user.image,
+        imageName: user.imageName,
       });
     } catch (e) {
       console.log(e);
@@ -72,7 +80,6 @@ const FirebaseForm = () => {
     e.preventDefault();
     addInfo();
   };
-
   const handleEdit = (user) => {
     if (user.id === editID) {
       editUser(editFormValues);
@@ -82,6 +89,42 @@ const FirebaseForm = () => {
       setEditFormValues(user);
     }
   };
+  const handleUpload = (e) => {
+    setIsDisabled((prevState) => !prevState);
+    const storageRef = ref(storage, `/images/${e.target.files[0].name}`);
+    const uploadData = uploadBytesResumable(storageRef, e.target.files[0]);
+    uploadData.on(
+      "state_changed",
+      (snapshot) => {
+        const prog = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(prog);
+      },
+      (err) => console.log(err),
+      () => {
+        getDownloadURL(uploadData.snapshot.ref).then((url) => {
+          setEditFormValues({
+            ...editFormValues,
+            image: url,
+            imageName: e.target.files[0].name,
+          });
+          setIsDisabled((prevState) => !prevState);
+        });
+      }
+    );
+  };
+  const handleDeleteImage = (item) => {
+    const imageRef = ref(storage, `images/${item.imageName}`);
+    // Delete the file
+    deleteObject(imageRef)
+      .then(() => {
+        editUser({
+          ...item,
+          imageName: null,
+          image: null,
+        });
+      })
+      .catch((error) => {});
+  };
   useEffect(() => {
     getInfo();
   }, []);
@@ -90,6 +133,9 @@ const FirebaseForm = () => {
   }, [users]);
   return (
     <div className={styles.inputState}>
+      {/* <br/><br/><br/>
+      <input type = "file" onChange={handleUpload}/>
+      <br/><br/><br/><br/><br/> */}
       <form onSubmit={handleSubmit}>
         <label>
           Firstname <br />
@@ -134,16 +180,38 @@ const FirebaseForm = () => {
           value="Submit"
         />
       </form>
+      <br />
+      <br />
+      <br />
 
       {users?.length > 0 &&
         users?.map((item) => (
           <div key={item.id}>
             {editID !== item.id ? (
-              <h3 className={styles.p}>
-                {item.firstname} {item.lastname} {item.age}
-              </h3>
+              <>
+                <h3 className={styles.p}>
+                  {item.firstname} {item.lastname} {item.age}
+                </h3>
+                {item?.image !== "" && (
+                  <>
+                    <img src={item.image} alt="" />
+                    <button
+                      style={{
+                        backgroundColor: "deepskyblue",
+                        color: "white",
+                      }}
+                      onClick={() => handleDeleteImage(item)}
+                    >
+                      {" "}
+                      Delete Image{" "}
+                    </button>
+                  </>
+                )}
+              </>
             ) : (
               <>
+                <input type="file" onChange={handleUpload} />
+                <br /> <br /> <br />
                 <input
                   style={{ color: "blue" }}
                   type="text"
@@ -186,6 +254,7 @@ const FirebaseForm = () => {
                 marginLeft: "10px",
                 marginTop: "30px",
               }}
+              disabled={editID === item.id && isDisabled}
               onClick={() => handleEdit(item)}
             >
               {editID !== item.id ? "Edit" : "Save"}
@@ -195,5 +264,4 @@ const FirebaseForm = () => {
     </div>
   );
 };
-
 export default FirebaseForm;
