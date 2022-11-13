@@ -8,9 +8,11 @@ export const MyRoutes = {
   REDUX_THUNK: "/redux_thunk",
   FIREBASE: "/firebase/*",
   LOGIN: "/signIn",
-  SIGN_UP:"/signUp"
+  SIGN_UP:"/signUp",
+  FIREBASE_FORM:"/firebaseForm"
 };
 export const MyRedirectRoutes = {
   FIREBASE: "/firebase",
   LOGIN: "/login",
+  FIREBASE_FORM:"/firebaseForm"
 };
