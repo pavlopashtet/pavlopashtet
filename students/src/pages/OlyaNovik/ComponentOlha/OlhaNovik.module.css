@@ -1,7 +1,9 @@
 .btn{
-    width: 120px;
-    height: 35p;
-    background-color: blue;
-    border: none;
-    border-radius: 7px;
+    background-color: rgb(36, 97, 12);
+    color: azure;
+    width: 150px;
+    height: 40px;
+    font-weight: bolder;
+    margin: 20px 70px; 
+    
 }

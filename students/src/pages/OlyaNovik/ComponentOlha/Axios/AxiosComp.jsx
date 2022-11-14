@@ -6,8 +6,7 @@ const AxiosComp = () => {
   const [data, setData] = useState();
 
   const getNext = () => {
-    getMore(data?.info?.next);
-    getCharacter().then((data) => {
+    getMore(data?.info?.next).then((data) => {
       setData((prevState) => {
         return {
           info: data.data.info,
@@ -22,10 +21,6 @@ const AxiosComp = () => {
       setData(data.data);
     });
   }, []);
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   return (
     <div>

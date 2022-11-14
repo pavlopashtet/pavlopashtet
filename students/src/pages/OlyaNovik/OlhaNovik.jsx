@@ -5,7 +5,7 @@ import {Link, Route, Routes} from "react-router-dom";
 import CvCopmonent from "./ComponentOlha/Cv/cv";
 import AxiosComp from './ComponentOlha/Axios/AxiosComp'
 import InputComponent from "./ComponentOlha/Input/input";
-import ReduxComp from './ComponentOlha/Redux/Redux'
+import Redux from './ComponentOlha/Redux/Redux'
 // import "./OlhaNovik.scss"
 
 const OlhaNovikMain = ()=>{
@@ -28,7 +28,7 @@ return(
     <Route path={OlhaRoute.CV} element={<CvCopmonent/>}/>
     <Route path={OlhaRoute.INPUT} element={<InputComponent/>}/>
     <Route path={OlhaRoute.AXIOS}  element={<AxiosComp/>}/>
-    <Route path={OlhaRoute.REDUX}  element={<ReduxComp/>}/>
+    <Route path={OlhaRoute.REDUX}  element={<Redux/>}/>
     </Routes>
 </div>
 )

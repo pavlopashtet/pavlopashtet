@@ -4,10 +4,12 @@ import charactersReducer from "./reducers/charactersReducer";
 import thunk from "redux-thunk";
 import { IrynaReducer } from "./reducers/IrynaReducer";
 import rickAndMorty from "./reducers/rickAndMorty";
+import { OlhaReducer} from "./reducers/OlhaReducer/OlhaReducer";
 
 const rootReducer = combineReducers({
   characters: charactersReducer,
   Iryna: IrynaReducer,
+  Olha: OlhaReducer,
   rickAndMorty
 });
 
