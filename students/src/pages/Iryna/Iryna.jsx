@@ -5,7 +5,6 @@ import { MyRoutes } from "./MyRoutes";
 import Con from "./CV/CV";
 import { Link } from "react-router-dom";
 import MainComponent from "./liftState/liftState";
-// import NotFoundPAge from "../404/NotFoundPAge";
 import styles from "./Iryna.module.css";
 import InputState from "./inputState/inputState";
 import MainForm from "./formState/MainForm";

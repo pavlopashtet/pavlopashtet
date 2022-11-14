@@ -11,7 +11,7 @@ export const AppRoutes = {
     Vitalii:"/Vitalii/*",
     Sasha: "/sasha/*",
     NataliaKoziar:"/NataliaKoziar/*",
-    OlhaNovik: "/OlhaNovik",
+    OlhaNovik: "/OlhaNovik/*",
     Andrew: '/andrew/*',
     FORM: "/form",
     BTN: "/NataComp",
