@@ -35,7 +35,7 @@ const MainSashaHeader = () =>
     {/*    </Link>*/}
 
     {/*    <Link to={`${RedirectRoutes.Sasha}${SashaRoutes.FORM}`}>*/}
-    {/*      <span>Form</span>*/}
+    {/*      <span>Forms</span>*/}
     {/*    </Link>*/}
 
     {/*  </div>*/}

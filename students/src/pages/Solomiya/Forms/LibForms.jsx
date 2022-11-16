@@ -1,6 +1,6 @@
 // import React from "react";
 // import styles from "./SolForms.module.scss";
-// import { Form, Button, ButtonToolbar, Schema, Panel, FlexboxGrid } from 'rsuite';
+// import { Forms, Button, ButtonToolbar, Schema, Panel, FlexboxGrid } from 'rsuite';
 // import { createRoot } from "react-dom/client";
 // import { JSONTree } from 'react-json-tree';
 //
@@ -45,10 +45,10 @@
 // const TextField = React.forwardRef((props, ref) => {
 //     const { name, label, accepter, ...rest } = props;
 //     return (
-//         <Form.Group controlId={`${name}-4`} ref={ref}>
-//             <Form.ControlLabel>{label} </Form.ControlLabel>
-//             <Form.Control name={name} accepter={accepter} {...rest} />
-//         </Form.Group>
+//         <Forms.Group controlId={`${name}-4`} ref={ref}>
+//             <Forms.ControlLabel>{label} </Forms.ControlLabel>
+//             <Forms.Control name={name} accepter={accepter} {...rest} />
+//         </Forms.Group>
 //     );
 // });
 //
@@ -65,10 +65,10 @@
 //
 //     const handleSubmit = () => {
 //         if (!formRef.current.check()) {
-//             console.error('Form Error');
+//             console.error('Forms Error');
 //             return;
 //         }
-//         console.log(formValue, 'Form Value');
+//         console.log(formValue, 'Forms Value');
 //     };
 //
 //     const handleCheckEmail = () => {
@@ -80,7 +80,7 @@
 //     return (
 //         <FlexboxGrid className={styles.background}>
 //             <FlexboxGrid.Item colspan={12}>
-//                 <Form
+//                 <Forms
 //                     ref={formRef}
 //                     onChange={setFormValue}
 //                     onCheck={setFormError}
@@ -105,7 +105,7 @@
 //
 //                         <Button onClick={handleCheckEmail}>Check Email</Button>
 //                     </ButtonToolbar>
-//                 </Form>
+//                 </Forms>
 //             </FlexboxGrid.Item>
 //             <FlexboxGrid.Item colspan={12}>
 //                 <JSONView formValue={formValue} formError={formError} />
