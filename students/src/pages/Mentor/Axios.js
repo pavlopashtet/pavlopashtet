@@ -3,10 +3,10 @@ import { Endpoints } from "../../api/Endpoints";
 import { deleteCharacter, getCharacter } from "../../api/apiCalls";
 import { getCharactersThunk, getMoreCharactersThunk } from "../../redux/action/charactersSctions";
 import { useDispatch, useSelector } from "react-redux";
-
+import styles from './styles.module.scss'
 const btnStyle = {
     margin: "20px",
-   backgroundColor: "blue",
+    backgroundColor: "blue",
     color: "yellow",
     padding: "10px",
 }
@@ -49,23 +49,36 @@ const AxiosPage = () => {
     // useEffect(() => {
     //     console.log("characters", characters)
     // }, [ characters ])
+    const skills = [ "1", "2", '5' ]
 
+    const active = "12345"
+    console.log(active[0] + active[1] + active[4])
     return (
         <div>
             <h1>Axios</h1>
             {/*{error && <span>{error.response.message}</span>}*/}
+            <div>
+                {"12345"}
+            </div>
+            {/*<form action="">*/}
+            {/*    <input type="checkbox" name='1' checked={skills.includes('1')}/>*/}
+            {/*    <input type="checkbox" name='2' checked={skills.includes('2')}/>*/}
+            {/*    <input type="checkbox" name='3' checked={skills.includes('3')}/>*/}
+            {/*    <input type="checkbox" name='4' checked={skills.includes('4')}/>*/}
+            {/*    <input type="checkbox" name='5' checked={skills.includes('5')}/>*/}
+            {/*</form>*/}
 
-            {isLoading && <h1>Loading ... </h1>}
-            {characters && !isLoading && characters?.map((item) => (
-                    <div key={item.id}>
-                        <p>{item.name}</p>
-                        <img src={item.image} alt=""/>
-                        {/*<button>Delete</button>*/}
-                    </div>
-                )
-            )}
-            {error && <h1>{error.message}</h1>}
-            )
+            {/*{isLoading && <h1>Loading ... </h1>}*/}
+            {/*{characters && !isLoading && characters?.map((item) => (*/}
+            {/*        <div key={item.id}>*/}
+            {/*            <p>{item.name}</p>*/}
+            {/*            <img src={item.image} alt=""/>*/}
+            {/*            /!*<button>Delete</button>*!/*/}
+            {/*        </div>*/}
+            {/*    )*/}
+            {/*)}*/}
+            {/*{error && <h1>{error.message}</h1>}*/}
+            {/*)*/}
             <button style={btnStyle} onClick={() => getMoreCharacters(info.next)}> Get more</button>
         </div>
     )
