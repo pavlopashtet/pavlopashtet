@@ -12,6 +12,10 @@ import MainForm from "./formState/MainForm";
 import SampleAxios from "./Axios/Axios";
 import SampleRedux from "./Redux/Redux";
 import SampleReduxThunk from "./ReduxThunk/ReduxThunk";
+import Firebase from "./Firebase/Main"
+import Login from "./Firebase/Login"
+import SignUp from "./Firebase/SignUp"
+
 const Iryna = () => {
   const [action, setAction] = useState("true");
   return (
@@ -52,6 +56,9 @@ const Iryna = () => {
       <Link to={`${RedirectRoutes.Iryna}${MyRoutes.REDUX_THUNK}`}>
         <span style={{ fontSize: "50px" }}>ReduxThunk</span>
       </Link>
+      <Link to={`${RedirectRoutes.Iryna}${MyRoutes.FIREBASE}`}>
+        <span style={{ fontSize: "50px" }}>Firebase</span>
+      </Link>     
       <Routes>
         <Route path={MyRoutes.CV} element={<Con />} />
         <Route path={MyRoutes.MainComponent} element={<MainComponent />} />
@@ -60,13 +67,9 @@ const Iryna = () => {
         <Route path={MyRoutes.AXIOS}  element={<SampleAxios/>}/>
         <Route path={MyRoutes.REDUX}  element={<SampleRedux/>}/>
         <Route path={MyRoutes.REDUX_THUNK}  element={<SampleReduxThunk/>}/>
+        <Route path={MyRoutes.FIREBASE}  element={<Firebase/>}/>          
       </Routes>
-
-
     </div>
-    
-
-    
     
   );
 };
