@@ -1,5 +1,5 @@
-import
-{useEffect, useState} from "react";
+//@ts-ignore
+import {useEffect, useState} from "react";
 import {getCharacter, postPostToPlaceholder} from "../../../api/apiCalls";
 import {Link} from "react-router-dom";
 import {RedirectRoutes} from "../../../common/Routes";
@@ -118,6 +118,7 @@ const Forms = () => {
     }, [users])
 
     const handleUpload = (e: any) => {
+          //@ts-ignore
         setIsDisabled((prevState) => !prevState)
         const storageRef = ref(storage, `/images/${e.target.files[0].name}`)
         const uploadData = uploadBytesResumable(storageRef, e.target.files[0])
@@ -133,6 +134,7 @@ const Forms = () => {
                         image: url,
                         imageName: e.target.files[0].name
                     })
+                    //@ts-ignore
                     setIsDisabled((prevState) => !prevState)
                 })
         })
